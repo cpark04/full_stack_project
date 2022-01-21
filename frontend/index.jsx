@@ -4,7 +4,7 @@ import { createStore } from "redux";
 import Root from "./components/root";
 
 document.addEventListener("DOMContentLoaded", () => {
-  let store = createStore()
+  // let store = createStore()
   const root = document.getElementById('root');
-  ReactDOM.render(<Root store={store}/>)
+  ReactDOM.render(<h1>SomeTrails</h1>)
 })
