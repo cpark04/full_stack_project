@@ -67,3 +67,12 @@ body {
 .session-button:hover {
   background-color: #1C84FF;
 }
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-title {
+  font-size: 22px;
+}
