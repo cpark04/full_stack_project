@@ -9,7 +9,7 @@ class NavBar extends React.Component {
   render() {
     return <nav id="nav-bar">
       Explore
-      <i class="fas fa-mountain">SomeTrails</i>
+      <i class="fas fa-mountain"><span>SomeTrails</span></i>
       <Button/>
     </nav>
   }
