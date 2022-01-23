@@ -208,5 +208,30 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 500px;
+  height: 540px;
+  background-image: url(https://cdn-assets.alltrails.com/assets/hero-images/hero-logged-out-4-w2800-8101fd3fe5602c8673f357905e28daddad847cbcc9e9f5ba912ed0916ffc64be.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 50px;
+  font-weight: 550;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.13;
+  letter-spacing: normal;
+  color: white;
+}
+
+.search-bar {
+  width: -webkit-fill-available;
+  height: 43px;
+  border-radius: 32px;
+  margin-top: 25px;
+  padding-left: 32px;
 }

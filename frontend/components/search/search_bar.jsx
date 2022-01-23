@@ -5,7 +5,7 @@ class SearchBar extends React.Component {
   render() {
     return <div className="search-container">
       <p>Find your next Trail</p>
-      <div className="search-bar">Search Bar</div>
+      <input type="text" className="search-bar" placeholder="Search by park or trail name"/>
     </div>
   }
 }
