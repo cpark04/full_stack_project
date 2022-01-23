@@ -1,12 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class Logo extends React.Component {
 
   render() {
-    return <div className="logo">
-      <img src="https://i.imgur.com/CsU8233.png" alt="" width="65px"/>
-      <span className="logo-title">SomeTrails</span>
-    </div>
+    return (
+      <Link to='/' className="logo">
+        <img src='/logoImg.png'alt="" width="65px"/>
+        <span className="logo-title">SomeTrails</span>
+      </Link>
+    )
   }
 }
 
