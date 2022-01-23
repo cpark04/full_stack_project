@@ -3,7 +3,6 @@ import NavBar from "./navbar"
 
 const mSTP = (state) => {
   return {
-
   }
 }
 

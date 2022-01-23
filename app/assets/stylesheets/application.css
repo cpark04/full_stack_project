@@ -59,6 +59,11 @@ table {
 }
 
 
+header {
+  display: flex;
+  justify-content: center;
+}
+
 body { 
   font-family: 'Montserrat', sans-serif;
 }
@@ -67,7 +72,8 @@ body {
    display: flex;
    justify-content: space-between;
    align-items: center;
-  width: 100%;
+  width: 90%;
+  padding-top: 10px;
   height: 60px; 
  }
 
@@ -75,8 +81,10 @@ body {
   font-size: 30px;
  }
 
-#button {
+.nav-button {
   display:flex;
+  width: 33.33%;
+  justify-content: flex-end;
 }
 
 .session-button {
@@ -93,7 +101,7 @@ body {
   flex-direction: row;
   flex-shrink: 0;
   font-family: "RM Neue",sans-serif;
-  font-size: 60%;
+  font-size: 90%;
   line-height: 1.15;
   margin: 5px;
   padding: 10px 21px;
@@ -103,6 +111,7 @@ body {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  text-decoration: none;
 }
 
 .session-button:active {
@@ -113,18 +122,77 @@ body {
   background-color: #1C84FF;
 }
 
+.nav-explore {
+  width: 33.33%
+}
+
 .logo {
   display: flex;
   align-items: center;
   text-decoration: none;
   color: inherit;
+  width: 33.33%;
+  justify-content: center;
 }
 
 .logo-title {
-  font-size: 22px;
+  font-size: 30px;
   text-decoration: none;
 }
 
 .session-form {
-  
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 22%;
+  padding: 30px;
+  background-color: white;
+  border: solid 1px white;
+  border-radius: 9px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  text-align: center;
+}
+
+.session-input {
+  height: 40px;
+  margin: 10px 0px 10px 0px;
+  border: solid 1px #b2aea7;
+  padding: 0 0 0 10px;
+  border-radius: 5px;
+
+}
+
+.session-submit-button {
+  height: 40px;
+  margin: 10px 0px 10px 0px;
+  border-radius: 5px;
+  background-color: #428a13;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+}
+.session-text {
+  margin: 10px 0px 10px 0px;
+}
+
+.session-route-link {
+  display: flex;
+  justify-content: space-around;
+}
+
+.background-div {
+  background-image: url(https://cdn-assets.alltrails.com/assets/hero-images/Signup-Hero-2-Large-1550x885-9ef74e54a6dd112d691098c9479aee500504c1c491f1fc8f0c89509db863dc14.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+}
+
+.form-padding {
+  padding-top: 140px;
 }

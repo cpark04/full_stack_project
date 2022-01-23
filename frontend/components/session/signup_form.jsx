@@ -5,8 +5,10 @@ class SignupForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      fname: '',
+      lname: '',
       email: '',
-      password: ''
+      password: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -35,29 +37,33 @@ class SignupForm extends React.Component {
   }
 
   render() {
-    let link;
-    if (this.props.formType === 'login') {
-      link = <Link to="/signup">Signup</Link>
-    } else {
-      link = <Link to="/login">Login</Link>
-    }
+    
+    return <div className='background-div'>
+      <div className='form-padding'>
+        <div className='session-form'>
+          <form onSubmit={this.handleSubmit} className='login-form'> 
+            <p className='session-text'>Create your free account</p>
 
-    return <div>
-      <form onSubmit={this.handleSubmit}> 
-        <span>{this.props.formType}</span>
-        <br />
-        <label>Email:
-          <input type="text" value={this.state.email} onChange={this.update('email')}/>
-        </label>
+            <input type="text" placeholder="First name" value={this.state.fname} onChange={this.update('fname')} className='session-input'/>
+            
+            <input type="text" placeholder="Last name" value={this.state.lname} onChange={this.update('lname')} className='session-input'/>
 
-        <label>Password:
-          <input type="password" value={this.state.password} onChange={this.update('password')}/>
-        </label>
-        <input type="submit" value={this.props.formType}/>
-        {link}
-      </form>
-      {this.renderErrors()}
+            <input type="text" placeholder="Email" value={this.state.email} onChange={this.update('email')} className='session-input'/>
+
+            <input type="password" placeholder="Password" value={this.state.password} onChange={this.update('password')} className='session-input'/>
+
+            <input type="submit" value='Sign up' className='session-submit-button'/>
+          </form>
+          {this.renderErrors()}
+
+          <div className='session-route-link'>
+            <p>Already have an account?</p>
+            <Link to='/login'>Log in</Link>
+          </div>
+        </div>
+      </div>
     </div>
+    
   }
 }
 
