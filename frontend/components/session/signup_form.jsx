@@ -9,6 +9,7 @@ class SignupForm extends React.Component {
       lname: '',
       email: '',
       password: '',
+      errors: []
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -21,13 +22,15 @@ class SignupForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.processForm(this.state)
+    this.props.processForm(this.state).fail(() => {
+      this.setState({ errors: this.props.errors})
+    })
   }
 
   renderErrors(){
     return(
       <ul>
-        {this.props.errors.map((error,i) => {
+        {this.state.errors.map((error,i) => {
           return <li key={i}>
             {error}
           </li>
