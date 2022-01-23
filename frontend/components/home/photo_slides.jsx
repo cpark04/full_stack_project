@@ -11,7 +11,7 @@ class PhotoSlides extends React.Component {
 
     setInterval(function() {
       $bg_slides.animate({ opacity: 1 }, 500, function() {
-        $bg_slides.css('background-image', 'url('+images[index]+')');
+        $bg_slides.css('background', 'rgba(184, 184, 184, 0.7) url('+images[index]+')');
         index++;
         $bg_slides.animate({ opacity: 1 }, 500, function() {
           if(index === images.length) index = 0;

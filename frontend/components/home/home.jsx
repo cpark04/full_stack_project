@@ -8,8 +8,15 @@ class Home extends React.Component {
       <div className='bg-slides'>
         <PhotoSlides />
       </div>
-      {/* <SearchBar /> */}
       <div className='trail-cards'></div>
+      <div className="module-picture">
+        <div className="module-text">
+          <h1 className="module-title">Explore with</h1>
+          <h1 className="module-title2">confidence</h1>
+          <div className="module-description">Inspiration and guidance for wherever your trail may lead.</div>
+          <div className="app-rating"></div>
+        </div>
+      </div>
       
     </div>
   }
