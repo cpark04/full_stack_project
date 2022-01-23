@@ -9,6 +9,12 @@ class Button extends React.Component {
       <Link to='/login' className="session-button">Login</Link>
     </div>
 
+    if (this.props.currentUser) {
+      buttons = <div className="nav-button">
+        <button className="session-button" onClick={this.props.logout}>Logout</button>
+      </div>
+    }
+
     return (
       buttons
     )

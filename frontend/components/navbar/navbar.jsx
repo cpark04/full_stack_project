@@ -10,7 +10,7 @@ class NavBar extends React.Component {
     return <nav id="nav-bar">
       <p className='nav-explore'>Explore</p>
       <Logo />
-      <Button/>
+      <Button currentUser={this.props.currentUser} logout={this.props.logout} />
     </nav>
   }
 }
