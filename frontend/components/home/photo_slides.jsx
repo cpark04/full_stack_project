@@ -10,14 +10,14 @@ class PhotoSlides extends React.Component {
     $bg_slides = $('.bg-slides');
 
     setInterval(function() {
-      $bg_slides.animate({ opacity: 0 }, 500, function() {
+      $bg_slides.animate({ opacity: 1 }, 500, function() {
         $bg_slides.css('background-image', 'url('+images[index]+')');
         index++;
         $bg_slides.animate({ opacity: 1 }, 500, function() {
           if(index === images.length) index = 0;
         });
       });
-    }, 4000);
+    }, 5000);
   }
 
   render() {
