@@ -65,7 +65,7 @@ class LoginForm extends React.Component {
           </div>
 
           <div className='demo-container'>
-            <a onClick={this.handleDemo}>Log in as Demo User</a>
+            <a href='' onClick={this.handleDemo}>Log in as Demo User</a>
           </div>
         </div>
       </div>

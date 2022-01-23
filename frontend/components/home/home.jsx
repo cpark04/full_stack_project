@@ -1,5 +1,6 @@
 import React from "react";
 import PhotoSlides from "./photo_slides";
+import SearchBar from "../search/search_bar";
 
 class Home extends React.Component {
   render(){
@@ -7,6 +8,7 @@ class Home extends React.Component {
       <div className='bg-slides'>
         <PhotoSlides />
       </div>
+      {/* <SearchBar /> */}
       <div className='trail-cards'></div>
       
     </div>

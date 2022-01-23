@@ -235,3 +235,9 @@ body {
   margin-top: 25px;
   padding-left: 32px;
 }
+
+.demo-container {
+  display:flex;
+  align-self: center;
+  margin-top: 40px;
+}

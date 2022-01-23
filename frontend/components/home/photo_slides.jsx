@@ -17,7 +17,7 @@ class PhotoSlides extends React.Component {
           if(index === images.length) index = 0;
         });
       });
-    }, 6000);
+    }, 4000);
   }
 
   render() {
