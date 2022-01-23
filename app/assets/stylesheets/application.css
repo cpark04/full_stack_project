@@ -58,6 +58,7 @@ table {
 	border-spacing: 0;
 }
 
+/* reset end */
 
 header {
   display: flex;
@@ -155,7 +156,8 @@ body {
 .login-form {
   display: flex;
   flex-direction: column;
-  font-size: 30px;
+  font-size: 20px;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -163,7 +165,7 @@ body {
   height: 40px;
   margin: 10px 0px 10px 0px;
   border: solid 1px #b2aea7;
-  padding: 0 0 0 10px;
+  padding-left: 10px;
   border-radius: 5px;
 
 }
@@ -184,6 +186,7 @@ body {
 .session-route-link {
   display: flex;
   justify-content: space-around;
+  padding-top: 25px;
 }
 
 .background-div {

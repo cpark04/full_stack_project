@@ -3,14 +3,6 @@ import { Link } from "react-router-dom";
 
 class Logo extends React.Component {
 
-  // constructor(){
-  //   this.handleClick = this.handleClick.bind(this)
-  // }
-
-  // handleClick(e) {
-    
-  // }
-
   render() {
     return (
       <Link to='/' className="logo">
