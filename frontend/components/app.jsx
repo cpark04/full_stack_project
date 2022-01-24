@@ -6,6 +6,7 @@ import SignupFormContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
 import NavBarContainer from "./navbar/navbar_container";
 import HomeContainer from "./home/home_container";
+import ParkContainer from "./park/park_container";
 
 const App = () => (
    <div>
@@ -15,7 +16,7 @@ const App = () => (
     <Switch>
       <AuthRoute path="/login" component={LoginFormContainer} />
       <AuthRoute path="/signup" component={SignupFormContainer} />
-      <Route path="/park/:parkId" component={} />
+      <Route path="/park/:parkId" component={ParkContainer} />
 
       <Route exact path="/" component={HomeContainer} />
     </Switch>
