@@ -1,6 +1,7 @@
 import React from "react";
 import PhotoSlides from "./photo_slides";
 import SearchBar from "../search/search_bar";
+import TrailCards from "../trail_cards/trail_cards";
 
 class Home extends React.Component {
   render(){
@@ -8,7 +9,9 @@ class Home extends React.Component {
       <div className='bg-slides'>
         <PhotoSlides />
       </div>
-      <div className='trail-cards'></div>
+      <div className='trail-cards'>
+        <TrailCards />
+      </div>
       <div className="module-picture">
         <div className="module-text">
           <h1 className="module-title">Explore with</h1>
