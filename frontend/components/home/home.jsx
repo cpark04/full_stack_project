@@ -6,12 +6,15 @@ import TrailCards from "../trail_cards/trail_cards";
 class Home extends React.Component {
   render(){
     return <div className="home-page">
+      
       <div className='bg-slides'>
         <PhotoSlides />
       </div>
+
       <div className='trail-cards'>
         <TrailCards />
       </div>
+      
       <div className="module-picture">
         <div className="module-text">
           <h1 className="module-title">Explore with</h1>
@@ -21,6 +24,9 @@ class Home extends React.Component {
         </div>
       </div>
       
+      <div className="phone-module">
+        
+      </div>
     </div>
   }
 }
