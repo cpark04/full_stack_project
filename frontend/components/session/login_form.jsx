@@ -6,9 +6,11 @@ class LoginForm extends React.Component {
     super(props);
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      errors: []
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
   
   update(field) {
@@ -19,13 +21,20 @@ class LoginForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.processForm(this.state)
+    this.props.processForm(this.state).fail(() => {
+      this.setState({ errors: this.props.errors})
+    })
+  }
+
+  handleDemo(e){
+    e.preventDefault();
+    this.props.processForm({email: "demo@gmail.com", password: "12341234"})
   }
 
   renderErrors(){
     return(
       <ul>
-        {this.props.errors.map((error,i) => {
+        {this.state.errors.map((error,i) => {
           return <li key={i}>
             {error}
           </li>
@@ -53,6 +62,10 @@ class LoginForm extends React.Component {
           <div className='session-route-link'>
             <p>Don't have an account?</p>
             <Link to='/signup'>Sign up for free</Link>
+          </div>
+
+          <div className='demo-container'>
+            <a href='' onClick={this.handleDemo}>Log in as Demo User</a>
           </div>
         </div>
       </div>

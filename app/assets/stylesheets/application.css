@@ -66,14 +66,18 @@ header {
 }
 
 body { 
-  font-family: 'Montserrat', sans-serif;
+  font-family: Proxima Nova,Arial,sans-serif;
+
+  font-weight: 400;
+
+  font-style: normal;
 }
 
  #nav-bar {
    display: flex;
    justify-content: space-between;
    align-items: center;
-  width: 90%;
+  width: 95%;
   padding-top: 10px;
   height: 60px; 
  }
@@ -198,4 +202,140 @@ body {
 
 .form-padding {
   padding-top: 140px;
+}
+
+.bg-slides {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 540px;
+  background: rgba(184, 184, 184, 0.7) url(https://cdn-assets.alltrails.com/assets/hero-images/hero-logged-out-4-w2800-8101fd3fe5602c8673f357905e28daddad847cbcc9e9f5ba912ed0916ffc64be.jpg);
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position-y: center !important;
+  background-blend-mode: darken !important;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 60px;
+  font-weight: 550;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.13;
+  letter-spacing: normal;
+  color: white;
+  margin-top: -49px;
+}
+
+.search-bar {
+  width: 545px;
+  height: 65px;
+  border-radius: 32px;
+  margin-top: 25px;
+  padding-left: 32px;
+}
+
+.demo-container {
+  display:flex;
+  align-self: center;
+  margin-top: 40px;
+}
+
+.search-form {
+  display: flex;
+}
+
+.search-button {
+  margin-left: -46px;
+  margin-top: 43px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background-color: #428a13;
+  transition: background-color .2s ease-in-out;
+}
+
+.trail-cards {
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+}
+
+.module-picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 540px;
+  background: url(https://cdn-assets.alltrails.com/assets/packs/e3fa1d17f1690743adf8.jpg);
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position-y: center !important;
+}
+
+/* .module-picture:after {
+  background: radial-gradient(circle at 47% 65%,hsla(0,0%,100%,0),rgba(0,0,0,.9) 65%);
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 540px;
+  left: 0;
+} */
+
+.module-text {
+  width: 60%;
+  margin-top: 26px;
+}
+
+.module-title {
+  font-size: 64px;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 42px;
+  color: white;
+}
+
+.module-title2 {
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  font-size: 64px;
+  line-height: 96px;
+  color: #f5d24b;
+}
+
+.module-description {
+  font-size: 13px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: normal;
+  color: #fff;
+  margin-top: 7px;
+  max-width: 239px;
+}
+
+.card-container {
+  display: flex;
+  width: 60%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border:#6f6f6f solid;
+  border-radius: 10%;
+  width: 120px;
+  height: 120px;
+  color: #6f6f6f;
 }
