@@ -364,3 +364,7 @@ body {
 .park-search-bar {
   align-self: center;
 }
+
+.breadcrumb-link {
+  text-decoration: none;
+}

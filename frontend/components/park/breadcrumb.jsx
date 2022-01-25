@@ -1,15 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class Breadcrumb extends React.Component {
 
   render() {
     const {park} = this.props
     return <div className="breadcrumb-container">
-      <div className="breadcrumb-country">{park.country}</div>
+
+      <Link className="breadcrumb-country breadcrumb-link">{park.country}</Link>
       <span>&nbsp; › &nbsp;</span>
-      <div className="breadcrumb-state">{park.state}</div>
+      <Link className="breadcrumb-state breadcrumb-link">{park.state}</Link>
       <span>&nbsp; › &nbsp;</span>
-      <div className="breadcrumb-name">{park.park_name}</div>
+      <Link className="breadcrumb-name breadcrumb-link">{park.park_name}</Link>
 
     </div>
   }
