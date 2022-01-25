@@ -28,13 +28,27 @@ class Park extends React.Component {
       <div className="park-trail-photos">
       </div>
 
-      <div className="park-title">
-        Best Trails in {park.park_name}
-      </div>
+      <div className="park-module">
+        <div className="park-title-info">
+          <p className="park-title">Best Trails in {park.park_name}</p>
+          <div className="park-review">
+            <div className="park-stars">
+              <span class="fa fa-star checked star"></span>
+              <span class="fa fa-star checked star"></span>
+              <span class="fa fa-star checked star"></span>
+              <span class="fa fa-star checked star"></span>
+              <span class="fa fa-star star"></span>
+            </div>
+            <div className='park-review-text'>1032 Reviews</div>
+          </div>
+        </div>
 
-      <div className="park-info"></div>
-      
-      <div className="park-trail-index"></div>
+        <div className="park-info">
+          {park.description}
+        </div>
+        
+        <div className="park-trail-index"></div>
+      </div>
     </div>
   }
 }

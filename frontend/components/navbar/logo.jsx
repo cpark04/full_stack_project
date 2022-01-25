@@ -6,7 +6,7 @@ class Logo extends React.Component {
   render() {
     return (
       <Link to='/' className="logo">
-        <img src='/logoImg.png'alt="" width="65px"/>
+        <img src='/logoImg.png'alt="" width="55px"/>
         <span className="logo-title">SomeTrails</span>
       </Link>
     )

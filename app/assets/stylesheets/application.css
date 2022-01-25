@@ -77,8 +77,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 95%;
-  padding-top: 10px;
+  width: 98%;
   height: 60px; 
   border-bottom: 1px solid;
   border-color: #dfdbdb;
@@ -97,7 +96,7 @@ body {
 .session-button {
   align-items: center;
   appearance: button;
-  background-color: #0276FF;
+  background-color: #219ad8;
   border-radius: 8px;
   border-style: none;
   box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
@@ -129,8 +128,46 @@ body {
   background-color: #1C84FF;
 }
 
+.session-button2 {
+  align-items: center;
+  appearance: button;
+  background-color: white;
+  border-radius: 8px;
+  border-style: solid;
+  border: solid 2px;
+  border-color: #219ad8;
+  box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
+  box-sizing: border-box;
+  color: #219ad8;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: "RM Neue",sans-serif;
+  font-size: 90%;
+  line-height: 1.15;
+  margin: 5px;
+  padding: 10px 21px;
+  text-align: center;
+  text-transform: none;
+  transition: color .13s ease-in-out,background .13s ease-in-out,opacity .13s ease-in-out,box-shadow .13s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-decoration: none;
+}
+
+.session-button2:active {
+  background-color: #006AE8;
+}
+
+.session-button2:hover {
+  background-color: #1C84FF;
+}
+
 .nav-explore {
-  width: 33.33%
+  width: 33.33%;
+  font-size: 14px;
 }
 
 .logo {
@@ -143,7 +180,7 @@ body {
 }
 
 .logo-title {
-  font-size: 30px;
+  font-size: 28px;
   text-decoration: none;
 }
 
@@ -205,6 +242,8 @@ body {
 .form-padding {
   padding-top: 140px;
 }
+
+/* root page */
 
 .bg-slides {
   display: flex;
@@ -346,9 +385,7 @@ body {
 
 .park-search-component {
   display:flex;
-  margin: auto;
   width: 100%;
-  max-width: 1024px;
   justify-content: space-between;
   color: #9d9d9d;
   height: 40px;
@@ -374,7 +411,7 @@ body {
 .park-container {
   display: flex;
   flex-direction: column;
-  width: 65%;
+  width: 60%;
   margin: auto;
 }
 
@@ -384,5 +421,48 @@ body {
 }
 
 .checked {
-  color: orange;
+  color: #f5d24b;
+}
+
+.park-title-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.13;
+  letter-spacing: -.3px;
+  color: #414141;
+  margin-top: 40px;
+}
+
+.park-review {
+  display: flex;
+  font-size: 15px;
+  color: #5a5a5a;
+  line-height: 1.5;
+  padding-bottom: 12px;
+}
+
+.park-review-text {
+  padding-left: 5px;
+}
+
+.star {
+  padding-left: 7px;
+}
+
+.park-title {
+  padding-bottom: 8px;
+}
+
+.park-info {
+  padding-bottom: 24px;
+  white-space: pre-wrap;
+  font-size: 18px;
+  color: #5a5a5a;
+  line-height: 1.6;
+}
+
+.park-module {
+  max-width: 763px;
 }

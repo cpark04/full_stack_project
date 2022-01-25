@@ -6,7 +6,7 @@ class Button extends React.Component {
   render() {
     let buttons = <div className="nav-button">
       <Link to='/signup' className="session-button">Sign Up</Link>
-      <Link to='/login' className="session-button">Login</Link>
+      <Link to='/login' className="session-button2">Login</Link>
     </div>
 
     if (this.props.currentUser) {
