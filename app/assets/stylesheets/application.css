@@ -66,9 +66,9 @@ header {
 }
 
 body { 
-  font-family: Proxima Nova,Arial,sans-serif;
+  font-family: proxima-nova, sans-serif;
 
-  font-weight: 400;
+  font-weight: 100;
 
   font-style: normal;
 }
@@ -168,6 +168,8 @@ body {
 .nav-explore {
   width: 33.33%;
   font-size: 14px;
+  font-weight: 700;
+  color: #414141;
 }
 
 .logo {
@@ -411,7 +413,7 @@ body {
 .park-container {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 57%;
   margin: auto;
 }
 
