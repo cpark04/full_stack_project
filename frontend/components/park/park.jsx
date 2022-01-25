@@ -26,6 +26,7 @@ class Park extends React.Component {
       </div>
 
       <div className="park-trail-photos">
+        
       </div>
 
       <div className="park-module">
@@ -43,8 +44,11 @@ class Park extends React.Component {
           </div>
         </div>
 
-        <div className="park-info">
-          {park.description}
+        <div className="park-summary">
+          <div className="park-intro">{park.intro}</div>
+          <div className="park-text-description">Description</div>
+          <div className="park-description">{park.description}</div>
+
         </div>
         
         <div className="park-trail-index"></div>
