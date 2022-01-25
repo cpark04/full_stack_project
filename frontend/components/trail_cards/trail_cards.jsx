@@ -9,7 +9,6 @@ class TrailCards extends React.Component {
       <div className="card">Trail Card Placeholder</div>
       <div className="card">Trail Card Placeholder</div>
       <div className="card">Trail Card Placeholder</div>
-      <div className="card">Trail Card Placeholder</div>
     </div>
   }
 }

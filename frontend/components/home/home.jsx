@@ -2,9 +2,17 @@ import React from "react";
 import PhotoSlides from "./photo_slides";
 import SearchBar from "../search/search_bar";
 import TrailCards from "../trail_cards/trail_cards";
+import { Link } from "react-router-dom";
 
 class Home extends React.Component {
+
+  componentDidMount() {
+    this.props.fetchParks();
+  }
+
   render(){
+    if (!this.props.parks) return null
+
     return <div className="home-page">
       
       <div className='bg-slides'>
@@ -26,6 +34,12 @@ class Home extends React.Component {
       
       <div className="phone-module">
         
+      </div>
+
+      <div>
+        {this.props.parks.map((park) => {
+          return <Link to={`/park/${park.id}`} key={park.id}>{park.park_name}</Link>
+        })}
       </div>
     </div>
   }

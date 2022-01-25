@@ -1,5 +1,7 @@
 import React from "react";
 import Breadcrumb from "./breadcrumb";
+import 'dotenv/config' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+import express from 'express'
 
 class Park extends React.Component {
 
@@ -25,7 +27,13 @@ class Park extends React.Component {
         </form>
       </div>
 
-      <div className="park-trail-photos"></div>
+      <div className="park-trail-photos">
+        {process.env.KEY}
+      </div>
+
+      <div className="park-title">
+        Best Trails in {park.park_name}
+      </div>
 
       <div className="park-info"></div>
       
