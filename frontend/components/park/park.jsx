@@ -26,7 +26,6 @@ class Park extends React.Component {
       </div>
 
       <div className="park-trail-photos">
-        {process.env.KEY}
       </div>
 
       <div className="park-title">
