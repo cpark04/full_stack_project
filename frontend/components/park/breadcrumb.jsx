@@ -7,11 +7,11 @@ class Breadcrumb extends React.Component {
     const {park} = this.props
     return <div className="breadcrumb-container">
 
-      <Link className="breadcrumb-country breadcrumb-link">{park.country}</Link>
+      <div className="breadcrumb-country breadcrumb-link">{park.country}</div>
       <span>&nbsp; › &nbsp;</span>
-      <Link className="breadcrumb-state breadcrumb-link">{park.state}</Link>
+      <div className="breadcrumb-state breadcrumb-link">{park.state}</div>
       <span>&nbsp; › &nbsp;</span>
-      <Link className="breadcrumb-name breadcrumb-link">{park.park_name}</Link>
+      <div className="breadcrumb-name breadcrumb-link">{park.park_name}</div>
 
     </div>
   }
