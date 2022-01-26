@@ -479,3 +479,16 @@ body {
   padding-top: 26px;
   padding-bottom: 10px;
 }
+
+.park-map-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.park-map {
+  border-radius: 8px;
+}
+
+.dir-print-share-container {
+  display: flex;
+}
