@@ -50,15 +50,19 @@ class Park extends React.Component {
   }
 
   socialLinkRender() {
-    // console.log(this.props.park.social_url)
-    // const socialLinks = JSON.parse(this.props.park.social_url);
-    // console.log(socialLinks)
-    // socialLinks = {Facebook: 'www.facebook.com', Website: 'www.website.com'}
-    // let render = [];
-    // for (const key in socialLinks) {
-    //   render.push(<a href={socialLinks[key]}>{key}</a>)
-    // }
-    // return render
+    if (!this.props.park.social_url) return null;
+
+   return JSON.parse(this.props.park.social_url).map((url, idx) => {
+      return <a className="park-link-individual" key={'social'+`${idx}`} href={url[1]}>{url[0]}</a>
+    })
+  }
+
+  hoursRender() {
+    if (!this.props.park.hours) return null;
+
+    return JSON.parse(this.props.park.hours).map((hour, idx) => {
+      return <div key={idx}>{hour}</div>
+    })
   }
 
   render() {
@@ -148,9 +152,7 @@ class Park extends React.Component {
                     <div>Sunday</div>
                   </div>
                   <div className="table-hours">
-                    {JSON.parse(park.hours).map((hour, idx) => {
-                      return <div key={idx}>{hour}</div>
-                    })}
+                    {this.hoursRender()}
                   </div>
                 </div>
               </div>
@@ -163,9 +165,7 @@ class Park extends React.Component {
               <div className="park-links">
                 <div className="park-sub-title">Helpful links</div>
                 <div className="park-link">
-                  {JSON.parse(park.social_url).map((url, idx) => {
-                    return <a className="park-link-individual" key={'social'+`${idx}`} href={url[1]}>{url[0]}</a>
-                  })}
+                  {this.socialLinkRender()}
                 </div>
               </div>
             </div>

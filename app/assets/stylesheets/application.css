@@ -714,3 +714,8 @@ body {
   font-weight: bold;
   color: red;
 }
+
+.spencer-container {
+  text-align: center;
+  padding-top: 30px;
+}
