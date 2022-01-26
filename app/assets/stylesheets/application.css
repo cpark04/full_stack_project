@@ -389,6 +389,7 @@ body {
 .park-search-component {
   display:flex;
   width: 100%;
+  max-width: 974px;
   justify-content: space-between;
   color: #5a5a5a;
   height: 40px;
@@ -458,12 +459,14 @@ body {
 .park-container {
   display: flex;
   flex-direction: column;
-  width: 57%;
+  width: 100%;
+  max-width: 974px;
   margin: auto;
 }
 
 .park-trail-photos {
   height: 240px;
+  max-width: 974px;
 }
 
 .checked {
