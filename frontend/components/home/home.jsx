@@ -23,6 +23,14 @@ class Home extends React.Component {
         <TrailCards />
       </div>
       
+      <div>
+        {this.props.parks.map((park) => {
+          return <div key={park.id}>
+            <Link to={`/park/${park.id}`}>{park.park_name}</Link>
+          </div>
+        })}
+      </div>
+
       <div className="module-picture">
         <div className="module-text">
           <h1 className="module-title">Explore with</h1>
@@ -36,11 +44,6 @@ class Home extends React.Component {
         
       </div>
 
-      <div>
-        {this.props.parks.map((park) => {
-          return <Link to={`/park/${park.id}`} key={park.id}>{park.park_name}</Link>
-        })}
-      </div>
     </div>
   }
 }
