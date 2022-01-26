@@ -491,4 +491,37 @@ body {
 
 .dir-print-share-container {
   display: flex;
+  padding: 24px 0 24px 0;
+  max-width: 763px
+}
+
+.park-dir {
+  display: flex;
+  width: 33.33%;
+  text-decoration: none;
+  color: #428a13;
+  font-size: 16px;
+  line-height: 1.38;
+  font-weight: 400;
+  justify-content: center;
+  align-items: center;
+}
+
+.dir-button {
+  background-image: url("https://cdn-assets.alltrails.com/assets/packs/89c516cd5541a5675db8.svg");
+  height: 60px;
+  width: 60px;
+  align-items: center;
+  background-color: #fff;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 24%), 0 0 8px 0 rgb(0 0 0 / 8%);
+  display: flex;
+  justify-content: center;
+  outline: none;
+  position: relative;
+  transition: .2s ease-in-out;
+  z-index: 99;
 }

@@ -53,9 +53,10 @@ class Park extends React.Component {
         <div className="park-map-container">
           <img src={park.mapUrl} alt="" className="park-map"/>
           <div className="dir-print-share-container">
-            <a href={`https://www.google.com/maps/dir/Current+Location/${park.latitude},${park.longitude}`} className="park-dir" target="_blank">DIR</a>
-            <a className="park-print"></a>
-            <a className="park-share"></a>
+            <a href={`https://www.google.com/maps/dir/Current+Location/${park.latitude},${park.longitude}`} className="park-dir" target="_blank">
+              <div className="dir-button"></div>
+              <span>Directions</span>
+            </a>
           </div>
         </div>
         
