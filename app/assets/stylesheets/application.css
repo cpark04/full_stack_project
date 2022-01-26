@@ -530,6 +530,8 @@ body {
 .park-map-container {
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid;
+  border-color: #dfdbdb;
 }
 
 .park-map {
@@ -640,4 +642,75 @@ body {
 #myBtn {
   text-decoration: none;
   color: #428a13;
+}
+
+.park-information {
+  margin-top: 45px;
+  letter-spacing: 0.3px;
+  line-height: 21px;
+}
+
+.park-information-main {
+  display: flex;
+  margin-top: 25px;
+}
+
+.park-information-title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.27;
+  color: #414141;
+}
+
+.park-sub-title {
+  font-size: 16px;
+  line-height: 1.38;
+  font-weight: 700;
+  color: #414141;
+}
+
+.park-information-left {
+  width: 50%;
+}
+
+.park-link {
+  display: flex;
+  flex-direction: column;
+}
+
+.park-link-individual {
+  text-decoration: none;
+  color: #428a13;
+  display: block;
+  width: 270px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 4px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.park-acre {
+  margin-right: 24px;
+  margin-bottom: 24px;
+}
+
+.park-contact {
+  margin-right: 24px;
+  margin-bottom: 24px;
+}
+
+.hour-table {
+  display: flex;
+}
+
+.table-day {
+  width: 50%;
+}
+
+.spencer-click {
+  font-size: 25px;
+  font-weight: bold;
+  color: red;
 }

@@ -49,9 +49,22 @@ class Park extends React.Component {
     this.props.fetchPark(this.props.match.params.parkId);
   }
 
+  socialLinkRender() {
+    // console.log(this.props.park.social_url)
+    // const socialLinks = JSON.parse(this.props.park.social_url);
+    // console.log(socialLinks)
+    // socialLinks = {Facebook: 'www.facebook.com', Website: 'www.website.com'}
+    // let render = [];
+    // for (const key in socialLinks) {
+    //   render.push(<a href={socialLinks[key]}>{key}</a>)
+    // }
+    // return render
+  }
+
   render() {
     if (!this.props.park) return null;
     const {park} = this.props;
+
 
     return <div className="park-container">
 
@@ -115,6 +128,48 @@ class Park extends React.Component {
         </div>
 
         <div className="park-information">
+          <div className="park-information-title">Park information</div>
+          <div className="park-information-main">
+            <div className="park-information-left">
+              <div className="park-acre">
+                <div className="park-sub-title">Acreage:</div>
+                <div>{park.acre}</div>
+              </div>
+              <div className="park-hours">
+                <div className="park-sub-title">Park hours</div>
+                <div className="hour-table">
+                  <div className="table-day">
+                    <div>Monday</div>
+                    <div>Tuesday</div>
+                    <div>Wednesday</div>
+                    <div>Thursday</div>
+                    <div>Friday</div>
+                    <div>Saturday</div>
+                    <div>Sunday</div>
+                  </div>
+                  <div className="table-hours">
+                    {JSON.parse(park.hours).map((hour, idx) => {
+                      return <div key={idx}>{hour}</div>
+                    })}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="park-information-right">
+              <div className="park-contact">
+                <div className="park-sub-title">Contact</div>
+                <div>{park.contact}</div>
+              </div>
+              <div className="park-links">
+                <div className="park-sub-title">Helpful links</div>
+                <div className="park-link">
+                  {JSON.parse(park.social_url).map((url, idx) => {
+                    return <a className="park-link-individual" key={'social'+`${idx}`} href={url[1]}>{url[0]}</a>
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
 
         </div>
 

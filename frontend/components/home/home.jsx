@@ -23,7 +23,7 @@ class Home extends React.Component {
         <TrailCards />
       </div>
       
-      <div>
+      <div><span className="spencer-click">SPENCER CLICK HEREEE!!! This is my temp park show links</span>
         {this.props.parks.map((park) => {
           return <div key={park.id}>
             <Link to={`/park/${park.id}`}>{park.park_name}</Link>
