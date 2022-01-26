@@ -1,5 +1,6 @@
 import React from "react";
 import Breadcrumb from "./breadcrumb";
+import Slider from "react-slick"
 
 class Park extends React.Component {
 
@@ -20,6 +21,29 @@ class Park extends React.Component {
       moreText.style.display = "none";
     }
   }
+
+  simpleSlider() {
+    const settings = {
+      dots: false,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      arrows: true,
+    };
+
+    return(
+      <Slider {...settings}>
+        <div><img src="https://bit.ly/3IAAk6T" alt="" className="slide-img"/></div>
+        <div><img src="https://bit.ly/3u0XHlZ" alt="" className="slide-img"/></div>
+        <div><img src="https://bit.ly/3GeLz3r" alt="" className="slide-img"/></div>
+        <div><img src="https://bit.ly/3o1a8um" alt="" className="slide-img"/></div>
+        <div><img src="https://bit.ly/32xtRdz" alt="" className="slide-img"/></div>
+        <div><img src="https://bit.ly/3AvTQyq" alt="" className="slide-img"/></div>
+      </Slider>
+    )
+  }
+  
 
   componentDidMount(){
     this.props.fetchPark(this.props.match.params.parkId);
@@ -43,7 +67,7 @@ class Park extends React.Component {
       </div>
 
       <div className="park-trail-photos">
-        
+        {this.simpleSlider()}
       </div>
 
       <div className="park-module">
@@ -91,7 +115,7 @@ class Park extends React.Component {
         </div>
 
         <div className="park-information">
-          
+
         </div>
 
         <div className="park-trail-index"></div>
