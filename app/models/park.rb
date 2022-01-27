@@ -3,4 +3,6 @@ class Park < ApplicationRecord
 
   has_one_attached :small_map
 
+  has_many :trails
+
 end
