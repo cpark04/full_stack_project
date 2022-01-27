@@ -1,3 +1,62 @@
 // Place all the styles related to the api::trails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.trail-bg-color {
+  background: #f2f2f2;
+}
+
+.trail-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
+}
+
+.trail-search-component {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  color: #5a5a5a;
+  height: 40px;
+  padding: 8px 0px 8px 0;
+}
+
+.trail-photo-info-container {
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+
+.trail-photo-bar {
+  height: 312px;
+  background-image: url("https://photos.alltrails.com/eyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvMjQwMjA0MjcvZDMyNjJkYmNhYWJkZTEyZTQ3ODVlNWRiOWY2MWE3NjcuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJqcGVnIiwicmVzaXplIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDgsImZpdCI6Imluc2lkZSJ9LCJyb3RhdGUiOm51bGwsImpwZWciOnsidHJlbGxpc1F1YW50aXNhdGlvbiI6dHJ1ZSwib3ZlcnNob290RGVyaW5naW5nIjp0cnVlLCJvcHRpbWlzZVNjYW5zIjp0cnVlLCJxdWFudGlzYXRpb25UYWJsZSI6M319fQ=="), linear-gradient(#eb01a5, #d13531);
+  background-size: cover;
+  background-position-y: center;
+}
+
+.trail-photo {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  display: block;
+  z-index: -9999;
+}
+
+.trail-photo-title {
+  font-family: Proxima Nova,Arial,sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  margin: 0 0 6px;
+  color: white
+}
+
+.trail-photo-info {
+  margin-top: -129px;
+  margin-left: 24px;
+}

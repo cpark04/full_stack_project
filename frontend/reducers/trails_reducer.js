@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_TRAIL, RECEIVE_TRAIL } from "../actions/trail_actions";
+import { RECEIVE_ALL_TRAILS, RECEIVE_TRAIL } from "../actions/trail_actions";
 
 const trailsReducer = (state = {}, action) => {
     Object.freeze(state);
@@ -6,7 +6,7 @@ const trailsReducer = (state = {}, action) => {
     switch (action.type) {
         case RECEIVE_ALL_TRAILS:
             return action.trails;
-        case RECEIVE_trail:
+        case RECEIVE_TRAIL:
             newState[action.trail.id] = action.trail;
             return newState;   
         default:
