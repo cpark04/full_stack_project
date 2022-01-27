@@ -384,6 +384,42 @@ body {
   color: #6f6f6f;
 }
 
+footer {
+  height: 170px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 50px
+}
+
+.footer-logo {
+  align-self: center;
+}
+
+.footer-social {
+  align-self: center;
+}
+
+.footer-name {
+  text-align: center;
+}
+
+.github-button {
+  width: 40px
+}
+
+.linkedin-button {
+  width: 40px;
+  padding-left: 12px;
+}
+
+.angel-button {
+  width: 44px;
+  padding-left: 10px;
+}
 /* park component */
 
 .park-search-component {

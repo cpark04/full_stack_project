@@ -7,6 +7,7 @@ import LoginFormContainer from './session/login_form_container';
 import NavBarContainer from "./navbar/navbar_container";
 import HomeContainer from "./home/home_container";
 import ParkContainer from "./park/park_container";
+import Footer from "./footer/footer";
 
 const App = () => (
    <div>
@@ -21,6 +22,10 @@ const App = () => (
       <Route exact path="/" component={HomeContainer} />
       <Redirect from="*" to="/" />
     </Switch>
+
+    <footer>
+      <Footer />
+    </footer>
   </div>
 );
 
