@@ -19,15 +19,15 @@ class Home extends React.Component {
         <PhotoSlides />
       </div>
 
-      <div className="spencer-container"><span className="spencer-click">SPENCER CLICK HEREEE!!! These are my temp park show links</span>
-        {this.props.parks.map((park) => {
-          return <div key={park.id}>
-            <Link to={`/park/${park.id}`}>{park.park_name}</Link>
-          </div>
-        })}
-      </div>
 
       <div className='trail-cards'>
+        <div className="spencer-container"><span className="spencer-click">SPENCER CLICK HEREEE!!! These are my temp park show links</span>
+          {this.props.parks.map((park) => {
+            return <div key={park.id}>
+              <Link to={`/park/${park.id}`}>{park.park_name}</Link>
+            </div>
+          })}
+        </div>
         <TrailCards />
       </div>
       

@@ -304,9 +304,11 @@ body {
 
 .trail-cards {
   display: flex;
+  flex-direction: column;
   height: 400px;
   justify-content: center;
   align-items: center;
+  background: #f2f2f2;
 }
 
 .module-picture {
@@ -382,10 +384,12 @@ body {
   width: 290px;
   height: 220px;
   color: #6f6f6f;
+  background:white;
 }
 
 footer {
   height: 170px;
+  background: #f2f2f2
 }
 
 .footer-container {
@@ -684,6 +688,9 @@ footer {
   margin-top: 45px;
   letter-spacing: 0.3px;
   line-height: 21px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid;
+  border-color: #dfdbdb;
 }
 
 .park-information-main {
