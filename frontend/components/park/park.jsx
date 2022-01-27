@@ -1,6 +1,9 @@
 import React from "react";
 import Breadcrumb from "./breadcrumb";
 import Slider from "react-slick"
+import ShareModal from "../modal/share_modal";
+import { useState } from "react";
+
 
 class Park extends React.Component {
 
@@ -65,13 +68,18 @@ class Park extends React.Component {
     })
   }
 
+  printPage(e) {
+    e.preventDefault();
+    window.print()
+  }
+
   render() {
     if (!this.props.park) return null;
     const {park} = this.props;
 
 
-    return <div className="park-container">
 
+    return <div className="park-container">
       <div className="park-search-component">
         <Breadcrumb park={park} />
 
@@ -119,12 +127,12 @@ class Park extends React.Component {
               <span>Directions</span>
             </a>
 
-            <a href={`https://www.google.com/maps/dir/Current+Location/${park.latitude},${park.longitude}`} className="park-dir" target="_blank">
+            <a href='' className="park-dir" onClick={this.printPage}>
               <div className="print-button"></div>
               <span>Print map</span>
             </a>
 
-            <a href={`https://www.google.com/maps/dir/Current+Location/${park.latitude},${park.longitude}`} className="park-dir" target="_blank">
+            <a className="park-dir">
               <div className="share-button"></div>
               <span>Share</span>
             </a>
