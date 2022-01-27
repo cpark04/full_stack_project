@@ -6,6 +6,7 @@ import LoginFormContainer from './session/login_form_container';
 import NavBarContainer from "./navbar/navbar_container";
 import HomeContainer from "./home/home_container";
 import ParkContainer from "./park/park_container";
+import TrailContainer from "./trail/trail_container";
 import Footer from "./footer/footer";
 
 const App = () => (
@@ -17,6 +18,7 @@ const App = () => (
       <AuthRoute path="/login" component={LoginFormContainer} />
       <AuthRoute path="/signup" component={SignupFormContainer} />
       <Route path="/park/:parkId" component={ParkContainer} />
+      <Route path="/trail/:trailId" component={TrailContainer} />
 
       <Route exact path="/" component={HomeContainer} />
       <Redirect from="*" to="/" />

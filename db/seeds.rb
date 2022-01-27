@@ -6,9 +6,16 @@ require 'open-uri'
 
 User.destroy_all
 Park.destroy_all
+Trail.destroy_all
 
+
+# USER DATA
 demo = User.create!(fname: 'demo', lname: 'demo', email: 'demo@gmail.com', password: '12341234')
 
+
+
+
+# PARK DATA
 yosemite = Park.create!(park_name: 'Yosemite National Park', description: "With over 3.5 million yearly visitors from throughout the world, the iconic Yosemite National Park is known for some of the most beautiful hikes and landscapes in the United States. There are over 800 miles of trails to explore through Yosemite Valley, Tuolumne Meadows, and Wawona. Yosemite has so much to see including the sequoias, the flower filed meadows and valleys left behind from the glaciers, the highest waterfall in the United States, and the spectacular Half Dome and El Capitan.
 
 Entrance Fees
@@ -62,3 +69,9 @@ Ready for your next hike or bike ride? Explore one of 27 easy hiking trails in S
 
 file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/parks/sequoiapark.png')
 sequoia.small_map.attach(io: file, filename: 'sequoiapark.png')
+
+
+
+# TRAIL DATA
+
+# vernal = Trail.create!(park_id: yosemite.id, latitude: 37.73279, longitude: -119.55782, description: "" )
