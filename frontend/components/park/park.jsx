@@ -63,9 +63,25 @@ class Park extends React.Component {
   hoursRender() {
     if (!this.props.park.hours) return null;
 
-    return JSON.parse(this.props.park.hours).map((hour, idx) => {
-      return <div key={idx}>{hour}</div>
-    })
+    return <div className="park-hours">
+      <div className="park-sub-title">Park hours</div>
+      <div className="hour-table">
+        <div className="table-day">
+          <div>Monday</div>
+          <div>Tuesday</div>
+          <div>Wednesday</div>
+          <div>Thursday</div>
+          <div>Friday</div>
+          <div>Saturday</div>
+          <div>Sunday</div>
+        </div>
+        <div className="table-hours">
+          {JSON.parse(this.props.park.hours).map((hour, idx) => {
+            return <div key={idx}>{hour}</div>
+          })}
+        </div>
+      </div>
+    </div>
   }
 
   printPage(e) {
@@ -147,23 +163,7 @@ class Park extends React.Component {
                 <div className="park-sub-title">Acreage:</div>
                 <div>{park.acre}</div>
               </div>
-              <div className="park-hours">
-                <div className="park-sub-title">Park hours</div>
-                <div className="hour-table">
-                  <div className="table-day">
-                    <div>Monday</div>
-                    <div>Tuesday</div>
-                    <div>Wednesday</div>
-                    <div>Thursday</div>
-                    <div>Friday</div>
-                    <div>Saturday</div>
-                    <div>Sunday</div>
-                  </div>
-                  <div className="table-hours">
-                    {this.hoursRender()}
-                  </div>
-                </div>
-              </div>
+             {this.hoursRender()}
             </div>
             <div className="park-information-right">
               <div className="park-contact">
