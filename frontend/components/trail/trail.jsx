@@ -62,7 +62,7 @@ class Trail extends React.Component {
       </div>
 
       <div className="trail-photo-info-container">
-        <div className="trail-photo-bar">
+        <div className="trail-photo-bar" style={{background: `linear-gradient(transparent,rgba(0,0,0,.7)), url('${trail.headPhoto}')`}}>
         </div>
         <div className="trail-photo-info"> 
           <h1 className="trail-photo-title">{trail.trail_name}</h1>
