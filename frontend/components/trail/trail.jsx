@@ -1,5 +1,7 @@
 import React from "react";
 import Breadcrumb from "../park/breadcrumb";
+import { Link } from "react-router-dom";
+
 
 class Trail extends React.Component {
 
@@ -27,18 +29,90 @@ class Trail extends React.Component {
         </div>
         <div className="trail-photo-info"> 
           <h1 className="trail-photo-title">{trail.trail_name}</h1>
-          <div className="trail-rating-diff">hard rating</div>
-          <div className="trail-photo-park-name">{trail.park_name}</div>
+          <div className="trail-rating-diff">
+            <span className="trail-difficulty">hard</span>
+            <span className="trail-stars">
+              <span className="fa fa-star checked star"></span>
+              <span className="fa fa-star checked star"></span>
+              <span className="fa fa-star checked star"></span>
+              <span className="fa fa-star checked star"></span>
+              <span className="fa fa-star star"></span>
+            </span>
+          </div>
+          <Link className="trail-park-name" to={`/park/${trail.park_id}`}>{trail.park_name}</Link>
         </div>
         <div className="trail-photo-buttons">
-          <ul className="trail-button-uo-list">
-            <li className="trail-button-photo"></li>
-            <li className="trail-button-directions"></li>
-            <li className="trail-button-print"></li>
-            <li className="trail-button-share"></li>
+          <ul className="trail-button-photo-uo">
+            <li className="trail-button-photo trail-photo-li">
+              <a href="" className="trail-button-photo-a">
+                <div className="trail-button-icon-container">
+                  <div className="trail-button-photo-icon"></div>
+                </div>
+                <span className="trail-button-photo-text">Photos (12,423)</span>
+              </a>
+            </li>
+            <li className="trail-button-directions trail-photo-li">
+              <a href="" className="trail-button-photo-a">
+                <div className="trail-button-icon-container">
+                  <div className="trail-button-dir-icon"></div>
+                </div>
+                <span className="trail-button-photo-text">Directions</span>
+              </a>
+            </li>
+            <li className="trail-button-print trail-photo-li">
+              <a href="" className="trail-button-photo-a">
+                <div className="trail-button-icon-container">
+                  <div className="trail-button-print-icon"></div>
+                </div>
+                <span className="trail-button-photo-text">Print/PDF</span>
+              </a>
+            </li>
+            <li className="trail-button-share trail-photo-li">
+              <a href="" className="trail-button-photo-a">
+                <div className="trail-button-icon-container">
+                  <div className="trail-button-share-icon"></div>
+                </div>
+                <span className="trail-button-photo-text">Share</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
+
+      <div className="trail-body-container">
+        
+        <div className="trail-left-container">
+
+          <div className="trail-left-intro">{trail.intro}</div>
+
+          <div className="trail-left-info">
+            <div className="trail-info-block">
+              <div className="trail-info-text">Length</div>
+              <div className="trail-info-value">{trail.length}</div>
+            </div>
+            <div className="trail-info-block">
+              <div className="trail-info-text">Elevation gain</div>
+              <div className="trail-info-value">{trail.elevation_gain}</div>
+            </div>
+            <div className="trail-info-block">
+              <div className="trail-info-text">Route type</div>
+              <div className="trail-info-value">{trail.route_type}</div>
+            </div>
+          </div>
+
+          
+
+        </div>
+
+
+        <div className="trail-right-container">
+          placeholder
+        </div>
+
+
+
+      </div>
+
     </div>
 
 

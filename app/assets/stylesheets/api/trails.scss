@@ -1,6 +1,9 @@
 // Place all the styles related to the api::trails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+a {
+  text-decoration: none !important;
+}
 
 .trail-bg-color {
   background: #f2f2f2;
@@ -30,8 +33,9 @@
 }
 
 .trail-photo-bar {
-  height: 312px;
-  background-image: url("https://photos.alltrails.com/eyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvMjQwMjA0MjcvZDMyNjJkYmNhYWJkZTEyZTQ3ODVlNWRiOWY2MWE3NjcuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJqcGVnIiwicmVzaXplIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDgsImZpdCI6Imluc2lkZSJ9LCJyb3RhdGUiOm51bGwsImpwZWciOnsidHJlbGxpc1F1YW50aXNhdGlvbiI6dHJ1ZSwib3ZlcnNob290RGVyaW5naW5nIjp0cnVlLCJvcHRpbWlzZVNjYW5zIjp0cnVlLCJxdWFudGlzYXRpb25UYWJsZSI6M319fQ=="), linear-gradient(#eb01a5, #d13531);
+  height: 365px;
+  background-image: linear-gradient(transparent,rgba(0,0,0,.7)), url("https://bit.ly/3KPYgFd");
+
   background-size: cover;
   background-position-y: center;
 }
@@ -57,6 +61,196 @@
 }
 
 .trail-photo-info {
-  margin-top: -129px;
+  margin-top: -176px;
   margin-left: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.trail-photo-buttons {
+  background: #428a13;
+  height: 55px;
+  margin-top: 40px;
+  border-top: none;
+}
+
+.trail-button-photo-uo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.trail-photo-li {
+  text-align: center;
+  background: #428a13;
+  width: 100%;
+  height: 55px;
+}
+
+.trail-button-photo-a {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  top: -24px;
+  cursor: pointer;
+}
+
+.trail-button-icon-container {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,24%);
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 4px;
+  position: relative;
+  // background-image: url("https://cdn-assets.alltrails.com/assets/packs/81f81b5c0141865c3d4f.png");
+}
+
+.trail-button-photo-text {
+  font-family: Proxima Nova,Arial,sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #fff;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.trail-button-photo-icon {
+  background-image: url("https://cdn-assets.alltrails.com/assets/packs/81f81b5c0141865c3d4f.png");
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+}
+
+.trail-button-dir-icon {
+  background-image: url("https://cdn-assets.alltrails.com/assets/packs/ed305b8cebf7bc15eec3.png");
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+}
+
+.trail-button-print-icon {
+  background-image: url("https://cdn-assets.alltrails.com/assets/packs/d2fa8f8221cbfde1f2b7.png");
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+}
+
+.trail-button-share-icon {
+  background-image: url("https://cdn-assets.alltrails.com/assets/packs/57e7f2b6afcda1a9713a.png");
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+}
+
+.trail-difficulty {
+  background-color: #676767;
+  color: #fff;
+  width: 72px;
+  height: 18px;
+  border-radius: 6px;
+  display: inline-block;
+  font-family: Proxima Nova,Arial,sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  line-height: 1.42;
+}
+
+.trail-park-name {
+  margin-top: 6px;
+  color: white !important;
+}
+
+.trail-body-container {
+  display: flex;
+  background: white;
+}
+
+.trail-left-container {
+  display: flex;
+  flex-direction: column;
+  width: 66.66666%
+}
+
+.trail-right-container {
+  display: flex;
+  flex-direction: column;
+  width: 33.333333%
+}
+
+.trail-left-intro {
+  color: #414141;
+  font-size: 18px;
+  line-height: 1.44;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  margin: 0 24px;
+  padding: 24px 0px;
+  font-weight: 400;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.trail-left-info {
+  display: flex;
+  margin: 0 24px;
+  padding: 24px 0px;
+  font-weight: 400;
+}
+
+.trail-info-block {
+  display: flex;
+  flex-direction: column;
+  width: 33.3333%
+}
+
+.trail-info-text {
+  color: #5a5a5a;
+  font-size: 12px;
+  line-height: 1.42;
+  display: block;
+  width: auto;
+}
+
+.trail-info-value {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.38;
+  display: block;
+  width: auto;
+  color: #414141;
+}
+
+div.scrollmenu {
+  padding: 13px;
+  background-color: #f2f2f2;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: #414141;
+  text-align: center;
+  text-decoration: none;
+  padding: 6px 0;
+  margin-right: 48px;
+  font-family: Proxima Nova,Arial,sans-serif;
+  min-width: 0;
+  letter-spacing: 1px;
+  font-size: 22px;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
 }
