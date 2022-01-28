@@ -97,7 +97,7 @@ class Park extends React.Component {
 
     return <div className="park-container">
       <div className="park-search-component">
-        <Breadcrumb park={park} />
+        <Breadcrumb item={park} />
 
         <form className='park-search-form'>
           <input type="text" className="park-search-bar" placeholder="Enter park or trail name"/>

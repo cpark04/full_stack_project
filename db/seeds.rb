@@ -6,9 +6,16 @@ require 'open-uri'
 
 User.destroy_all
 Park.destroy_all
+Trail.destroy_all
 
+
+# USER DATA
 demo = User.create!(fname: 'demo', lname: 'demo', email: 'demo@gmail.com', password: '12341234')
 
+
+
+
+# PARK DATA
 yosemite = Park.create!(park_name: 'Yosemite National Park', description: "With over 3.5 million yearly visitors from throughout the world, the iconic Yosemite National Park is known for some of the most beautiful hikes and landscapes in the United States. There are over 800 miles of trails to explore through Yosemite Valley, Tuolumne Meadows, and Wawona. Yosemite has so much to see including the sequoias, the flower filed meadows and valleys left behind from the glaciers, the highest waterfall in the United States, and the spectacular Half Dome and El Capitan.
 
 Entrance Fees
@@ -62,3 +69,23 @@ Ready for your next hike or bike ride? Explore one of 27 easy hiking trails in S
 
 file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/parks/sequoiapark.png')
 sequoia.small_map.attach(io: file, filename: 'sequoiapark.png')
+
+
+
+# TRAIL DATA
+
+vernal = Trail.create!(park_id: yosemite.id, latitude: 37.73279, longitude: -119.55782, description: "SEASONAL CLOSURE: During the winter months, portions of the John Muir Trail in Yosemite are closed. Visitors can still visit the falls, but you must return on the stairs, instead of returning on the John Muir Trail. For more information, please visit https://www.nps.gov/yose/planyourvisit/vernalnevadawinter.htm
+
+Yosemite National Park charges a fee to enter. Fees are per vehicle or per motorcycle. If you are entering on foot, horse, or bike the fee is per person. You can alternately purchase an America the Beautiful - National Parks & Federal Recreational Lands Annual Pass here: https://store.usgs.gov/pass/index.html
+
+Some services and facilities are limited in Yosemite National Park due to COVID, and shuttles are not operating.
+
+Hike to two breathtaking waterfalls along some of Yosemite Valley's most popular hiking trails. If you only have time for one hike while in Yosemite look no further - the Mist Trail is the hike for you. It is no wonder why this trail is one of the most traveled in Yosemite National Park. You will hike so close to these two massive waterfalls that you may get wet from the trail. The best time to hike this trail is in Spring or early Summer, while the snow runoff is high and the falls are full of water.
+
+The Mist Trail starts at Happy Isles Trailhead (YARTS Happy Isles shuttle stop #16, and within walking distance of Curry Village and the parking lot). The park recommends starting early to avoid the larger crowds. After a brief stroll along the river, you climb a pretty steep initial accent over stone steps until you reach the footbridge, which offers the first glimpse of Vernal Falls in the distance. You will also find a water fountain and restrooms. You will then continue up to Vernal Falls, past Emerald Pool, and alongside Nevada Falls until you reach the high-point of this hike.
+
+You can choose to take the alternate route down along the John Muir Trail to see great views of Nevada Falls and Liberty Cap in the distance before meeting back up with the Mist Trail near the footbridge. This route back is slightly longer, but offers a change of scenery and is easier on the knees. Before hopping back on the YARTS shuttle, treat yourself to some ice cream or a refreshing drink at the small stand, or head over to Curry Village for a larger variety of choices.", length: "6.0 mi", elevation_gain: "2,162 ft", route_type: "Loop", country: "United States of America", state: "California", trail_name: "Vernal and Nevada Falls via Mist Trail", intro: "Vernal and Nevada Falls via Mist Trail is a 6 mile heavily trafficked loop trail located near Yosemite Valley, California that features a waterfall and is rated as difficult. The trail is primarily used for hiking and is best used from May until October.", park_name: "Yosemite National Park", facilities: "If you visit the park in the off season you can normally park at the Happy Isles trailhead parking area and hike to the trailhead. During peak season park anywhere you can that is near the shuttle route, then take the shuttle to stop #16.", contact: "Public Information Office
+P.O. Box 577
+Yosemite, CA 95389
+Call: 209/372-0200; press 3 then 5.
+Time: 9 am to 5 pm Pacific Time (closed for lunch)", tips: "There is a water fountain at the footbridge, but you will need to bring at least 1L of water to hold you until you get back near the end of the hike.", getting_there: "Follow the link for information about travel to Yosemite. http://www.nps.gov/yose/planyourvisit/driving.htm", tags: ['Hiking', 'Forest', 'Partially paved', 'River', 'Views', 'Waterfall', 'Wildflowers', 'Wildlife', 'Rocky', 'Fee', 'No dogs'])
