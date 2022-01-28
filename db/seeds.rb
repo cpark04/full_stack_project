@@ -74,9 +74,11 @@ sequoia.small_map.attach(io: file, filename: 'sequoiapark.png')
 
 # TRAIL DATA
 
-vernal = Trail.create!(park_id: yosemite.id, latitude: 37.73279, longitude: -119.55782, description: "• SEASONAL CLOSURE: During the winter months, portions of the John Muir Trail in Yosemite are closed. Visitors can still visit the falls, but you must return on the stairs, instead of returning on the John Muir Trail. For more information, please visit https://www.nps.gov/yose/planyourvisit/vernalnevadawinter.htm
-• Yosemite National Park charges a fee to enter. Fees are per vehicle or per motorcycle. If you are entering on foot, horse, or bike the fee is per person. You can alternately purchase an America the Beautiful - National Parks & Federal Recreational Lands Annual Pass here: https://store.usgs.gov/pass/index.html
-• Some services and facilities are limited in Yosemite National Park due to COVID, and shuttles are not operating.
+vernal = Trail.create!(park_id: yosemite.id, latitude: 37.73279, longitude: -119.55782, description: "SEASONAL CLOSURE: During the winter months, portions of the John Muir Trail in Yosemite are closed. Visitors can still visit the falls, but you must return on the stairs, instead of returning on the John Muir Trail. For more information, please visit https://www.nps.gov/yose/planyourvisit/vernalnevadawinter.htm
+
+Yosemite National Park charges a fee to enter. Fees are per vehicle or per motorcycle. If you are entering on foot, horse, or bike the fee is per person. You can alternately purchase an America the Beautiful - National Parks & Federal Recreational Lands Annual Pass here: https://store.usgs.gov/pass/index.html
+
+Some services and facilities are limited in Yosemite National Park due to COVID, and shuttles are not operating.
 
 Hike to two breathtaking waterfalls along some of Yosemite Valley's most popular hiking trails. If you only have time for one hike while in Yosemite look no further - the Mist Trail is the hike for you. It is no wonder why this trail is one of the most traveled in Yosemite National Park. You will hike so close to these two massive waterfalls that you may get wet from the trail. The best time to hike this trail is in Spring or early Summer, while the snow runoff is high and the falls are full of water.
 
