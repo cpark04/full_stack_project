@@ -1,7 +1,7 @@
 import React from "react";
 import Breadcrumb from "../park/breadcrumb";
 import { Link } from "react-router-dom";
-
+import MenuBar from "../menubar/menu_bar";
 
 class Trail extends React.Component {
 
@@ -100,7 +100,7 @@ class Trail extends React.Component {
             </div>
           </div>
 
-          
+          <MenuBar trail={trail}/>
 
         </div>
 
