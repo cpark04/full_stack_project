@@ -100,6 +100,10 @@ class Trail extends React.Component {
             </div>
           </div>
 
+          <div className="trail-tags-container">
+            
+          </div>
+
           <MenuBar trail={trail}/>
 
         </div>
