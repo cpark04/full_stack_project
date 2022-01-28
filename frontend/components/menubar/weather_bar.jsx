@@ -40,7 +40,7 @@ function a11yProps(index) {
   };
 }
 
-export default function MenuBar(props) {
+export default function WeatherBar(props) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -51,27 +51,19 @@ export default function MenuBar(props) {
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="Description" {...a11yProps(0)} />
-          <Tab label="Facilities" {...a11yProps(1)} />
-          <Tab label="Contact" {...a11yProps(2)} />
-          <Tab label="Tips" {...a11yProps(3)} />
-          <Tab label="Getting There" {...a11yProps(4)} />
+          <Tab label="Weather" {...a11yProps(0)} />
+          <Tab label="UV Index" {...a11yProps(1)} />
+          <Tab label="Daylight" {...a11yProps(2)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <ShowMoreText lines={4}  ><pre>{props.trail.description}</pre></ShowMoreText>
+
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <pre>{props.trail.facilities}</pre>
+
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <pre>{props.trail.contact}</pre>
-      </TabPanel>
-      <TabPanel value={value} index={3}>
-        <pre>{props.trail.tips}</pre>
-      </TabPanel>
-      <TabPanel value={value} index={4}>
-        <pre>{props.trail.getting_there}</pre>
+        
       </TabPanel>
     </Box>
   );

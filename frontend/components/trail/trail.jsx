@@ -8,6 +8,15 @@ class Trail extends React.Component {
   componentDidMount() {
     this.props.fetchTrail(this.props.match.params.trailId);
   }
+
+  tagsRender(){
+    let render = JSON.parse(this.props.trail.tags)
+    return render.map((tag, idx) => {
+      return <div key={'tag'+`${idx}`} className="trail-tag">
+        <span className='trail-indiv-tag'>{tag}</span>
+      </div>
+    })
+  }
   
   render() {
     if (!this.props.trail) return null;
@@ -101,7 +110,7 @@ class Trail extends React.Component {
           </div>
 
           <div className="trail-tags-container">
-            
+            {this.tagsRender()}
           </div>
 
           <MenuBar trail={trail}/>

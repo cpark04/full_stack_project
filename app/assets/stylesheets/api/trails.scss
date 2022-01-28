@@ -287,7 +287,36 @@ pre {
   padding-top: 9px !important;
 }
 
-.trails-tags-container {
+.trail-tags-container {
   display: flex;
-  
+  flex-wrap: wrap;
+  padding-top: 2px;
+  padding-bottom: 29px;
+  margin: 0 24px;
+}
+
+.trail-tag {
+  margin-right: 5px;
+  margin-bottom: 0px;
+}
+
+.trail-indiv-tag {
+  padding: 5.5px 12px;
+  background-color: #ffffff;
+  font-size: 14px;
+  cursor: default;
+  margin: 5px 0;
+  display: inline-block;
+  font-weight: 500;
+  background-color: #ffffff;
+  color: #428a13;
+  white-space: nowrap;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  border: solid 1px #428a13;  
+}
+
+span a {
+  color: #428a13;
 }

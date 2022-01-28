@@ -88,4 +88,4 @@ You can choose to take the alternate route down along the John Muir Trail to see
 P.O. Box 577
 Yosemite, CA 95389
 Call: 209/372-0200; press 3 then 5.
-Time: 9 am to 5 pm Pacific Time (closed for lunch)", tips: "There is a water fountain at the footbridge, but you will need to bring at least 1L of water to hold you until you get back near the end of the hike.", getting_there: "Follow the link for information about travel to Yosemite. http://www.nps.gov/yose/planyourvisit/driving.htm")
+Time: 9 am to 5 pm Pacific Time (closed for lunch)", tips: "There is a water fountain at the footbridge, but you will need to bring at least 1L of water to hold you until you get back near the end of the hike.", getting_there: "Follow the link for information about travel to Yosemite. http://www.nps.gov/yose/planyourvisit/driving.htm", tags: ['Hiking', 'Forest', 'Partially paved', 'River', 'Views', 'Waterfall', 'Wildflowers', 'Wildlife', 'Rocky', 'Fee', 'No dogs'])
