@@ -2,11 +2,21 @@ import React from "react";
 import Breadcrumb from "../park/breadcrumb";
 import { Link } from "react-router-dom";
 import MenuBar from "../menubar/menu_bar";
+import WeatherBar from "../menubar/weather_bar";
+import { fetchWeather } from "../../util/weather_api_util";
 
 class Trail extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      forecastArray: ''
+    }
+  }
+
   componentDidMount() {
-    this.props.fetchTrail(this.props.match.params.trailId);
+    this.props.fetchTrail(this.props.match.params.trailId)
+      .then(() => this.weatherCall())
   }
 
   tagsRender(){
@@ -16,6 +26,17 @@ class Trail extends React.Component {
         <span className='trail-indiv-tag'>{tag}</span>
       </div>
     })
+  }
+
+  weatherCall() {
+    if (!this.props.trail) return null
+    fetchWeather(this.props.trail.latitude, this.props.trail.longitude)
+      .then(data => this.weatherRender(data))
+  }
+
+  weatherRender(weather) {
+    let forecastArr = weather.forecast.forecastday;
+    this.setState({forecastArray: forecastArr})
   }
   
   render() {
@@ -115,6 +136,7 @@ class Trail extends React.Component {
 
           <MenuBar trail={trail}/>
 
+          <WeatherBar lat={trail.latitude} long={trail.longitude} forecast={this.state.forecastArray}/>
         </div>
 
 

@@ -40,7 +40,9 @@ function a11yProps(index) {
   };
 }
 
-export default function WeatherBar(props) {
+
+
+export default function WeatherBar({lat, long, forecastArr}) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -57,13 +59,13 @@ export default function WeatherBar(props) {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-
+        
       </TabPanel>
       <TabPanel value={value} index={1}>
 
       </TabPanel>
       <TabPanel value={value} index={2}>
-        
+
       </TabPanel>
     </Box>
   );
