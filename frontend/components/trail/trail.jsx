@@ -10,7 +10,7 @@ class Trail extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      forecastArray: ''
+      forecastArray: '',
     }
   }
 
@@ -18,6 +18,11 @@ class Trail extends React.Component {
     this.props.fetchTrail(this.props.match.params.trailId)
       .then(() => this.weatherCall());
     this.props.fetchTrails();
+  }
+
+  printPage(e) {
+    e.preventDefault();
+    window.print()
   }
 
   tagsRender(){
@@ -40,14 +45,20 @@ class Trail extends React.Component {
     this.setState({forecastArray: forecastArr})
   }
 
-  trailIndexRender() {
-
+  difficultyColorRender(diff) {
+    if (diff === "hard") {
+      return <span className="trail-difficulty" style={{backgroundColor:"#676767"}}>{diff}</span>
+    } else if (diff === "moderate") {
+      return <span className="trail-difficulty" style={{backgroundColor:"#4bafe1"}}>{diff}</span>
+    } else {
+      return <span className="trail-difficulty" style={{backgroundColor:"#69a041"}}>{diff}</span>
+    }
   }
   
   render() {
     if (!this.props.trail) return null;
     if (!this.props.trails) return null;
-    const {trail} = this.props;
+    const {trail, trails} = this.props;
     console.log(this.props.trails)
 
     return <div className="trail-bg-color">
@@ -67,7 +78,7 @@ class Trail extends React.Component {
         <div className="trail-photo-info"> 
           <h1 className="trail-photo-title">{trail.trail_name}</h1>
           <div className="trail-rating-diff">
-            <span className="trail-difficulty">hard</span>
+            {this.difficultyColorRender(trail.difficulty)}
             <span className="trail-stars">
               <span className="fa fa-star checked star"></span>
               <span className="fa fa-star checked star"></span>
@@ -85,11 +96,11 @@ class Trail extends React.Component {
                 <div className="trail-button-icon-container">
                   <div className="trail-button-photo-icon"></div>
                 </div>
-                <span className="trail-button-photo-text">Photos (12,423)</span>
+                <span className="trail-button-photo-text">Photos</span>
               </a>
             </li>
             <li className="trail-button-directions trail-photo-li">
-              <a href="" className="trail-button-photo-a">
+              <a href={`https://www.google.com/maps/dir/Current+Location/${trail.latitude},${trail.longitude}`} className="trail-button-photo-a">
                 <div className="trail-button-icon-container">
                   <div className="trail-button-dir-icon"></div>
                 </div>
@@ -97,7 +108,7 @@ class Trail extends React.Component {
               </a>
             </li>
             <li className="trail-button-print trail-photo-li">
-              <a href="" className="trail-button-photo-a">
+              <a href="" className="trail-button-photo-a" onClick={this.printPage}>
                 <div className="trail-button-icon-container">
                   <div className="trail-button-print-icon"></div>
                 </div>
@@ -156,7 +167,41 @@ class Trail extends React.Component {
             <div className="trail-right-index-container">
               <div className="trail-right-index-title">Nearby Trails</div>
               <div className="trail-right-index">
+                <ul className="trail-right-list">
+                  {trails.map((trail, idx) => {
+                    return(
+                      <li key={'trail'+`${idx}`} className="trail-card-container">
+                        <div className="trail-card">
+                          <a href={`#/trail/${trail.id}`}>
+                            <div className="trail-card-photo-container">
+                              <img src={trail.headPhoto} alt="" className="trail-card-photo" />
+                            </div>
+                          </a>
+                          <div className="trail-card-info-container">
+                            <div className="trail-card-name">{trail.trail_name}</div>
+                            <a href={`#/park/${trail.park_id}`} className="trail-card-park">{trail.park_name}</a>
+                            <div className="trail-card-rating-container">
+                              {this.difficultyColorRender(trail.difficulty)}
+                              <span className="trail-stars">
+                                <span className="fa fa-star checked star"></span>
+                                <span className="fa fa-star checked star"></span>
+                                <span className="fa fa-star checked star"></span>
+                                <span className="fa fa-star checked star"></span>
+                                <span className="fa fa-star star"></span>
+                              </span>
+                            </div>
+                            <div className="trail-card-time-container">
+                              <span className="trail-card-length">Length: {trail.length}</span>
+                              <span>&nbsp;•&nbsp;</span>
+                              <span className="trail-card-time">Est. 3h 53m</span>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    )
+                  })}
 
+                </ul>
               </div>
             </div>
 
