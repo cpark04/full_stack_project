@@ -56,16 +56,16 @@ export default function MenuBar(props) {
         <ShowMoreText lines={4}  ><pre>{props.trail.description}</pre></ShowMoreText>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <pre>{props.trail.facilities}</pre>
+        <ShowMoreText lines={4}  ><pre>{props.trail.facilities}</pre></ShowMoreText>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <pre>{props.trail.contact}</pre>
+        <ShowMoreText lines={4}  ><pre>{props.trail.contact}</pre></ShowMoreText>
       </TabPanel>
       <TabPanel value={value} index={3}>
-        <pre>{props.trail.tips}</pre>
+        <ShowMoreText lines={4}  ><pre>{props.trail.tips}</pre></ShowMoreText>
       </TabPanel>
       <TabPanel value={value} index={4}>
-        <pre>{props.trail.getting_there}</pre>
+        <ShowMoreText lines={4}  ><pre>{props.trail.getting_there}</pre></ShowMoreText>
       </TabPanel>
     </Box>
   );

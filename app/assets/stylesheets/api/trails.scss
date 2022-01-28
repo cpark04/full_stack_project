@@ -26,6 +26,10 @@ a {
   padding: 8px 0px 8px 0;
 }
 
+.trail-stars {
+  vertical-align: middle;
+}
+
 .trail-photo-info-container {
   width: 100%;
   height: 100%;
@@ -34,10 +38,10 @@ a {
 
 .trail-photo-bar {
   height: 365px;
-  background-image: linear-gradient(transparent,rgba(0,0,0,.7)), url("https://bit.ly/3KPYgFd");
+  // background-image: linear-gradient(transparent,rgba(0,0,0,.7)), url("https://bit.ly/3KPYgFd");
 
-  background-size: cover;
-  background-position-y: center;
+  background-size: cover !important;
+  background-position-y: center !important;
 }
 
 .trail-photo {
@@ -157,7 +161,6 @@ a {
   height: 18px;
   border-radius: 6px;
   display: inline-block;
-  font-family: Proxima Nova,Arial,sans-serif;
   font-size: 12px;
   font-weight: 400;
   font-stretch: normal;
@@ -188,7 +191,9 @@ a {
 .trail-right-container {
   display: flex;
   flex-direction: column;
-  width: 33.333333%
+  width: 33.333333%;
+  padding: 24px 0;
+  border-left: 1px solid #eaeaea;
 }
 
 .trail-left-intro {
@@ -275,6 +280,7 @@ pre {
 .MuiButtonBase-root {
   font-family: Proxima Nova,Arial,sans-serif !important;
   font-size: 17px !important;
+  color: #414141 !important;
 }
 
 .MuiTabs-scroller {
@@ -403,4 +409,114 @@ span a {
   font-size: 14px;
   margin-top: 4px;
   font-weight: 100
+}
+
+.daylight-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 144px;
+  justify-content: space-between;
+  min-height: 138px;
+}
+
+.trail-right-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.trail-map-container {
+  padding: 0px 24px;
+}
+
+.trail-map {
+  width: 100%;
+  border-radius: 8px;
+  height: auto;
+}
+
+.trail-right-index-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 24px;
+}
+
+.trail-right-index-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  margin-top: 30px
+}
+
+.trail-right-list {
+  list-style: none;
+}
+
+.trail-card-container {
+  margin-bottom: 10px;
+}
+
+.trail-card {
+  display: block;
+  height: 236px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 8%);
+  background-color: #fff;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.trail-card-photo-container {
+  height: 128px;
+  min-height: 128px;
+  width: 100%;
+  min-width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.trail-card-photo {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.trail-card-info-container {
+  padding: 10px 16px;
+  line-height: 22.5px;
+  letter-spacing: .3px;
+}
+
+.trail-card-name {
+  color: #414141;
+  font-size: 18px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 700;
+  height: 24px;
+  line-height: 24px;
+  letter-spacing: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.trail-card-park {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  height: 21px;
+  line-height: 21px;
+  letter-spacing: normal;
+  color: #767676;
+}
+
+.trail-card-time-container {
+  font-size: 14px;
 }

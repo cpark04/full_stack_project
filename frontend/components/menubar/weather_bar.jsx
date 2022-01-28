@@ -131,8 +131,26 @@ export default function WeatherBar({lat, long, forecastArr}) {
 
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <ul className='weather-bar-container'>
-          
+        <ul className='daylight-container'>
+          <li className='weather-forecast'>
+            <h3 className='weather-date-uv'>
+              Sunrise
+            </h3>
+            <div className='uv-icon-container'>
+              <img src="https://cdn-assets.alltrails.com/assets/icons/cuttlefish-weather/sun/icons-daytime-sunrise.png" alt="" className='uv-icon'/>
+            </div>
+            <h4 className='uv-strength'>{forecastArr[0].astro.sunrise}</h4>
+          </li>
+
+          <li className='weather-forecast'>
+            <h3 className='weather-date-uv'>
+              Sunset
+            </h3>
+            <div className='uv-icon-container'>
+              <img src="https://cdn-assets.alltrails.com/assets/icons/cuttlefish-weather/sun/icons-daytime-sunset.png" alt="" className='uv-icon'/>
+            </div>
+            <h4 className='uv-strength'>{forecastArr[0].astro.sunset}</h4>
+          </li>
         </ul>
       </TabPanel>
     </Box>

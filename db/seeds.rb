@@ -74,6 +74,9 @@ sequoia.small_map.attach(io: file, filename: 'sequoiapark.png')
 
 # TRAIL DATA
 
+
+
+
 vernal = Trail.create!(park_id: yosemite.id, latitude: 37.73279, longitude: -119.55782, description: "SEASONAL CLOSURE: During the winter months, portions of the John Muir Trail in Yosemite are closed. Visitors can still visit the falls, but you must return on the stairs, instead of returning on the John Muir Trail. For more information, please visit https://www.nps.gov/yose/planyourvisit/vernalnevadawinter.htm
 
 Yosemite National Park charges a fee to enter. Fees are per vehicle or per motorcycle. If you are entering on foot, horse, or bike the fee is per person. You can alternately purchase an America the Beautiful - National Parks & Federal Recreational Lands Annual Pass here: https://store.usgs.gov/pass/index.html
@@ -88,4 +91,95 @@ You can choose to take the alternate route down along the John Muir Trail to see
 P.O. Box 577
 Yosemite, CA 95389
 Call: 209/372-0200; press 3 then 5.
-Time: 9 am to 5 pm Pacific Time (closed for lunch)", tips: "There is a water fountain at the footbridge, but you will need to bring at least 1L of water to hold you until you get back near the end of the hike.", getting_there: "Follow the link for information about travel to Yosemite. http://www.nps.gov/yose/planyourvisit/driving.htm", tags: ['Hiking', 'Forest', 'Partially paved', 'River', 'Views', 'Waterfall', 'Wildflowers', 'Wildlife', 'Rocky', 'Fee', 'No dogs'])
+Time: 9 am to 5 pm Pacific Time (closed for lunch)", tips: "There is a water fountain at the footbridge, but you will need to bring at least 1L of water to hold you until you get back near the end of the hike.", getting_there: "Follow the link for information about travel to Yosemite. http://www.nps.gov/yose/planyourvisit/driving.htm", tags: ['Hiking', 'Forest', 'Partially paved', 'River', 'Views', 'Waterfall', 'Wildflowers', 'Wildlife', 'Rocky', 'Fee', 'No dogs'], difficulty: "hard")
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails/VernalAndNevadaFalls.png')
+vernal.small_map.attach(io: file, filename: 'VernalAndNevadaFalls.png')
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails/vernal-header-photo.jpeg')
+vernal.head_photo.attach(io: file, filename: 'vernal-header-photo.jpeg')
+
+halfDome = Trail.create!(park_id: yosemite.id, latitude: 37.73268, longitude: -119.55794, description: "• Yosemite National Park charges a fee to enter. Fees are per vehicle or per motorcycle. If you are entering on foot, horse, or bike the fee is per person. You can alternately purchase an America the Beautiful - National Parks & Federal Recreational Lands Annual Pass here: https://store.usgs.gov/pass/index.html
+• Some services and facilities are limited in Yosemite National Park due to COVID, and shuttles are not operating.
+
+Half Dome is a serious endurance hike taking you 4800 feet above the Yosemite Valley to spectacular views of Vernal and Nevada Falls, Liberty Cap, the Yosemite Valley, and the High Sierra. This is one of Yosemite National Park’s most iconic hikes. You must obtain a permit to hike to the summit of Half Dome. 
+
+Preparation and safety are key to having a fantastic experience. This is a hike that requires users to be in good shape. Most people take 10 to 12 hours to hike to Half Dome and back, depending on the way chosen to come down. Plan to leave around sunrise (or earlier) and then have a non-negotiable turn-around time. The trail is fairly well marked but make sure to watch for all trail signs as it can be easy to miss them.
+
+The elevation gain is very strenuous, starting with a steep climb to Vernal Falls, followed by another steep climb to the top of Nevada Falls. There is about 1 mile of fairly level hiking before reaching Little Yosemite Campground, followed by steep switchbacks through the forest. At about 7 miles into your trip you’ll reach a break in the trees with a beautiful view of Half Dome and the valley below. Some steep switchbacks carved like stairs into the rock guide the way up to the top of what is known as Sub Dome. Once you walk across the rocky surface of Sub Dome you’ll arrive at the base of the cables with only 400 feet to go. These last 400 feet are the most challenging, but also the most rewarding (although you may not realize it until users are comfortably back on the valley floor).
+
+The part of this journey that makes the ascent up Half Dome famous is the cable route. Two steel cables allow hikers to climb the last 400 feet to the summit without rock climbing equipment. The cables are around a 45-55 degree grade, with wooden supports every 10 to 20 feet to rest and maintain your balance. Using gloves is highly recommended to get a better grip and avoid painful blisters. Be sure to tightly secure your water bottles and cameras for the climb up because you will want them once at the top. Once you have reached the summit, take the time to rest for a while and take in the incredible panoramic views. The Half Dome cables usually go up the Friday before Memorial Day (conditions permitting) and come down the day after Columbus Day.
+
+Compared to the hike up, the return journey flies by and before you know it you will be back at the top of Nevada falls. You have 2 options here: the Mist Trail, which is how you came up is about 3.4 miles (5.5km), or the John Muir Trail for a slight change of scenery (about 0.5 miles further). The waterfalls suddenly seem much more pleasant as you hike down compared to the earlier climb, and it's hard to hold back a smile as you reach the Vernal Falls footbridge where you can refill your water (there are also facilities here). About 30 minutes later you are back at the trailhead where you can catch a free shuttle to your car or anywhere else in the valley (there is a concession stand near the bus stop where you can buy cold drinks and ice cream).
+
+---
+
+This is one of Yosemite's many backpacking routes. While some can be done as a day hike, a permit is required if you plan on doing a multi-day trip. Permits are able to be reserved up to 24 weeks in advance and up until 4 days beforehand. Permits and more information can be found here: https://www.nps.gov/yose/planyourvisit/wildpermits.htm
+
+Sixty percent of reservations are available 24 weeks in advance; the remaining 40 percent are available two weeks in advance and up to four days before your hike. Each confirmed reservation costs $5 plus $5 per person. This fee is non-refundable and non-transferable.
+
+If you are granted a permit, the fee will need to be paid within 48 hours of your email confirmation. Permits will need to be picked up in the park at one of the following permit stations: https://www.nps.gov/yose/planyourvisit/permitstations.htm 
+
+Bear boxes are required to store all food while on overnight trips. Backpackers have the ability to spend a night prior to departure or night of return at the Backpackers Campground. There are 5 Backpackers Campground available that can be found here: https://www.nps.gov/yose/planyourvisit/bpcamp.htm", length: "15.0 mi", elevation_gain: '5,193 ft', route_type: 'Out & back', country: 'United State of America', state: 'California', trail_name: 'Half Dome via the John Muir Trail (JMT)', intro: "Try this 15.00 mile, out&back trail near Yosemite Valley, California. Generally considered a challenging route, it takes an average of 9 h 32 min to complete. This is a very popular area for hiking, so you'll likely encounter other people while exploring. You'll need to leave pups at home — dogs aren't allowed on this trail.", park_name: 'Yosemite National Park', facilities: "Best option is the trailhead parking lot. Just past Curry Village on the road marked 'Service Vehicles Only.' You can enter this road legally to enter the trailhead parking lot. Trailhead lot has bear-proof storage lockers if you want to store stuff you don't need to take up the trail. Bears will break into cars with food, etc.  If trailhead lot is full, park at Curry Village, which is near east end of Southside Drive.
+
+Flush toilets are available at the Vernal Fall Footbridge (below Vernal Fall). Composting toilets are available near Emerald Pool (above Vernal Fall), near the top of Nevada Fall, and in Little Yosemite Valley", contact: "Call (209) 372-0200 (then dial 3 then 5)
+The Yosemite public information office is open from 9 am to 5 pm Pacific time (closed for lunch). If the ranger is already on the line, you'll be returned to the main menu. If the ranger is not there, you can leave a message and they'll return your call.
+Public Information Office
+PO Box 577
+Yosemite, CA 95389 
+
+California Travel and Tourism Commision, P.O. Box 1499 , Sacramento, CA, 95812-1499, Phone: 800-862-2543
+
+More info here: http://www.nps.gov/yose/planyourvisit/halfdome.htm", tips: "This trail is possible as a single day hike only if you get a very early start. You could break the trail into two day backpacking adventure by staying at Little Yosemite Valley campground.
+
+The cable route to the summit is open between May and October. Check the NPS website for exact dates, which are weather dependent.
+
+Tips while using the cables:  Take your time and be patient with slower hikers.  Allow faster hikers to pass you (when possible).  Remain on the inside of the cables
+
+Do not attempt the ascent if storm clouds are in the area, the ground is wet (the cables and rock become very slick when wet; most accidents on the cables occur during wet conditions
+
+Bring well broken-in boots with good ankle support and good traction. Some of the most common injuries Half Dome hikers suffer are blisters and ankle injuries; good footwear is the best way to prevent these problems. Also recommend gloves be used on the cables. 
+
+No trash service on trails. Pack out all trash. When possible, help park rangers by picking up trash that you encounter on the trail. Bearproof trash cans are available at trailheads.
+
+Have plenty of water. NPS recommends:
+1 gallon (4 liters) if hiking to the top of Half Dome
+2 quarts (2 liters) if hiking only to the top of Nevada Fall
+1 quart (1 liter) if hiking only to the top of Vernal Fall
+The only treated water on the trail is available (summer only) at a drinking fountain at the Vernal Fall Footbridge (less than a mile from the trailhead). Merced River water is available up to Little Yosemite Valley, however treat water by boiling, using iodine, or using giardia-rated water filter
+
+Check Recreation.gov for latest permit requirements.", getting_there: "Directions from Arch Rock (south) Entrance: Travel eastward into the Yosemite Valley, 11.5 miles to the Curry Village day-use area. Park your car and take the shuttle to stop number 16, Happy Isles. Head eastward along the paved path that leads along the northern bank of the Merced River.  Even better  once you've reached the Curry Village vicinity of the valley, look for the signs for trailhead parking.  You are allowed to drive past the 'service vehicles only' signs if you're going to the trailhead parking.", tags: ['Hiking', 'Forest', 'Partially paved', 'River', 'Views', 'Waterfall', 'Wildflowers', 'Wildlife', 'Rocky', 'Fee', 'No dogs'], difficulty: "hard")
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails/half-dome/half-dome-map.png')
+halfDome.small_map.attach(io: file, filename: 'half-dome-map.png')
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails/half-dome/half-dome-header.jpeg')
+halfDome.head_photo.attach(io: file, filename: 'half-dome-header.jpeg')
+
+glacier = Trail.create!(park_id: yosemite.id, latitude: 37.72759, longitude: -119.57437, description: "• SEASONAL ROAD CLOSURE: Roads leading to this trailhead are subject to seasonal closure. In the winter, this is possible as a (21-mile) day trip or as an overnight. A ski hut is open in winter (reservation required) or you can camp (with a wilderness permit, available from the Badger Pass Ranger Station without a reservation). Read more about winter camping and winter trails along the Glacier Point Road by visiting: https://www.nps.gov/yose/index.htm
+• Yosemite National Park charges a fee to enter. Fees are per vehicle or per motorcycle. If you are entering on foot, horse, or bike the fee is per person. You can alternately purchase an America the Beautiful - National Parks & Federal Recreational Lands Annual Pass here: https://store.usgs.gov/pass/index.html
+• Some services and facilities are limited in Yosemite National Park due to COVID, and shuttles are not operating.
+
+Drive to the best view in all of Yosemite.  This 270-degree panorama trail of the Valley, Half Dome, and 3 Falls will amaze you.
+
+Glacier Point is a popular stop for many new visitors to Yosemite National Park on their way down to Yosemite Valley.  Although it's not much of a hike, the view at the end of the paved walkway will leave you breathless.  You will see (left to right) both Upper and Lower Yosemite Falls, Yosemite Valley below, Clouds Rest, Half Dome standing proud, and even Vernal and Nevada Falls.  The expansive views of Yosemite Valley will fill you with wonder.
+
+There are no shuttle services available between Yosemite Valley and Glacier Point. There is a limited bus to Glacier Point for a tour which is available in summer- reservations are required for these bus tours.
+
+During the winter months, the road to Glacier Point is closed to cars- but strap on a pair of cross-country skis or snowshoes and you should be good to go! Cross country skiers are known to spend time here on a good snow day. If you want to stay overnight, reserve a spot in the Glacier Point Ski Hut where there are bunk beds (dormitory style), a wood fire, food, and good company.
+
+Accessibility: There are 8 designated accessible spaces in the paved parking lot off of Glacier Point Road at the south end of the trail. All of them are van-accessible with striped access aisles. The trail surface is paved asphalt and smooth. It is typically at least 6 feet wide. 
+
+The most accessible portion of the trail is the eastern side in the first about 0,2 miles when going counterclockwise. The majority of the trail is estimated to be in the mostly gentle (5% or less) grade category but there are steeper sections at about 0.2-0.4 miles when going counterclockwise. Trail goers using wheelchairs/mobility equipment or strollers may need assistance in the steeper sections or to avoid them for safety. The restrooms, gift shop, and snack bar located at the trailhead are all wheelchair accessible.", length: "0.6 mi", elevation_gain: "167 ft", route_type: "Loop", country: "United States of America", state: "California", trail_name: "Glacier Point Trail", intro: "Glacier Point Trail is a 0.6 mile heavily trafficked loop trail located near Yosemite Valley, California that features a waterfall and is good for all skill levels. The trail is primarily used for hiking and walking and is best used from May until October.", park_name: "Yosemite National Park", tips: "If you entered from the South Entrance, turn right onto Glacier Point Road from Highway 41.  It is about 15 miles until you reach Glacier Point.  If you entered from the West Entrance (or were in Yosemite Valley) follow Highway 41 toward Wawona and Mariopsa Grove, and turn left at Glacier Point Road.", tags: ['Wheelchair friendly', 'Hiking', 'Forest', 'Partially paved', 'Kid friendly', 'Stroller friendly' 'Waterfall', 'Wildflowers', 'Wildlife', 'Rocky', 'Fee', 'No dogs'], difficulty: "easy")
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails/glacierpoint/glacierpoint-map.png')
+glacier.small_map.attach(io: file, filename: 'glacierpoint-map.png')
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails/glacierpoint/glacierpoint-header.jpeg')
+glacier.head_photo.attach(io: file, filename: 'glacierpoint-header.jpeg')
+
+
+
+
+
+
+# Trail.create!(park_id: "", latitude: "", longitude: "", description: "", length: "", elevation_gain: "", route_type: "", country: "", state: "", trail_name: "", intro: "", park_name: "", facilities: "", contact: "", tips: "", getting_there: "", tags: [], difficulty: "")
+
+# file = open('')
+# vernal.small_map.attach(io: file, filename: '')
+# file = open('')
+# vernal.head_photo.attach(io: file, filename: '')
