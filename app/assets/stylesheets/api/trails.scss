@@ -256,5 +256,33 @@ div.scrollmenu a:hover {
 }
 
 pre {
-  white-space: pre-wrap
+  white-space: pre-wrap;
+  font-weight: 400;
+  font-size: 16px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #414141;
+  margin-bottom: 8px;
+}
+
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+  color: #428a13 !important;
+}
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+  font-family: Proxima Nova,Arial,sans-serif !important;
+  font-size: 18px !important;
+}
+
+.css-1gsv261 {
+  background: #f2f2f2;
+}
+
+.css-jpln7h-MuiTabs-scroller {
+  height: 65px;
+}
+
+.css-heg063-MuiTabs-flexContainer{
+  padding-top: 9px !important;
 }
