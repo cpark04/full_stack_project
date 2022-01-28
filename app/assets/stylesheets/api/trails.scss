@@ -269,23 +269,20 @@ pre {
   margin-bottom: 8px;
 }
 
-.css-hg18dx-MuiButtonBase-root-MuiTab-root.Mui-selected {
+.Mui-selected {
   color: #428a13 !important;
 }
-.css-hg18dx-MuiButtonBase-root-MuiTab-root {
+.MuiButtonBase-root {
   font-family: Proxima Nova,Arial,sans-serif !important;
   font-size: 17px !important;
 }
 
-.css-1gsv261 {
-  background: #f2f2f2;
-}
-
-.css-jpln7h-MuiTabs-scroller {
+.MuiTabs-scroller {
   height: 65px;
+  background: #f2f2f2
 }
 
-.css-heg063-MuiTabs-flexContainer{
+.MuiTabs-flexContainer{
   padding-top: 9px !important;
   justify-content: space-evenly;
 }
