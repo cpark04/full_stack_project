@@ -89,3 +89,7 @@ P.O. Box 577
 Yosemite, CA 95389
 Call: 209/372-0200; press 3 then 5.
 Time: 9 am to 5 pm Pacific Time (closed for lunch)", tips: "There is a water fountain at the footbridge, but you will need to bring at least 1L of water to hold you until you get back near the end of the hike.", getting_there: "Follow the link for information about travel to Yosemite. http://www.nps.gov/yose/planyourvisit/driving.htm", tags: ['Hiking', 'Forest', 'Partially paved', 'River', 'Views', 'Waterfall', 'Wildflowers', 'Wildlife', 'Rocky', 'Fee', 'No dogs'])
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails/VernalAndNevadaFalls.png')
+vernal.small_map.attach(io: file, filename: 'VernalAndNevadaFalls.png')
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails/vernal-header-photo.jpeg')
+vernal.head_photo.attach(io: file, filename: 'vernal-header-photo.jpeg')

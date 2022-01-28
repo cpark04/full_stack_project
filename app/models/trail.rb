@@ -3,4 +3,8 @@ class Trail < ApplicationRecord
 
   belongs_to :park
 
+  has_one_attached :small_map
+
+  has_one_attached :head_photo
+
 end

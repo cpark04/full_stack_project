@@ -16,7 +16,8 @@ class Trail extends React.Component {
 
   componentDidMount() {
     this.props.fetchTrail(this.props.match.params.trailId)
-      .then(() => this.weatherCall())
+      .then(() => this.weatherCall());
+    this.props.fetchTrails();
   }
 
   tagsRender(){
@@ -38,10 +39,16 @@ class Trail extends React.Component {
     let forecastArr = weather.forecast.forecastday;
     this.setState({forecastArray: forecastArr})
   }
+
+  trailIndexRender() {
+
+  }
   
   render() {
     if (!this.props.trail) return null;
+    if (!this.props.trails) return null;
     const {trail} = this.props;
+    console.log(this.props.trails)
 
     return <div className="trail-bg-color">
     <div className="trail-container">
@@ -141,20 +148,27 @@ class Trail extends React.Component {
 
 
         <div className="trail-right-container">
-          placeholder
+          <div className="trail-right-flex">
+            <div className="trail-map-container">
+              <img src={trail.mapUrl} alt="" className="trail-map"/>
+            </div>
+
+            <div className="trail-right-index-container">
+              <div className="trail-right-index-title">Nearby Trails</div>
+              <div className="trail-right-index">
+
+              </div>
+            </div>
+
+
+
+          </div>
         </div>
 
 
 
       </div>
-
     </div>
-
-
-
-
-
-
     </div>
   }
 }

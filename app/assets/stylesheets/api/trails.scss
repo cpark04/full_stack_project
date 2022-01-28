@@ -188,7 +188,9 @@ a {
 .trail-right-container {
   display: flex;
   flex-direction: column;
-  width: 33.333333%
+  width: 33.333333%;
+  padding: 24px 0;
+  border-left: 1px solid #eaeaea;
 }
 
 .trail-left-intro {
@@ -412,4 +414,24 @@ span a {
   padding: 0 144px;
   justify-content: space-between;
   min-height: 138px;
+}
+
+.trail-right-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.trail-map-container {
+  padding: 0px 24px;
+}
+
+.trail-map {
+  width: 100%;
+  border-radius: 8px;
+  height: auto;
+}
+
+.trail-right-index-container {
+  display: flex;
+  flex-direction: column;
 }
