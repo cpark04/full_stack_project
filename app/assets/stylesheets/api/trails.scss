@@ -404,3 +404,12 @@ span a {
   margin-top: 4px;
   font-weight: 100
 }
+
+.daylight-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 144px;
+  justify-content: space-between;
+  min-height: 138px;
+}
