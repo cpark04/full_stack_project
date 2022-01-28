@@ -34,8 +34,8 @@
     "test": "test"
   },
   "engines": {
-    "node": "17.0.1",
-    "npm": "8.1.0"
+    "node": "14.18.3",
+    "npm": "6.14.15"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
