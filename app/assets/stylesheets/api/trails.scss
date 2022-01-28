@@ -326,7 +326,7 @@ span a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 24px;
+  padding: 0 24px 0 24px;
   justify-content: space-between;
   min-height: 138px;
 }
@@ -343,7 +343,8 @@ span a {
   align-items: center;
   display: flex;
   justify-content: space-around;
-  font-weight: 400;
+  font-weight: 100;
+  margin-bottom: -15px
 }
 
 .weather-icon-container {
@@ -360,4 +361,46 @@ span a {
 
 .weather-degrees {
   font-size: 14px;
+  margin-top: -15px;
+  font-weight: 100;
+}
+
+.weather-uv-num-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: 700;
+}
+
+.uv-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.weather-date-uv {
+  font-size: 16px;
+  color: #414141;
+  height: 24px;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  font-weight: 100;
+  margin-bottom: 4px;
+}
+
+.uv-icon-container {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.uv-strength {
+  font-size: 14px;
+  margin-top: 4px;
+  font-weight: 100
 }

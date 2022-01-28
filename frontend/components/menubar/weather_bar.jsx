@@ -41,6 +41,36 @@ function getDay(forecast) {
   return day
 }
 
+function getUvIcon(uv) {
+  if (uv === 1 || uv === 2) {
+    return <img src="https://cdn-assets.alltrails.com/assets/icons/cuttlefish-weather/uv/icons-uv-low.png" alt="" className='uv-icon'/>
+  } else if (uv === 3 || uv === 4) {
+    return <img src="https://cdn-assets.alltrails.com/assets/icons/cuttlefish-weather/uv/icons-uv-moderate.png" alt="" className='uv-icon'/>
+  } else {
+    return <img src="https://cdn-assets.alltrails.com/assets/icons/cuttlefish-weather/uv/icons-uv-high.png" alt="" className='uv-icon'/>
+  }
+}
+
+function getUvStrength(uv) {
+  if (uv === 1 || uv === 2) {
+    return "Low"
+  } else if (uv === 3 || uv === 4) {
+    return "Moderate"
+  } else {
+    return "High"
+  }
+}
+
+function getUvNum(uv) {
+  if (uv === 1 || uv === 2) {
+    return <span className='weather-uv-num' style={{color: '#69a041'}}>{uv}</span>
+  } else if (uv === 3 || uv === 4) {
+    return <span className='weather-uv-num' style={{color: '#f5d24b'}}>{uv}</span>
+  } else {
+    return <span className='weather-uv-num' style={{color: '#orange'}}>{uv}</span>
+  }
+}
+
 export default function WeatherBar({lat, long, forecastArr}) {
   const [value, setValue] = React.useState(0);
 
@@ -59,46 +89,51 @@ export default function WeatherBar({lat, long, forecastArr}) {
       </Box>
       <TabPanel value={value} index={0}>
         <ul className='weather-bar-container'>
-          <li className="weather-forecast">
-            <h3 className="weather-date">
-              {getDay(forecastArr[0])}
-            </h3>
-            <div className="weather-icon-container">
-              <img src={forecastArr[0].day.condition.icon} alt="" className='weather-icon'/>
-            </div>
-            <h4 className="weather-degrees">
-              {forecastArr[0].day.maxtemp_f}&#176; / {forecastArr[0].day.mintemp_f}&#176; F
-            </h4>
-          </li>
-          <li className="weather-forecast">
-            <h3 className="weather-date">
-              {getDay(forecastArr[1])}
-            </h3>
-            <div className="weather-icon-container">
-              <img src={forecastArr[1].day.condition.icon} alt="" className='weather-icon'/>
-            </div>
-            <h4 className="weather-degrees">
-              {forecastArr[1].day.maxtemp_f}&#176; / {forecastArr[1].day.mintemp_f}&#176; F
-            </h4>
-          </li>
-          <li className="weather-forecast">
-            <h3 className="weather-date">
-              {getDay(forecastArr[2])}
-            </h3>
-            <div className="weather-icon-container">
-              <img src={forecastArr[2].day.condition.icon} alt="" className='weather-icon'/>
-            </div>
-            <h4 className="weather-degrees">
-              {forecastArr[2].day.maxtemp_f}&#176; / {forecastArr[2].day.mintemp_f}&#176; F
-            </h4>
-          </li>
+
+          {forecastArr.map((forecast, idx) => {
+            return (
+              <li key={'weather'+`${idx}`} className="weather-forecast">
+                <h3 className="weather-date">
+                  {getDay(forecast)}
+                </h3>
+                <div className="weather-icon-container">
+                  <img src={forecast.day.condition.icon} alt="" className='weather-icon'/>
+                </div>
+                <h4 className="weather-degrees">
+                  {forecast.day.maxtemp_f}&#176; / {forecast.day.mintemp_f}&#176; F
+                </h4>
+              </li>
+            )
+          })}
         </ul>
       </TabPanel>
       <TabPanel value={value} index={1}>
+       <ul className='weather-bar-container'>
+         {forecastArr.map((forecast, idx) => {
+           return (
+              <li key={'weather'+`${idx}`} className="weather-forecast">
+                <h3 className="weather-date-uv">
+                  {getDay(forecast)}
+                </h3>
+                <div className="uv-icon-container">
+                  <div className="weather-uv-num-container">
+                    {getUvNum(forecast.day.uv)}
+                  </div>
+                  {getUvIcon(forecast.day.uv)}
+                </div>
+                <h4 className="uv-strength">
+                  {getUvStrength(forecast.day.uv)}
+                </h4>
+              </li>
+           )
+         })}
+       </ul>
 
       </TabPanel>
       <TabPanel value={value} index={2}>
-
+        <ul className='weather-bar-container'>
+          
+        </ul>
       </TabPanel>
     </Box>
   );
