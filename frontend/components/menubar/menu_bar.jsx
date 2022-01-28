@@ -50,12 +50,12 @@ export default function MenuBar(props) {
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="Description" {...a11yProps(0)} />
-          <Tab label="Facilities" {...a11yProps(1)} />
-          <Tab label="Contact" {...a11yProps(2)} />
-          <Tab label="Tips" {...a11yProps(3)} />
-          <Tab label="Getting There" {...a11yProps(4)} />
+        <Tabs TabIndicatorProps={{style: {background:'green'}}} value={value} onChange={handleChange} aria-label="basic tabs example">
+          <Tab sx={{ textTransform: "none" }} label="Description" {...a11yProps(0)} />
+          <Tab sx={{ textTransform: "none" }} label="Facilities" {...a11yProps(1)} />
+          <Tab sx={{ textTransform: "none" }} label="Contact" {...a11yProps(2)} />
+          <Tab sx={{ textTransform: "none" }} label="Tips" {...a11yProps(3)} />
+          <Tab sx={{ textTransform: "none" }} label="Getting There" {...a11yProps(4)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>

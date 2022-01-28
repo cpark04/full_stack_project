@@ -136,7 +136,7 @@ class Trail extends React.Component {
 
           <MenuBar trail={trail}/>
 
-          <WeatherBar lat={trail.latitude} long={trail.longitude} forecast={this.state.forecastArray}/>
+          {this.state.forecastArray ? <WeatherBar forecastArr={this.state.forecastArray} /> : null }
         </div>
 
 

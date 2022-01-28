@@ -40,7 +40,12 @@ function a11yProps(index) {
   };
 }
 
-
+function getDay(forecast) {
+  console.log(forecast)
+  let day = new Date(forecast.date)
+  day = day.toLocaleDateString(undefined, {weekday: 'long'})
+  return day
+}
 
 export default function WeatherBar({lat, long, forecastArr}) {
   const [value, setValue] = React.useState(0);
@@ -52,14 +57,48 @@ export default function WeatherBar({lat, long, forecastArr}) {
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="Weather" {...a11yProps(0)} />
-          <Tab label="UV Index" {...a11yProps(1)} />
-          <Tab label="Daylight" {...a11yProps(2)} />
+        <Tabs TabIndicatorProps={{style: {background:'green'}}} value={value} onChange={handleChange} aria-label="basic tabs example">
+          <Tab sx={{ textTransform: "none" }} label="Weather" {...a11yProps(0)} />
+          <Tab sx={{ textTransform: "none" }} label="UV Index" {...a11yProps(1)} />
+          <Tab sx={{ textTransform: "none" }} label="Daylight" {...a11yProps(2)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        
+        <ul className='weather-bar-container'>
+          <li className="weather-forecast">
+            <h3 className="weather-date">
+              {getDay(forecastArr[0])}
+            </h3>
+            <div className="weather-icon-container">
+              <img src={forecastArr[0].day.condition.icon} alt="" className='weather-icon'/>
+            </div>
+            <h4 className="weather-degrees">
+              {forecastArr[0].day.maxtemp_f}&#176; / {forecastArr[0].day.mintemp_f}&#176; F
+            </h4>
+          </li>
+          <li className="weather-forecast">
+            <h3 className="weather-date">
+              {getDay(forecastArr[1])}
+            </h3>
+            <div className="weather-icon-container">
+              <img src={forecastArr[1].day.condition.icon} alt="" className='weather-icon'/>
+            </div>
+            <h4 className="weather-degrees">
+              {forecastArr[1].day.maxtemp_f}&#176; / {forecastArr[1].day.mintemp_f}&#176; F
+            </h4>
+          </li>
+          <li className="weather-forecast">
+            <h3 className="weather-date">
+              {getDay(forecastArr[2])}
+            </h3>
+            <div className="weather-icon-container">
+              <img src={forecastArr[2].day.condition.icon} alt="" className='weather-icon'/>
+            </div>
+            <h4 className="weather-degrees">
+              {forecastArr[2].day.maxtemp_f}&#176; / {forecastArr[2].day.mintemp_f}&#176; F
+            </h4>
+          </li>
+        </ul>
       </TabPanel>
       <TabPanel value={value} index={1}>
 
