@@ -177,8 +177,24 @@ moroRock.small_map.attach(io: file, filename: 'moro-rock-map.png')
 file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails/moro-rock/moro-rock-header.jpeg')
 moroRock.head_photo.attach(io: file, filename: 'moro-rock-header.jpeg')
 
+sentinel = Trail.create!(park_id: yosemite.id, latitude: 37.71243, longitude: -119.58632, description: "Sentinel Dome starts from Glacier Point Road and scales one of Yosemite's high domes and offers a fully breathtaking 360-degree view.
 
+It provides one of the very best NP experiences for the effort you can find. To the west, you'll see almost a reverse Tunnel View of the Yosemite Valley and can see beyond the Merced River canyon. To the north is Yosemite Valley, including El Capitan and Yosemite Falls. You'll see Nevada Falls, Half Dome and Clouds Rest to the east, and many of the High Sierra peaks.
 
+This summit was made famous by Ansel Adam's 1940 photo of the Jeffrey Pine tree. The tree perished in 1977 and fell over in 2003.  The trail crosses a bridge over a stream near the beginning of the hike and gradually slopes up along a granite floor among the pines.  It then turns slightly left and after a gradual climb through more pines, meets the base of the dome, where you then take a sharp left straight up onto the exposed dome.  Enjoy the views!
+
+An alternate route begins at the service road entrance about a half-mile towards Glacier Point from the main trailhead. This spur joins the main trail at the base of the dome and is about two-thirds of a mile.
+", length: "2.1 mi", elevation_gain: "456 ft", route_type: "Out & back", country: "United States of America", state: "California", trail_name: "Sentinel Dome Trail", intro: "Sentinel Dome Trail is a 2.1 mile heavily trafficked out and back trail located near Yosemite Valley, California that features beautiful wild flowers and is rated as moderate. The trail is primarily used for hiking and is best used from April until November.", park_name: "Yosemite National Park", contact: "Small parking lot 17.3 miles up Glacier Point road on the left (at true trailhead which is also the trailhead to Taft Point), also pit toilets, and room for several more cars about a half mile further on the right - across from service road entrance.", getting_there: "Yosemite National Park
+Call 209/372-0200 (then dial 3 then 5)
+The public information office is open from 9 am to 5 pm Pacific time (closed for lunch). If the ranger is already on the line, you'll be returned to the main menu. If the ranger is not there, you can leave a message and they'll return your call.
+
+Public Information Office
+PO Box 577
+Yosemite, CA 95389", tags: ['Hiking', 'Forest', 'View', 'Wildflowers', 'Wildlife', 'Fee', 'No dogs'], difficulty: "moderate")
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails/sentinel/sentinel-map.png')
+sentinel.small_map.attach(io: file, filename: 'sentinel-map.png')
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails/sentinel/sentinel-header.jpeg')
+sentinel.head_photo.attach(io: file, filename: 'sentinel-header.jpeg')
 
 
 # Trail.create!(park_id: "", latitude: "", longitude: "", description: "", length: "", elevation_gain: "", route_type: "", country: "", state: "", trail_name: "", intro: "", park_name: "", facilities: "", contact: "", tips: "", getting_there: "", tags: [], difficulty: "")
