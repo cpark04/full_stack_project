@@ -105,9 +105,8 @@ class Park extends React.Component {
   }
 
   render() {
-    if (!this.props.park) return null;
+    if (!this.props.park || !this.props.park.trails) return null;
     const {park} = this.props;
-
 
 
     return <div className="park-container">

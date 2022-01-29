@@ -35,7 +35,6 @@ function a11yProps(index) {
 }
 
 function getDay(forecast) {
-  console.log(forecast)
   let day = new Date(forecast.date)
   day = day.toLocaleDateString(undefined, {weekday: 'long'})
   return day

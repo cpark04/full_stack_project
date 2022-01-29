@@ -59,7 +59,7 @@ class Trail extends React.Component {
     if (!this.props.trail) return null;
     if (!this.props.trails) return null;
     const {trail, trails} = this.props;
-    console.log(this.props.trails)
+    (this.props.trails)
 
     return <div className="trail-bg-color">
     <div className="trail-container">
