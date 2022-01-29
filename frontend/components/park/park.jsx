@@ -26,6 +26,7 @@ class Park extends React.Component {
   }
 
   simpleSlider() {
+    // if (!this.props.park.trails) return null;
     const settings = {
       dots: false,
       infinite: false,
@@ -35,16 +36,21 @@ class Park extends React.Component {
       arrows: true,
     };
 
-    return(
-      <Slider {...settings}>
-        <div><img src="https://bit.ly/3IAAk6T" alt="" className="slide-img"/></div>
-        <div><img src="https://bit.ly/3u0XHlZ" alt="" className="slide-img"/></div>
-        <div><img src="https://bit.ly/3GeLz3r" alt="" className="slide-img"/></div>
-        <div><img src="https://bit.ly/3o1a8um" alt="" className="slide-img"/></div>
-        <div><img src="https://bit.ly/32xtRdz" alt="" className="slide-img"/></div>
-        <div><img src="https://bit.ly/3AvTQyq" alt="" className="slide-img"/></div>
-      </Slider>
-    )
+    const {park} = this.props
+    if (park.trails) {
+      return(
+        <Slider {...settings}>
+          
+          {Object.values(park.trails).map((trail, idx) => {
+            return (
+              <div key={'trail' + `${idx}`}>
+                <a href={`#/trail/${trail.id}`} ><img src={(trail.headPhoto)} alt="" className="slide-img"/></a>
+              </div>
+            )
+          })}
+        </Slider>
+      )
+    }
   }
   
 
