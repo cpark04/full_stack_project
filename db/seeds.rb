@@ -77,13 +77,7 @@ sequoia.small_map.attach(io: file, filename: 'sequoiapark.png')
 
 
 
-vernal = Trail.create!(park_id: yosemite.id, latitude: 37.73279, longitude: -119.55782, description: "SEASONAL CLOSURE: During the winter months, portions of the John Muir Trail in Yosemite are closed. Visitors can still visit the falls, but you must return on the stairs, instead of returning on the John Muir Trail. For more information, please visit https://www.nps.gov/yose/planyourvisit/vernalnevadawinter.htm
-
-Yosemite National Park charges a fee to enter. Fees are per vehicle or per motorcycle. If you are entering on foot, horse, or bike the fee is per person. You can alternately purchase an America the Beautiful - National Parks & Federal Recreational Lands Annual Pass here: https://store.usgs.gov/pass/index.html
-
-Some services and facilities are limited in Yosemite National Park due to COVID, and shuttles are not operating.
-
-Hike to two breathtaking waterfalls along some of Yosemite Valley's most popular hiking trails. If you only have time for one hike while in Yosemite look no further - the Mist Trail is the hike for you. It is no wonder why this trail is one of the most traveled in Yosemite National Park. You will hike so close to these two massive waterfalls that you may get wet from the trail. The best time to hike this trail is in Spring or early Summer, while the snow runoff is high and the falls are full of water.
+vernal = Trail.create!(park_id: yosemite.id, latitude: 37.73279, longitude: -119.55782, description: "Hike to two breathtaking waterfalls along some of Yosemite Valley's most popular hiking trails. If you only have time for one hike while in Yosemite look no further - the Mist Trail is the hike for you. It is no wonder why this trail is one of the most traveled in Yosemite National Park. You will hike so close to these two massive waterfalls that you may get wet from the trail. The best time to hike this trail is in Spring or early Summer, while the snow runoff is high and the falls are full of water.
 
 The Mist Trail starts at Happy Isles Trailhead (YARTS Happy Isles shuttle stop #16, and within walking distance of Curry Village and the parking lot). The park recommends starting early to avoid the larger crowds. After a brief stroll along the river, you climb a pretty steep initial accent over stone steps until you reach the footbridge, which offers the first glimpse of Vernal Falls in the distance. You will also find a water fountain and restrooms. You will then continue up to Vernal Falls, past Emerald Pool, and alongside Nevada Falls until you reach the high-point of this hike.
 
@@ -97,10 +91,7 @@ vernal.small_map.attach(io: file, filename: 'VernalAndNevadaFalls.png')
 file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails/vernal-header-photo.jpeg')
 vernal.head_photo.attach(io: file, filename: 'vernal-header-photo.jpeg')
 
-halfDome = Trail.create!(park_id: yosemite.id, latitude: 37.73268, longitude: -119.55794, description: "• Yosemite National Park charges a fee to enter. Fees are per vehicle or per motorcycle. If you are entering on foot, horse, or bike the fee is per person. You can alternately purchase an America the Beautiful - National Parks & Federal Recreational Lands Annual Pass here: https://store.usgs.gov/pass/index.html
-• Some services and facilities are limited in Yosemite National Park due to COVID, and shuttles are not operating.
-
-Half Dome is a serious endurance hike taking you 4800 feet above the Yosemite Valley to spectacular views of Vernal and Nevada Falls, Liberty Cap, the Yosemite Valley, and the High Sierra. This is one of Yosemite National Park’s most iconic hikes. You must obtain a permit to hike to the summit of Half Dome. 
+halfDome = Trail.create!(park_id: yosemite.id, latitude: 37.73268, longitude: -119.55794, description: "Half Dome is a serious endurance hike taking you 4800 feet above the Yosemite Valley to spectacular views of Vernal and Nevada Falls, Liberty Cap, the Yosemite Valley, and the High Sierra. This is one of Yosemite National Park’s most iconic hikes. You must obtain a permit to hike to the summit of Half Dome. 
 
 Preparation and safety are key to having a fantastic experience. This is a hike that requires users to be in good shape. Most people take 10 to 12 hours to hike to Half Dome and back, depending on the way chosen to come down. Plan to leave around sunrise (or earlier) and then have a non-negotiable turn-around time. The trail is fairly well marked but make sure to watch for all trail signs as it can be easy to miss them.
 
@@ -152,13 +143,7 @@ halfDome.small_map.attach(io: file, filename: 'half-dome-map.png')
 file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails/half-dome/half-dome-header.jpeg')
 halfDome.head_photo.attach(io: file, filename: 'half-dome-header.jpeg')
 
-glacier = Trail.create!(park_id: yosemite.id, latitude: 37.72759, longitude: -119.57437, description: "• SEASONAL ROAD CLOSURE: Roads leading to this trailhead are subject to seasonal closure. In the winter, this is possible as a (21-mile) day trip or as an overnight. A ski hut is open in winter (reservation required) or you can camp (with a wilderness permit, available from the Badger Pass Ranger Station without a reservation). Read more about winter camping and winter trails along the Glacier Point Road by visiting: https://www.nps.gov/yose/index.htm
-• Yosemite National Park charges a fee to enter. Fees are per vehicle or per motorcycle. If you are entering on foot, horse, or bike the fee is per person. You can alternately purchase an America the Beautiful - National Parks & Federal Recreational Lands Annual Pass here: https://store.usgs.gov/pass/index.html
-• Some services and facilities are limited in Yosemite National Park due to COVID, and shuttles are not operating.
-
-Drive to the best view in all of Yosemite.  This 270-degree panorama trail of the Valley, Half Dome, and 3 Falls will amaze you.
-
-Glacier Point is a popular stop for many new visitors to Yosemite National Park on their way down to Yosemite Valley.  Although it's not much of a hike, the view at the end of the paved walkway will leave you breathless.  You will see (left to right) both Upper and Lower Yosemite Falls, Yosemite Valley below, Clouds Rest, Half Dome standing proud, and even Vernal and Nevada Falls.  The expansive views of Yosemite Valley will fill you with wonder.
+glacier = Trail.create!(park_id: yosemite.id, latitude: 37.72759, longitude: -119.57437, description: "Glacier Point is a popular stop for many new visitors to Yosemite National Park on their way down to Yosemite Valley.  Although it's not much of a hike, the view at the end of the paved walkway will leave you breathless.  You will see (left to right) both Upper and Lower Yosemite Falls, Yosemite Valley below, Clouds Rest, Half Dome standing proud, and even Vernal and Nevada Falls.  The expansive views of Yosemite Valley will fill you with wonder.
 
 There are no shuttle services available between Yosemite Valley and Glacier Point. There is a limited bus to Glacier Point for a tour which is available in summer- reservations are required for these bus tours.
 

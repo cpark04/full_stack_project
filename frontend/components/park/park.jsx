@@ -211,7 +211,7 @@ class Park extends React.Component {
                   <a href={`/#/trail/${trail.id}`}>
                     <div className="park-trail-info-container">
                       <div className="park-trail-info-name">#{idx+1} - {trail.trail_name}</div>
-                      <a href={`/#/park/${trail.park_id}`} className="park-trail-info-park">{trail.park_name}</a>
+                      <div className="park-trail-info-park">{trail.park_name}</div>
                       <div className="trail-card-rating-container">
                         {this.difficultyColorRender(trail.difficulty)}
                         <span className="trail-stars">
@@ -225,11 +225,11 @@ class Park extends React.Component {
                       <div className="trail-card-time-container">
                         <span>Length: {trail.length}</span>
                         <span>&nbsp;•&nbsp;</span>
-                        <span class="xlate-none">Est. 3h 53m</span>
+                        <span>Est. 3h 53m</span>
                       </div>
                       <div className="trail-card-description-container">
                         {trail.description}
-                        <a href={`/#/trail/${trail.id}`} className="park-trail-show-more">Show more</a>
+                        <div className="park-trail-show-more">Show more</div>
                       </div>
                     </div>
                   </a>
