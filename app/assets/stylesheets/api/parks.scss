@@ -1,3 +1,150 @@
 // Place all the styles related to the api::parks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.park-trail-bottom-container {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  flex-direction: column;
+  max-width: 1024px;
+  width: 100%;
+  padding: 0;
+}
+
+.park-trail-index-container {
+  width: 100%;
+  padding-top: 32px;
+  display: block!important;
+}
+
+.park-trail-top-trails {
+  margin-bottom: 18px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: -.2px;
+  color: #414141;
+}
+
+.park-trail-index {
+  display: flex;
+  flex-direction: column;
+}
+
+.park-trail-card-container {
+  margin-bottom: 24px;
+  display: flex;
+  height: 192px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.08), 0 0 4px 0 rgba(0,0,0,0.08);
+  background-color: #fff;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  padding: 16px;
+}
+
+.park-trail-card-img-cont {
+  border-radius: 8px;
+  height: 192px;
+  margin-right: 24px;
+  min-width: 288px;
+  width: 288px;
+  position: relative;
+}
+
+.trail-card-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.park-trail-info-container {
+  padding-top: 8px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.park-trail-info-name {
+  padding-right: 24px;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #414141;
+  font-size: 18px;
+  font-weight: 700;
+  height: 24px;
+  line-height: 24px;
+  width: 100%;
+}
+
+.park-trail-info-park {
+  padding-right: 24px;
+  color: #767676 !important;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  height: 21px;
+  line-height: 21px;
+  letter-spacing: normal;
+  color: #767676;
+}
+
+.trail-card-time-container {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  height: 21px;
+  line-height: 21px;
+  letter-spacing: normal;
+  color: #767676;
+}
+
+.trail-card-description-container {
+  margin-top: 24px;
+  height: 48px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1em;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #5a5a5a;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+}
+
+.park-trail-show-more {
+  position: absolute;
+  background-image: linear-gradient(90deg,hsla(0,0%,100%,0),#fff 20px,#fff);
+  padding-left: 20px;
+  bottom: 32px;
+  right: 16px;
+  color: #428a13;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: normal;
+}
