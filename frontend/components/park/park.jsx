@@ -35,16 +35,21 @@ class Park extends React.Component {
       arrows: true,
     };
 
-    return(
-      <Slider {...settings}>
-        <div><img src="https://bit.ly/3IAAk6T" alt="" className="slide-img"/></div>
-        <div><img src="https://bit.ly/3u0XHlZ" alt="" className="slide-img"/></div>
-        <div><img src="https://bit.ly/3GeLz3r" alt="" className="slide-img"/></div>
-        <div><img src="https://bit.ly/3o1a8um" alt="" className="slide-img"/></div>
-        <div><img src="https://bit.ly/32xtRdz" alt="" className="slide-img"/></div>
-        <div><img src="https://bit.ly/3AvTQyq" alt="" className="slide-img"/></div>
-      </Slider>
-    )
+    const {park} = this.props
+    if (park.trails) {
+      return(
+        <Slider {...settings}>
+          
+          {Object.values(park.trails).map((trail, idx) => {
+            return (
+              <div key={'trail' + `${idx}`}>
+                <a href={`#/trail/${trail.id}`} ><img src={(trail.headPhoto)} alt="" className="slide-img"/></a>
+              </div>
+            )
+          })}
+        </Slider>
+      )
+    }
   }
   
 
@@ -87,6 +92,16 @@ class Park extends React.Component {
   printPage(e) {
     e.preventDefault();
     window.print()
+  }
+
+  difficultyColorRender(diff) {
+    if (diff === "hard") {
+      return <span className="trail-difficulty" style={{backgroundColor:"#676767"}}>{diff}</span>
+    } else if (diff === "moderate") {
+      return <span className="trail-difficulty" style={{backgroundColor:"#4bafe1"}}>{diff}</span>
+    } else {
+      return <span className="trail-difficulty" style={{backgroundColor:"#69a041"}}>{diff}</span>
+    }
   }
 
   render() {
@@ -178,11 +193,53 @@ class Park extends React.Component {
               </div>
             </div>
           </div>
-
         </div>
-
-        <div className="park-trail-index"></div>
       </div>
+
+      <div className="park-trail-bottom-container">
+        <div className="park-trail-index-container">
+          <div className="park-trail-top-trails">Top Trails</div>
+          <div className="park-trail-index">
+            {Object.values(park.trails).map((trail, idx) => {
+              return (
+                <div key={'park'+`${idx}`} className="park-trail-card-container">
+                  <a href={`/#/trail/${trail.id}`}>
+                    <div className="park-trail-card-img-cont">
+                      <img src={trail.headPhoto} alt="" className="trail-card-img"/>
+                    </div>
+                  </a>
+                  <a href={`/#/trail/${trail.id}`}>
+                    <div className="park-trail-info-container">
+                      <div className="park-trail-info-name">#{idx+1} - {trail.trail_name}</div>
+                      <div className="park-trail-info-park">{trail.park_name}</div>
+                      <div className="trail-card-rating-container">
+                        {this.difficultyColorRender(trail.difficulty)}
+                        <span className="trail-stars">
+                          <span className="fa fa-star checked star"></span>
+                          <span className="fa fa-star checked star"></span>
+                          <span className="fa fa-star checked star"></span>
+                          <span className="fa fa-star checked star"></span>
+                          <span className="fa fa-star star"></span>
+                        </span>
+                      </div>
+                      <div className="trail-card-time-container">
+                        <span>Length: {trail.length}</span>
+                        <span>&nbsp;•&nbsp;</span>
+                        <span>Est. 3h 53m</span>
+                      </div>
+                      <div className="trail-card-description-container">
+                        {trail.description}
+                        <div className="park-trail-show-more">Show more</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </div>
+
     </div>
   }
 }
