@@ -8,6 +8,7 @@ class Home extends React.Component {
 
   componentDidMount() {
     this.props.fetchParks();
+    this.props.fetchTrails();
   }
 
   render(){
