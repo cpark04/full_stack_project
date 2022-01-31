@@ -6,7 +6,7 @@ class Api::ReviewsController < ApplicationController
         login!(@review)
         render :show
       else
-        render json: @review.errors.full_messages, status: 422
+        render json: @review.errors.full_messages, status: 401
       end
   end
 
@@ -14,6 +14,25 @@ class Api::ReviewsController < ApplicationController
     @review = Review.find_by(id: params[:id])
     render :show
   end 
+
+  def update
+    @review = Review.find_by(id: params[:id])
+    if @review.update(review_params)
+      render :show
+    else
+      render json: @review.errors.full_messages, status: 401
+    end
+  end
+
+  def destroy
+      @review = Review.find_by(id: params[:id])
+      if @review
+          @review.destroy
+          render json: @review.trail_id   
+      else
+          render json: ["Review cannot be deleted."]
+      end
+  end
 
   private
 
