@@ -171,15 +171,15 @@ class Trail extends React.Component {
                   {trails.map((trail, idx) => {
                     return(
                       <li key={'trail'+`${idx}`} className="trail-card-container">
-                        <div className="trail-card">
-                          <a href={`#/trail/${trail.id}`}>
+                        <a href={`#/trail/${trail.id}`} className="trail-card">
+                          <div>
                             <div className="trail-card-photo-container">
                               <img src={trail.headPhoto} alt="" className="trail-card-photo" />
                             </div>
-                          </a>
+                          </div>
                           <div className="trail-card-info-container">
                             <div className="trail-card-name">{trail.trail_name}</div>
-                            <a href={`#/park/${trail.park_id}`} className="trail-card-park">{trail.park_name}</a>
+                            <div className="trail-card-park">{trail.park_name}</div>
                             <div className="trail-card-rating-container">
                               {this.difficultyColorRender(trail.difficulty)}
                               <span className="trail-stars">
@@ -196,7 +196,7 @@ class Trail extends React.Component {
                               <span className="trail-card-time">Est. 3h 53m</span>
                             </div>
                           </div>
-                        </div>
+                        </a>
                       </li>
                     )
                   })}

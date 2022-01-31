@@ -39,16 +39,16 @@ class Home extends React.Component {
           
           {trails.map((trail, idx) => {
             return (
-              <div key={'trail'+`${idx}`} className="trail-card-container">
+              <a href={`#/trail/${trail.id}`} key={'trail'+`${idx}`} className="trail-card-container">
                 <div className="trail-card">
-                  <a href={`#/trail/${trail.id}`}>
+                  <div>
                     <div className="trail-card-photo-container">
                       <img src={trail.headPhoto} alt="" className="trail-card-photo" />
                     </div>
-                  </a>
+                  </div>
                   <div className="trail-card-info-container">
                     <div className="trail-card-name">{trail.trail_name}</div>
-                    <a href={`#/park/${trail.park_id}`} className="trail-card-park">{trail.park_name}</a>
+                    <div className="trail-card-park">{trail.park_name}</div>
                     <div className="trail-card-rating-container">
                       {this.difficultyColorRender(trail.difficulty)}
                       <span className="trail-stars">
@@ -66,7 +66,7 @@ class Home extends React.Component {
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             )
           })}
         </Slider>
