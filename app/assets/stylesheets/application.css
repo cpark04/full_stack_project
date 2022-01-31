@@ -301,13 +301,23 @@ body {
   transition: background-color .2s ease-in-out;
 }
 
-.trail-cards {
-  display: flex;
-  flex-direction: column;
-  height: 400px;
-  justify-content: center;
-  align-items: center;
+.home-trail-card-container {
+  display: block;
+  padding: 92px 0;
   background: #f2f2f2;
+}
+
+.home-trail-card-container .slick-slider {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.home-trail-card-container .slick-prev {
+  left: -47px
+}
+
+.home-trail-card-container .slick-next {
+  right: -29px
 }
 
 .module-picture {
@@ -664,12 +674,12 @@ footer {
 }
 
 .slick-next {
-  right: 40px !important;
+  /* right: 40px !important; */
 }
 
 .slick-prev {
-  left: -1px !important;
-  z-index: 999999999;
+  /* left: -1px !important;
+  z-index: 999999999; */
 }
 
 .slick-next:before, .slick-prev:before {
