@@ -3,15 +3,82 @@ import PhotoSlides from "./photo_slides";
 import SearchBar from "../search/search_bar";
 import TrailCards from "../trail_cards/trail_cards";
 import { Link } from "react-router-dom";
+import Slider from "react-slick";
 
 class Home extends React.Component {
 
   componentDidMount() {
     this.props.fetchParks();
+    this.props.fetchTrails();
+  }
+
+  difficultyColorRender(diff) {
+    if (diff === "hard") {
+      return <span className="trail-difficulty" style={{backgroundColor:"#676767"}}>{diff}</span>
+    } else if (diff === "moderate") {
+      return <span className="trail-difficulty" style={{backgroundColor:"#4bafe1"}}>{diff}</span>
+    } else {
+      return <span className="trail-difficulty" style={{backgroundColor:"#69a041"}}>{diff}</span>
+    }
+  }
+
+  simpleSlider() {
+    const settings = {
+      dots: false,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      arrows: true,
+    };
+
+    const {trails} = this.props
+    if (trails) {
+      return(
+        <Slider {...settings}>
+          
+          {trails.map((trail, idx) => {
+            return (
+              <div key={'trail'+`${idx}`} className="trail-card-container">
+                <div className="trail-card">
+                  <a href={`#/trail/${trail.id}`}>
+                    <div className="trail-card-photo-container">
+                      <img src={trail.headPhoto} alt="" className="trail-card-photo" />
+                    </div>
+                  </a>
+                  <div className="trail-card-info-container">
+                    <div className="trail-card-name">{trail.trail_name}</div>
+                    <a href={`#/park/${trail.park_id}`} className="trail-card-park">{trail.park_name}</a>
+                    <div className="trail-card-rating-container">
+                      {this.difficultyColorRender(trail.difficulty)}
+                      <span className="trail-stars">
+                        <span className="fa fa-star checked star"></span>
+                        <span className="fa fa-star checked star"></span>
+                        <span className="fa fa-star checked star"></span>
+                        <span className="fa fa-star checked star"></span>
+                        <span className="fa fa-star star"></span>
+                      </span>
+                    </div>
+                    <div className="trail-card-time-container">
+                      <span className="trail-card-length">Length: {trail.length}</span>
+                      <span>&nbsp;•&nbsp;</span>
+                      <span className="trail-card-time">Est. 3h 53m</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )
+          })}
+        </Slider>
+      )
+    }
   }
 
   render(){
-    if (!this.props.parks) return null
+    if (!this.props.parks) return null;
+    if (!this.props.trails) return null;
+
+    const {parks, trails} = this.props
 
     return <div className="home-page">
       
@@ -20,15 +87,8 @@ class Home extends React.Component {
       </div>
 
 
-      <div className='trail-cards'>
-        <div className="spencer-container"><span className="spencer-click">SPENCER CLICK HEREEE!!! These are my temp park show links</span>
-          {this.props.parks.map((park) => {
-            return <div key={park.id}>
-              <Link to={`/park/${park.id}`}>{park.park_name}</Link>
-            </div>
-          })}
-        </div>
-        <TrailCards />
+      <div className='home-trail-card-container'>
+          {this.simpleSlider()}       
       </div>
       
 
