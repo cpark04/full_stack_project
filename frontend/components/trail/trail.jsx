@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import MenuBar from "../menubar/menu_bar";
 import WeatherBar from "../menubar/weather_bar";
 import { fetchWeather } from "../../util/weather_api_util";
+import ReviewBar from "../menubar/review_bar";
 
 class Trail extends React.Component {
 
@@ -155,6 +156,8 @@ class Trail extends React.Component {
           <MenuBar trail={trail}/>
 
           {this.state.forecastArray ? <WeatherBar forecastArr={this.state.forecastArray} /> : null }
+
+          <ReviewBar />
         </div>
 
 
