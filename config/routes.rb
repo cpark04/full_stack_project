@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :parks, only: [:index, :show]
     resource :session, only: [:create, :destroy]
     resources :trails, only: [:index, :show]
+    resources :reviews, only: [:create, :show, :update, :destroy]
   end  
 
   root to: 'static_pages#root'
