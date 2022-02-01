@@ -179,13 +179,8 @@ class Trail extends React.Component {
                             <div className="trail-card-park">{trail.park_name}</div>
                             <div className="trail-card-rating-container">
                               {this.difficultyColorRender(trail.difficulty)}
-                              <span className="trail-stars">
-                                <span className="fa fa-star checked star"></span>
-                                <span className="fa fa-star checked star"></span>
-                                <span className="fa fa-star checked star"></span>
-                                <span className="fa fa-star checked star"></span>
-                                <span className="fa fa-star star"></span>
-                              </span>
+                              <StarRatings rating={trail.avg_rating} starDimension="15px" starRatedColor="#f5d24b" starSpacing="2px" className='review-user-date'/>
+                              <span className="top-num-reviews">({trail.num_reviews})</span>  
                             </div>
                             <div className="trail-card-time-container">
                               <span className="trail-card-length">Length: {trail.length}</span>
