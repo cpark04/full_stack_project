@@ -8,8 +8,12 @@
         json.set! review.id do
           json.extract! review, :id, :review_date, :rating, :comment, :user_id, :trail_id
           json.pfp url_for(review.user.pfp)
+          json.name (review.user.fname + " " + review.user.lname)
         end
       end
     end
+    
+    json.avg_rating (trail.reviews.length > 0 ? trail.reviews.map{|review| review.rating}.sum/trail.reviews.length : [])
+    json.num_reviews trail.reviews.length
   end
 end

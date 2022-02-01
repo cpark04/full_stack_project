@@ -3,6 +3,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import StarRatings from 'react-star-ratings';
 
 
 function TabPanel(props) {
@@ -55,7 +56,14 @@ export default function ReviewBar({trail}) {
             return <div className="review-item-container">
               <div className="review-user-container">
                 <img src={review.pfp} alt="" className='review-user-photo'/>
-
+                <div className="review-user-name">{review.name}</div>
+                <div className='review-user-rating-container'>
+                  <StarRatings rating={review.rating} starDimension="15px" starRatedColor="#f5d24b" starSpacing="2px" className='review-user-date'/>
+                  <span className='review-user-date'>{new Date(review.review_date).toDateString()}</span>
+                </div>
+              </div>
+              <div className="review-comment-container">
+                <div className="review-comment">{review.comment}</div>
               </div>
             </div>
           })}

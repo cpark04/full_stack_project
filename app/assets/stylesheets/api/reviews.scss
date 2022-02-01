@@ -14,3 +14,58 @@
   max-width: 100%;
   overflow: hidden;
 }
+
+.review-user-photo {
+  border-radius: 50%;
+  position: relative;
+  height: 48px;
+  width: 48px;
+  border-radius: 48px;
+}
+
+.review-user-name {
+  color: #414141;
+  font-size: 16px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 600;
+  height: 24px;
+  line-height: 24px;
+  letter-spacing: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 64px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.review-user-rating-container {
+  position: absolute;
+  top: 28px;
+  left: 64px;
+}
+
+.review-user-date {
+  font-size: 14px;
+  color: #767676;
+  position: relative;
+  top: -3px;
+  margin-left: 8px;
+}
+
+.review-comment-container {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.review-comment {
+  white-space: pre-wrap;
+  line-height: 1.5;
+  font-size: 14px;
+  margin-top: 17px;
+}
