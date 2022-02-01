@@ -12,6 +12,32 @@ Trail.destroy_all
 # USER DATA
 demo = User.create!(fname: 'demo', lname: 'demo', email: 'demo@gmail.com', password: '12341234')
 
+chris = User.create!(fname: 'Chris', lname: 'Park', email: 'chris@gmail.com', password: '12341234')
+brian = User.create!(fname: 'Brian', lname: 'Ko', email: 'brian@gmail.com', password: '12341234')
+jerry = User.create!(fname: 'Jerry', lname: 'Phan', email: 'jerry@gmail.com', password: '12341234')
+amanda = User.create!(fname: 'Amanda', lname: 'Chen', email: 'amanda@gmail.com', password: '12341234')
+laney = User.create!(fname: 'Laney', lname: 'Luong', email: 'laney@gmail.com', password: '12341234')
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/profile-pic/person_placeholder.png')
+demo.pfp.attach(io: file, filename: 'person_placeholder.png')
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/profile-pic/person_placeholder.png')
+
+chris.pfp.attach(io: file, filename: 'person_placeholder.png')
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/profile-pic/person_placeholder.png')
+
+brian.pfp.attach(io: file, filename: 'person_placeholder.png')
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/profile-pic/person_placeholder.png')
+
+jerry.pfp.attach(io: file, filename: 'person_placeholder.png')
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/profile-pic/person_placeholder.png')
+
+amanda.pfp.attach(io: file, filename: 'person_placeholder.png')
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/profile-pic/person_placeholder.png')
+
+laney.pfp.attach(io: file, filename: 'person_placeholder.png')
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/profile-pic/person_placeholder.png')
+
+
+
 
 
 
@@ -216,3 +242,17 @@ mirror.head_photo.attach(io: file, filename: 'mirror-header.jpeg')
 # vernal.small_map.attach(io: file, filename: '')
 # file = open('')
 # vernal.head_photo.attach(io: file, filename: '')
+
+
+
+
+
+
+
+### Reviews data
+
+
+review1 = Review.create!(user_id: chris.id, trail_id: vernal.id, rating: 3, comment: "Okay trail", review_date: "2022-01-11")
+review2 = Review.create!(user_id: brian.id, trail_id: vernal.id, rating: 5, comment: "Great trail", review_date: "2022-01-11")
+review3 = Review.create!(user_id: amanda.id, trail_id: vernal.id, rating: 1, comment: "Great trail", review_date: "2022-01-11")
+review4 = Review.create!(user_id: jerry.id, trail_id: vernal.id, rating: 2, comment: "Great trail", review_date: "2022-01-11")

@@ -33,13 +33,13 @@ function a11yProps(index) {
   };
 }
 
-export default function ReviewBar() {
+export default function ReviewBar({trail}) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
+  console.log(trail)
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -49,14 +49,22 @@ export default function ReviewBar() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <ul className='weather-bar-container'>
-          
-        </ul>
+        <div className='review-container'>
+          {Object.values(trail.reviews).map((review) => {
+            console.log(review)
+            return <div className="review-item-container">
+              <div className="review-user-container">
+                <img src={review.pfp} alt="" className='review-user-photo'/>
+
+              </div>
+            </div>
+          })}
+            
+
+        </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
-       <ul className='weather-bar-container'>
          
-       </ul>
 
       </TabPanel>
       

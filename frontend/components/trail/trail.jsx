@@ -16,9 +16,9 @@ class Trail extends React.Component {
   }
 
   componentDidMount() {
+    this.props.fetchTrails();
     this.props.fetchTrail(this.props.match.params.trailId)
       .then(() => this.weatherCall());
-    this.props.fetchTrails();
   }
 
   printPage(e) {
@@ -157,7 +157,7 @@ class Trail extends React.Component {
 
           {this.state.forecastArray ? <WeatherBar forecastArr={this.state.forecastArray} /> : null }
 
-          <ReviewBar />
+          <ReviewBar trail={trail}/>
         </div>
 
 

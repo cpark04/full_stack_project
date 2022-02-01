@@ -6,7 +6,7 @@ class Review extends React.Component {
   }
 
   render () {
-    return 
+    return null
   }
 }
 
