@@ -13,7 +13,7 @@
       end
     end
     
-    json.avg_rating (trail.reviews.length > 0 ? trail.reviews.map{|review| review.rating}.sum/trail.reviews.length : [])
+    json.avg_rating (trail.reviews.length > 0 ? trail.reviews.map{|review| review.rating}.sum/trail.reviews.length : 0)
     json.num_reviews trail.reviews.length
   end
 end
