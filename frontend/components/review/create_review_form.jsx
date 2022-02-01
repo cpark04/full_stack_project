@@ -1,7 +1,5 @@
-import { FormControl, InputLabel, Select, Stack } from "@mui/material";
 import React from "react";
 import StarRatings from "react-star-ratings";
-import DatePicker from 'react-date-picker';
 
 
 
@@ -30,7 +28,7 @@ class CreateReviewForm extends React.Component {
   handleChange(field) {
     return (e) => {
       this.setState({[field]: e.currentTarget.value})
-      console.log(this.state.comment)
+      console.log(this.state)
     }
   }
 
@@ -74,14 +72,96 @@ class CreateReviewForm extends React.Component {
         <div className="create-form-steps">Step 2 of 2</div>
         <form className="create-form-act-condition-form">
           <div className="create-form-act-container">
-            <div className="create-form-activity-selectors">
-              <div className="selector-root">
-              <DatePicker onChange={this.handleDate} />
+            <div className="form-activity-container">
+              Date of Activity
+            </div>
+            <div className="selector-root">
+              <div className="date-select-container">
+                <div className="date-select-input-box">
+                    <input type="date" id="date-select" onChange={this.handleChange('review_date')} />
+                </div>
               </div>
+            </div>
                       
 
 
+          </div>
+          <div className="review-conditions-container">
+            <div className="review-conditions-title">Trail Conditions</div>
+            <div className="review-conditions-checkbox-container">
+              <div className="checkbox-container">
+                <input type="checkbox" id="great" value="great" className="checkbox-input"/>
+                <label for="great" >Great!</label>
+              </div>
+              <div className="checkbox-container">
+                <input type="checkbox" id="blowdown" value="blowdown" className="checkbox-input"/>
+                <label for="blowdown" >Blowdown</label>
+              </div>
+              <div className="checkbox-container">
+                <input type="checkbox" id="bridge-out" value="bridge-out" className="checkbox-input"/>
+                <label for="bridge-out" >Bridge out</label>
+              </div>
+              <div className="checkbox-container">
+                <input type="checkbox" id="bugs" value="bugs" className="checkbox-input"/>
+                <label for="bugs" >Bugs</label>
+              </div>
+              <div className="checkbox-container">
+                <input type="checkbox" id="closed" value="closed" className="checkbox-input"/>
+                <label for="closed" >Closed</label>
+              </div>
+              <div className="checkbox-container">
+                <input type="checkbox" id="fee" value="fee" className="checkbox-input"/>
+                <label for="fee" >Fee</label>
+              </div>
+              <div className="checkbox-container">
+                <input type="checkbox" id="flooded" value="flooded" className="checkbox-input"/>
+                <label for="flooded" >Flooded</label>
+              </div>
+              <div className="checkbox-container">
+                <input type="checkbox" id="icy" value="icy" className="checkbox-input"/>
+                <label for="icy" >Icy</label>
+              </div>
+              <div className="checkbox-container">
+                <input type="checkbox" id="muddy" value="muddy" className="checkbox-input"/>
+                <label for="muddy" >Muddy</label>
+              </div>
+              <div className="checkbox-container">
+                <input type="checkbox" id="no-shade" value="no-shade" className="checkbox-input"/>
+                <label for="no-shade" >No shade</label>
+              </div>
+              <div className="checkbox-container">
+                <input type="checkbox" id="off-trail" value="off-trail" className="checkbox-input"/>
+                <label for="off-trail" >Off trail</label>
+              </div>
+              <div className="checkbox-container">
+                <input type="checkbox" id="over-grown" value="over-grown" className="checkbox-input"/>
+                <label for="over-grown" >Over grown</label>
+              </div>
+              <div className="checkbox-container">
+                <input type="checkbox" id="private-property" value="private-property" className="checkbox-input"/>
+                <label for="private-property" >Private property</label>
+              </div>
+              <div className="checkbox-container">
+                <input type="checkbox" id="rocky" value="rocky" className="checkbox-input"/>
+                <label for="rocky" >rocky</label>
+              </div>
+              <div className="checkbox-container">
+                <input type="checkbox" id="scramble" value="scramble" className="checkbox-input"/>
+                <label for="scramble" >Scramble</label>
+              </div>
+              <div className="checkbox-container">
+                <input type="checkbox" id="snow" value="snow" className="checkbox-input"/>
+                <label for="snow" >Snow</label>
+              </div>
+              <div className="checkbox-container">
+                <input type="checkbox" id="washed-out" value="washed-out" className="checkbox-input"/>
+                <label for="washed-out" >Washed out</label>
+              </div>
             </div>
+          </div>
+          <div className="create-form-button-container">
+            <button className="back-button">Back</button>
+            <input type="submit" value="Post" className="create-form-post" />
           </div>
         </form>
       </div>
@@ -91,3 +171,4 @@ class CreateReviewForm extends React.Component {
 }
 
 export default CreateReviewForm;
+
