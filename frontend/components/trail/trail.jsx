@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import MenuBar from "../menubar/menu_bar";
 import WeatherBar from "../menubar/weather_bar";
 import { fetchWeather } from "../../util/weather_api_util";
+import ReviewBar from "../menubar/review_bar";
+import StarRatings from "react-star-ratings";
 
 class Trail extends React.Component {
 
@@ -15,9 +17,9 @@ class Trail extends React.Component {
   }
 
   componentDidMount() {
+    this.props.fetchTrails();
     this.props.fetchTrail(this.props.match.params.trailId)
       .then(() => this.weatherCall());
-    this.props.fetchTrails();
   }
 
   printPage(e) {
@@ -79,13 +81,8 @@ class Trail extends React.Component {
           <h1 className="trail-photo-title">{trail.trail_name}</h1>
           <div className="trail-rating-diff">
             {this.difficultyColorRender(trail.difficulty)}
-            <span className="trail-stars">
-              <span className="fa fa-star checked star"></span>
-              <span className="fa fa-star checked star"></span>
-              <span className="fa fa-star checked star"></span>
-              <span className="fa fa-star checked star"></span>
-              <span className="fa fa-star star"></span>
-            </span>
+            <StarRatings rating={trail.avg_rating} starDimension="15px" starRatedColor="#f5d24b" starSpacing="2px" className="star-ratings"/>
+            <span className="top-num-reviews">({trail.num_reviews})</span>
           </div>
           <Link className="trail-park-name" to={`/park/${trail.park_id}`}>{trail.park_name}</Link>
         </div>
@@ -153,11 +150,11 @@ class Trail extends React.Component {
           </div>
 
           <MenuBar trail={trail}/>
-
           {this.state.forecastArray ? <WeatherBar forecastArr={this.state.forecastArray} /> : null }
+          <ReviewBar trail={trail}/>
+
+
         </div>
-
-
         <div className="trail-right-container">
           <div className="trail-right-flex">
             <div className="trail-map-container">
