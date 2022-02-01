@@ -1,6 +1,9 @@
-import { FormControl, InputLabel, Select } from "@mui/material";
+import { FormControl, InputLabel, Select, Stack } from "@mui/material";
 import React from "react";
 import StarRatings from "react-star-ratings";
+import DatePicker from 'react-date-picker';
+
+
 
 class CreateReviewForm extends React.Component {
 
@@ -41,6 +44,13 @@ class CreateReviewForm extends React.Component {
     }
   }
 
+  handleDate (value) {
+    return (e) => {
+      this.setState({review_date: value})
+      console.log(this.state)
+    }
+  }
+
   render() {
     return <div>
       <div className="create-form-title-container" id="modal-step-1">
@@ -66,7 +76,7 @@ class CreateReviewForm extends React.Component {
           <div className="create-form-act-container">
             <div className="create-form-activity-selectors">
               <div className="selector-root">
-                
+              <DatePicker onChange={this.handleDate} />
               </div>
                       
 

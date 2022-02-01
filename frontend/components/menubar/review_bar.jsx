@@ -41,7 +41,6 @@ export default function ReviewBar({trail}) {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  console.log(trail)
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
