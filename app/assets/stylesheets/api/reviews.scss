@@ -422,3 +422,30 @@ textarea {
   background: transparent;
   cursor: pointer;
 }
+
+.review-user-tag-container {
+  display: flex;
+  flex-flow: row wrap;
+  padding-top: 8px;
+  padding-bottom: 12px;
+}
+
+.review-user-tag {
+  padding: 3px 13px;
+  border-radius: 6px;
+  border: 1px solid #428a13;
+  background-color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #428a13;
+  max-width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 4px 8px 0 0;
+}

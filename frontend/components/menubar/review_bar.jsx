@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import StarRatings from 'react-star-ratings';
 import CreateReviewModal from '../modal/create_review_modal';
+import { splitCap } from '../../util/util';
 
 
 function TabPanel(props) {
@@ -41,6 +42,8 @@ export default function ReviewBar({trail}) {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -61,6 +64,11 @@ export default function ReviewBar({trail}) {
                   <div className='review-user-rating-container'>
                     <StarRatings rating={review.rating} starDimension="15px" starRatedColor="#f5d24b" starSpacing="2px" className='review-user-date'/>
                     <span className='review-user-date'>{new Date(review.review_date).toDateString()}</span>
+                  </div>
+                  <div className="review-user-tag-container">
+                    {JSON.parse(review.conditions).map((tag, idx) => {
+                      return <span key={'tag'+`${idx}`} className='review-user-tag'>{splitCap(tag)}</span>
+                    })}
                   </div>
                 </div>
                 <div className="review-comment-container">

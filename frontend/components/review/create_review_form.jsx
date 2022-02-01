@@ -13,10 +13,11 @@ class CreateReviewForm extends React.Component {
       rating: 0,
       comment: '',
       review_date: '',
+      conditions: []
     }
     this.changeRating = this.changeRating.bind(this)
     this.handleClick = this.handleClick.bind(this)
-
+    this.handleCheckbox = this.handleCheckbox.bind(this)
   }
 
   changeRating(newRating) {
@@ -30,6 +31,17 @@ class CreateReviewForm extends React.Component {
       this.setState({[field]: e.currentTarget.value})
       console.log(this.state)
     }
+  }
+
+  handleCheckbox() {
+    let checkboxes = Array.from(document.getElementsByClassName('checkbox-input'))
+
+    let tagArr = [];
+    checkboxes.forEach((input) => {
+      if (input.checked) tagArr.push(input.value)
+    })
+    this.setState({conditions: tagArr})
+    console.log(this.state.conditions)
   }
 
   handleClick(e, condition) {
@@ -93,72 +105,72 @@ class CreateReviewForm extends React.Component {
             <div className="review-conditions-title">Trail Conditions</div>
             <div className="review-conditions-checkbox-container">
               <div className="checkbox-container">
-                <input type="checkbox" id="great" value="great" className="checkbox-input"/>
-                <label for="great" >Great!</label>
+                <input onChange={this.handleCheckbox} type="checkbox" id="great" value="great" className="checkbox-input"/>
+                <label htmlFor="great" >Great!</label>
               </div>
               <div className="checkbox-container">
-                <input type="checkbox" id="blowdown" value="blowdown" className="checkbox-input"/>
-                <label for="blowdown" >Blowdown</label>
+                <input onChange={this.handleCheckbox} type="checkbox" id="blowdown" value="blowdown" className="checkbox-input"/>
+                <label htmlFor="blowdown" >Blowdown</label>
               </div>
               <div className="checkbox-container">
-                <input type="checkbox" id="bridge-out" value="bridge-out" className="checkbox-input"/>
-                <label for="bridge-out" >Bridge out</label>
+                <input onChange={this.handleCheckbox} type="checkbox" id="bridge-out" value="bridge-out" className="checkbox-input"/>
+                <label htmlFor="bridge-out" >Bridge out</label>
               </div>
               <div className="checkbox-container">
-                <input type="checkbox" id="bugs" value="bugs" className="checkbox-input"/>
-                <label for="bugs" >Bugs</label>
+                <input onChange={this.handleCheckbox} type="checkbox" id="bugs" value="bugs" className="checkbox-input"/>
+                <label htmlFor="bugs" >Bugs</label>
               </div>
               <div className="checkbox-container">
-                <input type="checkbox" id="closed" value="closed" className="checkbox-input"/>
-                <label for="closed" >Closed</label>
+                <input onChange={this.handleCheckbox} type="checkbox" id="closed" value="closed" className="checkbox-input"/>
+                <label htmlFor="closed" >Closed</label>
               </div>
               <div className="checkbox-container">
-                <input type="checkbox" id="fee" value="fee" className="checkbox-input"/>
-                <label for="fee" >Fee</label>
+                <input onChange={this.handleCheckbox} type="checkbox" id="fee" value="fee" className="checkbox-input"/>
+                <label htmlFor="fee" >Fee</label>
               </div>
               <div className="checkbox-container">
-                <input type="checkbox" id="flooded" value="flooded" className="checkbox-input"/>
-                <label for="flooded" >Flooded</label>
+                <input onChange={this.handleCheckbox} type="checkbox" id="flooded" value="flooded" className="checkbox-input"/>
+                <label htmlFor="flooded" >Flooded</label>
               </div>
               <div className="checkbox-container">
-                <input type="checkbox" id="icy" value="icy" className="checkbox-input"/>
-                <label for="icy" >Icy</label>
+                <input onChange={this.handleCheckbox} type="checkbox" id="icy" value="icy" className="checkbox-input"/>
+                <label htmlFor="icy" >Icy</label>
               </div>
               <div className="checkbox-container">
-                <input type="checkbox" id="muddy" value="muddy" className="checkbox-input"/>
-                <label for="muddy" >Muddy</label>
+                <input onChange={this.handleCheckbox} type="checkbox" id="muddy" value="muddy" className="checkbox-input"/>
+                <label htmlFor="muddy" >Muddy</label>
               </div>
               <div className="checkbox-container">
-                <input type="checkbox" id="no-shade" value="no-shade" className="checkbox-input"/>
-                <label for="no-shade" >No shade</label>
+                <input onChange={this.handleCheckbox} type="checkbox" id="no-shade" value="no-shade" className="checkbox-input"/>
+                <label htmlFor="no-shade" >No shade</label>
               </div>
               <div className="checkbox-container">
-                <input type="checkbox" id="off-trail" value="off-trail" className="checkbox-input"/>
-                <label for="off-trail" >Off trail</label>
+                <input onChange={this.handleCheckbox} type="checkbox" id="off-trail" value="off-trail" className="checkbox-input"/>
+                <label htmlFor="off-trail" >Off trail</label>
               </div>
               <div className="checkbox-container">
-                <input type="checkbox" id="over-grown" value="over-grown" className="checkbox-input"/>
-                <label for="over-grown" >Over grown</label>
+                <input onChange={this.handleCheckbox} type="checkbox" id="over-grown" value="over-grown" className="checkbox-input"/>
+                <label htmlFor="over-grown" >Over grown</label>
               </div>
               <div className="checkbox-container">
-                <input type="checkbox" id="private-property" value="private-property" className="checkbox-input"/>
-                <label for="private-property" >Private property</label>
+                <input onChange={this.handleCheckbox} type="checkbox" id="private-property" value="private-property" className="checkbox-input"/>
+                <label htmlFor="private-property" >Private property</label>
               </div>
               <div className="checkbox-container">
-                <input type="checkbox" id="rocky" value="rocky" className="checkbox-input"/>
-                <label for="rocky" >rocky</label>
+                <input onChange={this.handleCheckbox} type="checkbox" id="rocky" value="rocky" className="checkbox-input"/>
+                <label htmlFor="rocky" >rocky</label>
               </div>
               <div className="checkbox-container">
-                <input type="checkbox" id="scramble" value="scramble" className="checkbox-input"/>
-                <label for="scramble" >Scramble</label>
+                <input onChange={this.handleCheckbox} type="checkbox" id="scramble" value="scramble" className="checkbox-input"/>
+                <label htmlFor="scramble" >Scramble</label>
               </div>
               <div className="checkbox-container">
-                <input type="checkbox" id="snow" value="snow" className="checkbox-input"/>
-                <label for="snow" >Snow</label>
+                <input onChange={this.handleCheckbox} type="checkbox" id="snow" value="snow" className="checkbox-input"/>
+                <label htmlFor="snow" >Snow</label>
               </div>
               <div className="checkbox-container">
-                <input type="checkbox" id="washed-out" value="washed-out" className="checkbox-input"/>
-                <label for="washed-out" >Washed out</label>
+                <input onChange={this.handleCheckbox} type="checkbox" id="washed-out" value="washed-out" className="checkbox-input"/>
+                <label htmlFor="washed-out" >Washed out</label>
               </div>
             </div>
           </div>
