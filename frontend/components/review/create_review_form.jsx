@@ -27,6 +27,7 @@ class CreateReviewForm extends React.Component {
   handleChange(field) {
     return (e) => {
       this.setState({[field]: e.currentTarget.value})
+      console.log(this.state.comment)
     }
   }
 
