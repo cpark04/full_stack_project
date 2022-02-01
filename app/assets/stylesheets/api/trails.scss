@@ -92,6 +92,10 @@ a {
   height: 55px;
 }
 
+.trail-photo-li:hover {
+  background-color: #69a041;
+}
+
 .trail-button-photo-a {
   position: relative;
   width: 100%;
@@ -277,10 +281,14 @@ pre {
 .Mui-selected {
   color: #428a13 !important;
 }
-.MuiButtonBase-root {
+.MuiTab-root {
   font-family: Proxima Nova,Arial,sans-serif !important;
   font-size: 17px !important;
   color: #414141;
+}
+
+.MuiTab-root:hover {
+  color: #69a041
 }
 
 .MuiTabs-scroller {
