@@ -674,14 +674,7 @@ footer {
   border-radius: 8px;
 }
 
-.slick-next {
-  /* right: 40px !important; */
-}
 
-.slick-prev {
-  /* left: -1px !important;
-  z-index: 999999999; */
-}
 
 .slick-next:before, .slick-prev:before {
   font-size: 37px !important;

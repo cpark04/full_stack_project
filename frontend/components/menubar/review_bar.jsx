@@ -52,11 +52,10 @@ export default function ReviewBar({trail}) {
       </Box>
       <TabPanel value={value} index={0}>
         <div className="review-container">
-          <CreateReviewModal/>          
+          <CreateReviewModal trail={trail}/>          
           <div className='review-index'>
-            {Object.values(trail.reviews).map((review) => {
-              console.log(review)
-              return <div className="review-item-container">
+            {Object.values(trail.reviews).map((review, idx) => {
+              return <div key={'review'+`${idx}`} className="review-item-container">
                 <div className="review-user-container">
                   <img src={review.pfp} alt="" className='review-user-photo'/>
                   <div className="review-user-name">{review.name}</div>

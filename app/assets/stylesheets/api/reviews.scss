@@ -124,3 +124,61 @@
   display: flex;
   flex-direction: column;
 }
+
+.create-close-button-container {
+  padding: 26px 32px 0;
+}
+
+.create-form-title-container {
+  padding: 16px 32px 24px;
+}
+
+.create-close-button {
+  border: none;
+  color: #767676;
+  background: #fff;
+  font-size: 16px;
+  padding: 0;
+  margin-left: -5px;
+  outline: none;
+}
+
+.create-form-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #414141;
+  line-height: 1.13;
+  letter-spacing: -.3px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 72px;
+}
+
+.create-form-steps {
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #5a5a5a;
+  margin-top: 4px;
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.create-form-rating-comment-form {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.create-form-rating-comment-container {
+  padding: 0 32px 32px;
+}

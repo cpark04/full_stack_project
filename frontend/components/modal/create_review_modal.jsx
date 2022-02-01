@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import CreateReviewForm from '../review/create_review_form';
+import { DialogTitle } from '@mui/material';
 
 const style = {
   // position: 'absolute',
@@ -12,12 +13,12 @@ const style = {
   // transform: 'translate(-50%, -50%)',
   // width: 400,
   // bgcolor: 'background.paper',
-  border: '2px solid #000',
+  // border: '2px solid #000',
   // boxShadow: 24,
-  p: 4,
+  // p: 4,
 };
 
-export default function CreateReviewModal() {
+export default function CreateReviewModal({trail}) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -32,9 +33,15 @@ export default function CreateReviewModal() {
         aria-describedby="modal-modal-description"
         onBackdropClick={handleClose}
         className='create-modal-container'
+        title={<div className='create-close-button'>X</div>}
       >
-        <Box>
-          <CreateReviewForm />
+        <Box className="create-review-form-container">
+          <div className="create-close-button-container">
+            <button onClick={handleClose} className="create-close-button">
+              X
+            </button>
+          </div>
+          <CreateReviewForm trail={trail}/>
         </Box>
       </Modal>
     </div>
