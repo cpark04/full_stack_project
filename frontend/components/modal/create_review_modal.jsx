@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import CreateReviewForm from '../review/create_review_form';
+import CreateReviewContainer from './../review/create_review_container'
 import { DialogTitle } from '@mui/material';
 
 const style = {
@@ -41,7 +41,7 @@ export default function CreateReviewModal({trail}) {
               X
             </button>
           </div>
-          <CreateReviewForm trail={trail}/>
+          <CreateReviewContainer trail={trail}/>
         </Box>
       </Modal>
     </div>
