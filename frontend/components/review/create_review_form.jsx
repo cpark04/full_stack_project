@@ -34,11 +34,14 @@ class CreateReviewForm extends React.Component {
 
   handleClick(e, condition) {
     e.preventDefault();
+    let modal = document.getElementById('modal-step-1')
+    let modal2 = document.getElementById('modal-step-2')
     if (condition === 'next') {
-      let modal = document.getElementById('modal-step-1')
       modal.classList.add('hidden')
-      let modal2 = document.getElementById('modal-step-2')
       modal2.classList.remove('hidden')
+    } else if (condition === 'back') {
+      modal2.classList.add('hidden')
+      modal.classList.remove('hidden')
     }
   }
 
@@ -160,7 +163,7 @@ class CreateReviewForm extends React.Component {
             </div>
           </div>
           <div className="create-form-button-container">
-            <button className="back-button">Back</button>
+            <button className="back-button" onClick={(e) => this.handleClick(e, 'back')} >Back</button>
             <input type="submit" value="Post" className="create-form-post" />
           </div>
         </form>

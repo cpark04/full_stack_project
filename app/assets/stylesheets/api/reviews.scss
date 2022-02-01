@@ -252,7 +252,7 @@ textarea {
   flex-direction: row;
   align-items: center;
   padding-bottom: 24px;
-  margin: 0 32px;
+  margin: 17px 32px 0;
   justify-content: space-between;
   border-bottom: 1px solid #e6e6e6;
 }
@@ -338,7 +338,7 @@ textarea {
 
 .review-conditions-container {
   padding: 0 32px;
-  margin: auto 0;
+  margin: 25px 0;
 }
 
 .review-conditions-title {
@@ -420,4 +420,5 @@ textarea {
   padding: 10px 20px;
   height: 100%;
   background: transparent;
+  cursor: pointer;
 }
