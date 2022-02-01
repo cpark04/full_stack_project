@@ -7,7 +7,7 @@ require 'open-uri'
 User.destroy_all
 Park.destroy_all
 Trail.destroy_all
-
+Review.destroy_all
 
 # USER DATA
 demo = User.create!(fname: 'demo', lname: 'demo', email: 'demo@gmail.com', password: '12341234')
@@ -252,7 +252,41 @@ mirror.head_photo.attach(io: file, filename: 'mirror-header.jpeg')
 ### Reviews data
 
 
-review1 = Review.create!(user_id: chris.id, trail_id: vernal.id, rating: 3, comment: "Okay trail", review_date: "2022-01-11")
-review2 = Review.create!(user_id: brian.id, trail_id: vernal.id, rating: 5, comment: "Great trail", review_date: "2022-01-11")
-review3 = Review.create!(user_id: amanda.id, trail_id: vernal.id, rating: 1, comment: "Great trail", review_date: "2022-01-11")
-review4 = Review.create!(user_id: jerry.id, trail_id: vernal.id, rating: 2, comment: "Great trail", review_date: "2022-01-11")
+review1 = Review.create!(user_id: chris.id, trail_id: vernal.id, rating: 3, comment: "Long awaited review as I did this hike in September 2017 and is the most beautiful hike I’ve ever done!!! Views at the top of Vernal and Nevada fall is just magical. September I think is perfect month as weather is just perfect and you get to enjoy gorgeous mist and waterfalls alongs with autumn view of John Muir Trail", review_date: "2022-01-11")
+review2 = Review.create!(user_id: brian.id, trail_id: vernal.id, rating: 5, comment: "Did this hike 1/22, started at approximately 1130 at the trailhead parking directed from Apple Maps. Due to road closure, this parking lot adds about 0.5 miles to the hike. Trail started out paved with small amounts of snow- nothing that sneakers couldn’t handle. As the hike progresses, the trail becomes increasingly more snow and ice packed. Witnessed several people in sneakers/hiking boots slip and fall flat on their back at this portion. Spikes are highly recommended and necessary in my opinion, however I did witness some crazy people (unsafely) attempting to go up in regular boots or even Yeezys… These people were literally sliding down on their butts when we passed them later. We hiked all the way to Nevada Falls, with one or two minor ankle/thigh-deep post-holing incidents so be careful but overall it’s fine. From the parking lot, to Nevada falls, and back to the parking lot, clocked about 10 miles. Got back to the car around 5pm, but enjoyed a good amount of time at the top of the falls. Followed the trail map provided on AllTrails for navigation because it was easy to lose the trail at certain snowy/rocky-scramble portions. Be safe and enjoy! Beautiful hike ", review_date: "2022-01-01")
+review3 = Review.create!(user_id: amanda.id, trail_id: vernal.id, rating: 5, comment: "Incredible hike with amazing views of both falls and the surrounding valley. It was definitely icy once you get past the bridge so bring micro spikes! I saw people without spikes slipping and it’s a bit steep near the top so you don’t want to be without stability there… also parts of the trail were closed so you can’t do the full loop as indicated on all trails but still a great hike! ", review_date: "2021-10-08")
+review4 = Review.create!(user_id: jerry.id, trail_id: vernal.id, rating: 4, comment: "Awesome in the snow! Bring trekking poles to make it easier on yourself .
+
+", review_date: "2021-06-18")
+
+review5 = Review.create!(user_id: laney.id, trail_id: halfDome.id, rating: 5, comment: "Great trail", review_date: "2022-01-11")
+review6 = Review.create!(user_id: chris.id, trail_id: halfDome.id, rating: 4, comment: "Great trail", review_date: "2022-01-11")
+review7 = Review.create!(user_id: brian.id, trail_id: halfDome.id, rating: 4, comment: "Great trail", review_date: "2022-01-11")
+review8 = Review.create!(user_id: jerry.id, trail_id: halfDome.id, rating: 3, comment: "Great trail", review_date: "2022-01-11")
+review9 = Review.create!(user_id: amanda.id, trail_id: halfDome.id, rating: 5, comment: "Great trail", review_date: "2022-01-11")
+review10 = Review.create!(user_id: chris.id, trail_id: halfDome.id, rating: 5, comment: "Great trail", review_date: "2022-01-11")
+review11 = Review.create!(user_id: laney.id, trail_id: halfDome.id, rating: 4, comment: "Great trail", review_date: "2022-01-11")
+review12 = Review.create!(user_id: brian.id, trail_id: halfDome.id, rating: 5, comment: "Great trail", review_date: "2022-01-11")
+
+review13 = Review.create!(user_id: brian.id, trail_id: glacier.id, rating: 5, comment: "Great trail", review_date: "2022-01-11")
+review14 = Review.create!(user_id: amanda.id, trail_id: glacier.id, rating: 3, comment: "Great trail", review_date: "2022-01-11")
+review15 = Review.create!(user_id: jerry.id, trail_id: glacier.id, rating: 3, comment: "Great trail", review_date: "2022-01-11")
+
+review16 = Review.create!(user_id: chris.id, trail_id: moroRock.id, rating: 1, comment: "Great trail", review_date: "2022-01-11")
+review17 = Review.create!(user_id: brian.id, trail_id: moroRock.id, rating: 2, comment: "Great trail", review_date: "2022-01-11")
+review18 = Review.create!(user_id: jerry.id, trail_id: moroRock.id, rating: 1, comment: "Great trail", review_date: "2022-01-11")
+review19 = Review.create!(user_id: laney.id, trail_id: moroRock.id, rating: 2, comment: "Great trail", review_date: "2022-01-11")
+
+review20 = Review.create!(user_id: amanda.id, trail_id: sentinel.id, rating: 1, comment: "Great trail", review_date: "2022-01-11")
+review21 = Review.create!(user_id: jerry.id, trail_id: sentinel.id, rating: 1, comment: "Great trail", review_date: "2022-01-11")
+review22 = Review.create!(user_id: brian.id, trail_id: sentinel.id, rating: 1, comment: "Great trail", review_date: "2022-01-11")
+review23 = Review.create!(user_id: laney.id, trail_id: sentinel.id, rating: 1, comment: "Great trail", review_date: "2022-01-11")
+review24 = Review.create!(user_id: chris.id, trail_id: sentinel.id, rating: 1, comment: "Great trail", review_date: "2022-01-11")
+review25 = Review.create!(user_id: amanda.id, trail_id: sentinel.id, rating: 1, comment: "Great trail", review_date: "2022-01-11")
+
+review26 = Review.create!(user_id: amanda.id, trail_id: mirror.id, rating: 5, comment: "Great trail", review_date: "2022-01-11")
+review27 = Review.create!(user_id: jerry.id, trail_id: mirror.id, rating: 5, comment: "Great trail", review_date: "2022-01-11")
+
+
+
+
