@@ -41,7 +41,7 @@ class Home extends React.Component {
           {trails.map((trail, idx) => {
             return (
               <a href={`#/trail/${trail.id}`} key={'trail'+`${idx}`} className="trail-card-container">
-                <div className="trail-card">
+                <div className="trail-card-home">
                   <div>
                     <div className="trail-card-photo-container">
                       <img src={trail.headPhoto} alt="" className="trail-card-photo" />

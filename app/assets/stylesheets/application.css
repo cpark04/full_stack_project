@@ -758,3 +758,14 @@ footer {
 .trail-card-rating-container .top-num-reviews {
   color: #767676;
 }
+
+.trail-card-home {
+  display: block;
+  height: 236px;
+  width: 94%;
+  border-radius: 8px;
+  background-color: #fff;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
