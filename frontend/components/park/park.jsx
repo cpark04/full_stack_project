@@ -1,7 +1,7 @@
 import React from "react";
 import Breadcrumb from "./breadcrumb";
 import Slider from "react-slick"
-import ShareModal from "../modal/share_modal";
+import ShareModal from "../modal/create_review_modal";
 import { useState } from "react";
 
 

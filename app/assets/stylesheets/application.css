@@ -762,13 +762,6 @@ footer {
   width: 50%;
 }
 
-.spencer-click {
-  font-size: 25px;
-  font-weight: bold;
-  color: red;
-}
-
-.spencer-container {
-  text-align: center;
-  padding-top: 30px;
+.trail-card-rating-container .top-num-reviews {
+  color: #767676;
 }

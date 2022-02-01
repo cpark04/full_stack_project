@@ -53,6 +53,7 @@ class Home extends React.Component {
                     <div className="trail-card-rating-container">
                       {this.difficultyColorRender(trail.difficulty)}
                       <StarRatings rating={trail.avg_rating} starDimension="15px" starRatedColor="#f5d24b" starSpacing="2px" className='review-user-date'/>
+                      <span className="top-num-reviews">({trail.num_reviews})</span>
                     </div>
                     <div className="trail-card-time-container">
                       <span className="trail-card-length">Length: {trail.length}</span>

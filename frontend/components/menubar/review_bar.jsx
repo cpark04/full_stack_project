@@ -4,6 +4,7 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import StarRatings from 'react-star-ratings';
+import CreateReviewModal from '../modal/create_review_modal';
 
 
 function TabPanel(props) {
@@ -50,24 +51,26 @@ export default function ReviewBar({trail}) {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <div className='review-container'>
-          {Object.values(trail.reviews).map((review) => {
-            console.log(review)
-            return <div className="review-item-container">
-              <div className="review-user-container">
-                <img src={review.pfp} alt="" className='review-user-photo'/>
-                <div className="review-user-name">{review.name}</div>
-                <div className='review-user-rating-container'>
-                  <StarRatings rating={review.rating} starDimension="15px" starRatedColor="#f5d24b" starSpacing="2px" className='review-user-date'/>
-                  <span className='review-user-date'>{new Date(review.review_date).toDateString()}</span>
+        <div className="review-container">
+          <CreateReviewModal/>          
+          <div className='review-index'>
+            {Object.values(trail.reviews).map((review) => {
+              console.log(review)
+              return <div className="review-item-container">
+                <div className="review-user-container">
+                  <img src={review.pfp} alt="" className='review-user-photo'/>
+                  <div className="review-user-name">{review.name}</div>
+                  <div className='review-user-rating-container'>
+                    <StarRatings rating={review.rating} starDimension="15px" starRatedColor="#f5d24b" starSpacing="2px" className='review-user-date'/>
+                    <span className='review-user-date'>{new Date(review.review_date).toDateString()}</span>
+                  </div>
+                </div>
+                <div className="review-comment-container">
+                  <div className="review-comment">{review.comment}</div>
                 </div>
               </div>
-              <div className="review-comment-container">
-                <div className="review-comment">{review.comment}</div>
-              </div>
-            </div>
-          })}
-            
+            })}
+          </div>
 
         </div>
       </TabPanel>

@@ -150,13 +150,11 @@ class Trail extends React.Component {
           </div>
 
           <MenuBar trail={trail}/>
-
           {this.state.forecastArray ? <WeatherBar forecastArr={this.state.forecastArray} /> : null }
-
           <ReviewBar trail={trail}/>
+
+
         </div>
-
-
         <div className="trail-right-container">
           <div className="trail-right-flex">
             <div className="trail-map-container">
