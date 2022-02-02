@@ -53,7 +53,7 @@ function a11yProps(index) {
 //   }
 // }
 
-export default function ReviewBar({trail, currentUser, deleteReview}) {
+export default function ReviewBar({trail, currentUser, deleteReview, photos}) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -68,7 +68,9 @@ export default function ReviewBar({trail, currentUser, deleteReview}) {
     history.go(0);
   }
 
-
+  const photoRender = (photos) => {
+    
+  }
 
   return (
     <Box sx={{ width: '100%' }}>

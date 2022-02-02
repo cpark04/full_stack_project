@@ -1,6 +1,6 @@
-export const fetchPhotos = (contentType, id) => {
+export const fetchPhotos = () => {
     return $.ajax({
-        url: `/api/${contentType}/${id}/photos`,
+        url: `/api/photos`,
         method: "GET"
     })
 }
