@@ -8,6 +8,7 @@ import CreateReviewModal from '../modal/create_review_modal';
 import { splitCap } from '../../util/util';
 import EditReviewModal from './../modal/edit_review_modal'
 import { useHistory } from "react-router";
+import PhotoForm from '../photo/photo_form';
 
 
 function TabPanel(props) {
@@ -67,6 +68,8 @@ export default function ReviewBar({trail, currentUser, deleteReview}) {
     history.go(0);
   }
 
+
+
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -109,7 +112,13 @@ export default function ReviewBar({trail, currentUser, deleteReview}) {
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
-         
+         <div>
+           <PhotoForm trail={trail} currentUser={currentUser}/>
+         </div>
+          <div className="trail-photo-index">
+            
+          </div>
+
 
       </TabPanel>
       
