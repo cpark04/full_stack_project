@@ -68,8 +68,14 @@ export default function ReviewBar({trail, currentUser, deleteReview, photos}) {
     history.go(0);
   }
 
-  const photoRender = (photos) => {
-    
+  const photoFind = (photos, trail) => {
+    let photoArr = []
+    photos.forEach((photo) => {
+      if (photo.trail_id === trail.id) {
+        photoArr.push(photo)
+      }
+    })
+    return photoArr
   }
 
   return (
@@ -118,7 +124,9 @@ export default function ReviewBar({trail, currentUser, deleteReview, photos}) {
            <PhotoForm trail={trail} currentUser={currentUser}/>
          </div>
           <div className="trail-photo-index">
-            <img src={trail.photo} alt="" />
+            {photoFind(photos, trail).map((photo, idx) => {
+              return <img key={'photo'+`${idx}`} src={photo.trailPhoto} alt="" />
+            })}
           </div>
 
 

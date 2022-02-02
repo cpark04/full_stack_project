@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 
 class PhotoForm extends React.Component {
   constructor(props) {
@@ -26,7 +27,7 @@ class PhotoForm extends React.Component {
       data: formData,
       contentType: false,
       processData: false
-    }).then((response) => console.log(response.message), (response) => console.log(response.responseJSON))
+    }).then(() => this.props.history.go(0))
   }
 
   render() {
@@ -38,4 +39,4 @@ class PhotoForm extends React.Component {
   }
 }
 
-export default PhotoForm
+export default withRouter(PhotoForm)

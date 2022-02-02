@@ -61,6 +61,7 @@ class Trail extends React.Component {
   render() {
     if (!this.props.trail) return null;
     if (!this.props.trails) return null;
+    if (!this.props.photos) return null;
     const {trail, trails} = this.props;
     (this.props.trails)
 
