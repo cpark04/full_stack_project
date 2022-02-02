@@ -36,7 +36,15 @@ function a11yProps(index) {
   };
 }
 
-export default function ReviewBar({trail}) {
+function checkUser(currentUser, review) {
+  if (currentUser === review.user_id) {
+    return <div className='edit-delete-container'>
+      hehihie
+    </div>
+  }
+}
+
+export default function ReviewBar({trail, currentUser}) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -74,6 +82,7 @@ export default function ReviewBar({trail}) {
                 <div className="review-comment-container">
                   <div className="review-comment">{review.comment}</div>
                 </div>
+                {checkUser(currentUser, review)}
               </div>
             })}
           </div>
