@@ -5,10 +5,11 @@ class Trail < ApplicationRecord
 
   has_many :reviews
 
+  has_many :photos
+
   has_one_attached :small_map
 
   has_one_attached :head_photo
 
-  has_one_attached :photo
 
 end

@@ -16,11 +16,17 @@ class PhotoForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // const formData = new FormData();
-    // formData.append('post[photo]', this.state.photoFile)
-    let file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/profile-pic/person_placeholder.png')
-    // this.props.trail.photo.attach(io: file, filename: 'person_placeholder.png')
-    console.log(file)
+    const formData = new FormData();
+    formData.append('photo[photo]', this.state.photoFile )
+    formData.append('photo[trail_id]', this.props.trail.id)
+    formData.append('photo[user_id]', this.props.currentUser)
+    $.ajax({
+      url: '/api/photos',
+      method: 'POST',
+      data: formData,
+      contentType: false,
+      processData: false
+    }).then((response) => console.log(response.message), (response) => console.log(response.responseJSON))
   }
 
   render() {
