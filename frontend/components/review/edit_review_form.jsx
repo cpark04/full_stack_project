@@ -32,7 +32,6 @@ class EditReviewForm extends React.Component {
   handleChange(field) {
     return (e) => {
       this.setState({[field]: e.currentTarget.value})
-      console.log(this.state)
     }
   }
 
@@ -44,7 +43,6 @@ class EditReviewForm extends React.Component {
       if (input.checked) tagArr.push(input.value)
     })
     this.setState({conditions: tagArr})
-    console.log(this.state.conditions)
   }
 
   handleClick(e, condition) {
@@ -63,13 +61,11 @@ class EditReviewForm extends React.Component {
   handleDate (value) {
     return (e) => {
       this.setState({review_date: value})
-      console.log(this.state)
     }
   }
 
   handleSubmit(e) {
     e.preventDefault()
-    console.log("handle submit", this.state)
     this.props.updateReview(this.state)
     this.props.history.go(0)
   }
