@@ -8,6 +8,7 @@ import HomeContainer from "./home/home_container";
 import ParkContainer from "./park/park_container";
 import TrailContainer from "./trail/trail_container";
 import Footer from "./footer/footer";
+import EditReviewContainer from "./review/edit_review_container";
 
 const App = () => (
    <div>
@@ -19,6 +20,8 @@ const App = () => (
       <AuthRoute path="/signup" component={SignupFormContainer} />
       <Route path="/park/:parkId" component={ParkContainer} />
       <ProtectedRoute path="/trail/:trailId" component={TrailContainer} />
+      <Route path="/review/:reviewId" component={EditReviewContainer} />
+      
 
       <Route exact path="/" component={HomeContainer} />
       <Redirect from="*" to="/" />
