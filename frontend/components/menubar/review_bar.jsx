@@ -116,7 +116,7 @@ export default function ReviewBar({trail, currentUser, deleteReview}) {
            <PhotoForm trail={trail} currentUser={currentUser}/>
          </div>
           <div className="trail-photo-index">
-            
+            <img src={trail.photo} alt="" />
           </div>
 
 

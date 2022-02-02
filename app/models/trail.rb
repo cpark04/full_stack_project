@@ -9,6 +9,6 @@ class Trail < ApplicationRecord
 
   has_one_attached :head_photo
 
-  has_many_attached :photos
+  has_one_attached :photo
 
 end

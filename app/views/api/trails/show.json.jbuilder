@@ -10,4 +10,4 @@ json.reviews do
   end
 end
 json.avg_rating (@trail.reviews.length > 0 ? @trail.reviews.map{|review| review.rating}.sum/@trail.reviews.length : [])
-json.photos @trail.photos
+json.photo url_for(@trail.photo)
