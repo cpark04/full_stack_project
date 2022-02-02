@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 import StarRatings from 'react-star-ratings';
 import CreateReviewModal from '../modal/create_review_modal';
 import { splitCap } from '../../util/util';
+import EditReviewModal from './../modal/edit_review_modal'
 
 
 function TabPanel(props) {
@@ -36,10 +37,12 @@ function a11yProps(index) {
   };
 }
 
-function checkUser(currentUser, review) {
+function checkUser(currentUser, review, trail) {
   if (currentUser === review.user_id) {
     return <div className='edit-delete-container'>
-      hehihie
+      <button className='review-delete-button'>Delete</button>
+      <EditReviewModal trail={trail} review={review} />
+      {/* <a href="" className='review-edit-button'>Edit</a> */}
     </div>
   }
 }
@@ -82,7 +85,7 @@ export default function ReviewBar({trail, currentUser}) {
                 <div className="review-comment-container">
                   <div className="review-comment">{review.comment}</div>
                 </div>
-                {checkUser(currentUser, review)}
+                {checkUser(currentUser, review, trail)}
               </div>
             })}
           </div>

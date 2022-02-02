@@ -9,12 +9,12 @@ class EditReviewForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      user_id: this.props.currentUser,
-      trail_id: this.props.trail.id,
-      rating: 0,
-      comment: '',
-      review_date: '',
-      conditions: []
+      user_id: this.props.review.user_id,
+      trail_id: this.props.review.trail_id,
+      rating: this.props.review.rating,
+      comment: this.props.review.comment,
+      review_date: this.props.review.review_date,
+      conditions: this.props.review.conditions
     }
     this.changeRating = this.changeRating.bind(this)
     this.handleClick = this.handleClick.bind(this)

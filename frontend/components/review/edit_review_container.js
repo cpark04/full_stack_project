@@ -4,9 +4,8 @@ import EditReviewForm from "./create_review_form";
 
 
 const mSTP = (state, ownProps) => {
-  console.log(ownProps)
   return {
-    // currentUser: state.session.id,
+    currentUser: state.session.id
   }
 }
 

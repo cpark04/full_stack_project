@@ -455,3 +455,24 @@ textarea {
   display: flex;
   align-items: center;
 }
+
+
+.review-delete-button {
+  padding-left: 0;
+  font-size: 14px;
+  padding: 0 12px;
+  border: none;
+  background: none;
+  color: #428a13;
+  cursor: pointer;
+}
+
+.review-edit-button {
+  border: none;
+  border-left: 1px solid !important;
+  font-size: 14px;
+  padding: 0 12px;
+  background: none;
+  color: #428a13;
+  cursor: pointer;
+}
