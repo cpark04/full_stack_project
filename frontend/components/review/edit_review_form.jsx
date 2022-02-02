@@ -9,6 +9,7 @@ class EditReviewForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      id: this.props.review.id,
       user_id: this.props.review.user_id,
       trail_id: this.props.review.trail_id,
       rating: this.props.review.rating,
@@ -81,9 +82,9 @@ class EditReviewForm extends React.Component {
         <form action="create-form-rating-comment-form">
           <div className="create-form-rating-comment-container">
             <div className="create-form-rating-container">
-              <StarRatings starHoverColor="#f5d24b" rating={this.state.rating} changeRating={this.changeRating} starDimension="35px" starSpacing="3px" starRatedColor="#f5d24b"/>
+              <StarRatings starHoverColor="#f5d24b"  rating={this.state.rating} changeRating={this.changeRating} starDimension="35px" starSpacing="3px" starRatedColor="#f5d24b"/>
             </div>
-            <textarea className="create-form-comment" onChange={this.handleChange('comment')} placeholder="Give back to the community. Share your thoughts about the trail so others know what to expect."></textarea>
+            <textarea className="create-form-comment" onChange={this.handleChange('comment')} value={this.state.comment}></textarea>
           </div>
           <div className="create-form-button-container">
             <input type="submit" value="Next" className="create-form-next" onClick={(e) => this.handleClick(e, 'next')}/>
@@ -102,7 +103,7 @@ class EditReviewForm extends React.Component {
             <div className="selector-root">
               <div className="date-select-container">
                 <div className="date-select-input-box">
-                    <input type="date" id="date-select" onChange={this.handleChange('review_date')} />
+                    <input value={this.state.review_date} type="date" id="date-select" onChange={this.handleChange('review_date')} />
                 </div>
               </div>
             </div>
@@ -185,7 +186,7 @@ class EditReviewForm extends React.Component {
           </div>
           <div className="create-form-button-container">
             <button className="back-button" onClick={(e) => this.handleClick(e, 'back')} >Back</button>
-            <input type="submit" value="Post" className="create-form-post" />
+            <input type="submit" value="Edit" className="create-form-post" />
           </div>
         </form>
       </div>

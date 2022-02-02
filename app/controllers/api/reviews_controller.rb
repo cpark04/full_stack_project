@@ -16,6 +16,7 @@ class Api::ReviewsController < ApplicationController
 
   def update
     @review = Review.find_by(id: params[:id])
+    debugger
     if @review.update(review_params)
       render :show
     else
@@ -25,6 +26,7 @@ class Api::ReviewsController < ApplicationController
 
   def destroy
       @review = Review.find_by(id: params[:id])
+      debugger
       if @review
           @review.destroy
           render json: @review.trail_id   

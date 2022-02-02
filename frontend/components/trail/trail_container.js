@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import Trail from "./trail";
 import { fetchTrail, fetchTrails } from "../../actions/trail_actions";
+import { deleteReview } from "../../actions/review_actions";
 
 
 const mSTP = (state, ownProps) => {
@@ -15,8 +16,8 @@ const mSTP = (state, ownProps) => {
 const mDTP = (dispatch) => {
   return {
     fetchTrail: (trailId) => dispatch(fetchTrail(trailId)),
-    fetchTrails: () => dispatch(fetchTrails())
-
+    fetchTrails: () => dispatch(fetchTrails()),
+    deleteReview: (reviewId) => dispatch(deleteReview(reviewId))
   }
 }
 
