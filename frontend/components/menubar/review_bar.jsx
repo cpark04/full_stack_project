@@ -56,7 +56,7 @@ export default function ReviewBar({trail}) {
         <div className="review-container">
           <CreateReviewModal trail={trail}/>          
           <div className='review-index'>
-            {Object.values(trail.reviews).map((review, idx) => {
+            {Object.values(trail.reviews).reverse().map((review, idx) => {
               return <div key={'review'+`${idx}`} className="review-item-container">
                 <div className="review-user-container">
                   <img src={review.pfp} alt="" className='review-user-photo'/>
@@ -66,7 +66,7 @@ export default function ReviewBar({trail}) {
                     <span className='review-user-date'>{new Date(review.review_date).toDateString()}</span>
                   </div>
                   <div className="review-user-tag-container">
-                    {JSON.parse(review.conditions).map((tag, idx) => {
+                    {review.conditions.map((tag, idx) => {
                       return <span key={'tag'+`${idx}`} className='review-user-tag'>{splitCap(tag)}</span>
                     })}
                   </div>

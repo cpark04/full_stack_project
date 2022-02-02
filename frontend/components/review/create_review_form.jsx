@@ -1,5 +1,6 @@
 import React from "react";
 import StarRatings from "react-star-ratings";
+import { withRouter } from "react-router-dom";
 
 
 
@@ -18,6 +19,7 @@ class CreateReviewForm extends React.Component {
     this.changeRating = this.changeRating.bind(this)
     this.handleClick = this.handleClick.bind(this)
     this.handleCheckbox = this.handleCheckbox.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   changeRating(newRating) {
@@ -64,6 +66,13 @@ class CreateReviewForm extends React.Component {
     }
   }
 
+  handleSubmit(e) {
+    e.preventDefault()
+    console.log("handle submit", this.state)
+    this.props.createReview(this.state)
+    this.props.history.go(0)
+  }
+
   render() {
     return <div>
       <div className="create-form-title-container" id="modal-step-1">
@@ -85,7 +94,7 @@ class CreateReviewForm extends React.Component {
       <div className="create-form-title-container hidden" id="modal-step-2">
         <div className="create-form-title">{this.props.trail.trail_name}</div>
         <div className="create-form-steps">Step 2 of 2</div>
-        <form className="create-form-act-condition-form">
+        <form className="create-form-act-condition-form" onSubmit={this.handleSubmit}>
           <div className="create-form-act-container">
             <div className="form-activity-container">
               Date of Activity
@@ -185,5 +194,5 @@ class CreateReviewForm extends React.Component {
   }
 }
 
-export default CreateReviewForm;
+export default withRouter(CreateReviewForm)
 

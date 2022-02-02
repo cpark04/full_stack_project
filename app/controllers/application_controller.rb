@@ -24,9 +24,8 @@ class ApplicationController < ActionController::Base
     @current_user = nil
   end
 
-  def required_logged_in
-      
+  def require_logged_in
+    redirect_to new_api_session_url unless logged_in?
   end
-
 
 end
