@@ -20,6 +20,7 @@ class Trail extends React.Component {
     this.props.fetchTrails();
     this.props.fetchTrail(this.props.match.params.trailId)
       .then(() => this.weatherCall());
+    this.props.fetchPhotos();
   }
 
   printPage(e) {
@@ -60,6 +61,7 @@ class Trail extends React.Component {
   render() {
     if (!this.props.trail) return null;
     if (!this.props.trails) return null;
+    if (!this.props.photos) return null;
     const {trail, trails} = this.props;
     (this.props.trails)
 
@@ -151,7 +153,7 @@ class Trail extends React.Component {
 
           <MenuBar trail={trail}/>
           {this.state.forecastArray ? <WeatherBar forecastArr={this.state.forecastArray} /> : null }
-          <ReviewBar trail={trail} currentUser={this.props.currentUser} deleteReview={this.props.deleteReview}/>
+          <ReviewBar trail={trail} currentUser={this.props.currentUser} deleteReview={this.props.deleteReview} photos={this.props.photos}/>
 
 
         </div>

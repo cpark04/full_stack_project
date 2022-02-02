@@ -8,6 +8,7 @@ import CreateReviewModal from '../modal/create_review_modal';
 import { splitCap } from '../../util/util';
 import EditReviewModal from './../modal/edit_review_modal'
 import { useHistory } from "react-router";
+import PhotoForm from '../photo/photo_form';
 
 
 function TabPanel(props) {
@@ -52,7 +53,7 @@ function a11yProps(index) {
 //   }
 // }
 
-export default function ReviewBar({trail, currentUser, deleteReview}) {
+export default function ReviewBar({trail, currentUser, deleteReview, photos}) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -65,6 +66,16 @@ export default function ReviewBar({trail, currentUser, deleteReview}) {
     e.preventDefault();
     deleteReview(review);
     history.go(0);
+  }
+
+  const photoFind = (photos, trail) => {
+    let photoArr = []
+    photos.forEach((photo) => {
+      if (photo.trail_id === trail.id) {
+        photoArr.push(photo)
+      }
+    })
+    return photoArr
   }
 
   return (
@@ -109,7 +120,15 @@ export default function ReviewBar({trail, currentUser, deleteReview}) {
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
-         
+         <div>
+           <PhotoForm trail={trail} currentUser={currentUser}/>
+         </div>
+          <div className="trail-photo-index">
+            {photoFind(photos, trail).map((photo, idx) => {
+              return <img key={'photo'+`${idx}`} src={photo.trailPhoto} alt="" />
+            })}
+          </div>
+
 
       </TabPanel>
       
