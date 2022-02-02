@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import StarRatings from 'react-star-ratings';
 import CreateReviewModal from '../modal/create_review_modal';
+import { splitCap } from '../../util/util';
 
 
 function TabPanel(props) {
@@ -35,13 +36,22 @@ function a11yProps(index) {
   };
 }
 
-export default function ReviewBar({trail}) {
+function checkUser(currentUser, review) {
+  if (currentUser === review.user_id) {
+    return <div className='edit-delete-container'>
+      hehihie
+    </div>
+  }
+}
+
+export default function ReviewBar({trail, currentUser}) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  console.log(trail)
+
+
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -52,11 +62,10 @@ export default function ReviewBar({trail}) {
       </Box>
       <TabPanel value={value} index={0}>
         <div className="review-container">
-          <CreateReviewModal/>          
+          <CreateReviewModal trail={trail}/>          
           <div className='review-index'>
-            {Object.values(trail.reviews).map((review) => {
-              console.log(review)
-              return <div className="review-item-container">
+            {Object.values(trail.reviews).reverse().map((review, idx) => {
+              return <div key={'review'+`${idx}`} className="review-item-container">
                 <div className="review-user-container">
                   <img src={review.pfp} alt="" className='review-user-photo'/>
                   <div className="review-user-name">{review.name}</div>
@@ -64,10 +73,16 @@ export default function ReviewBar({trail}) {
                     <StarRatings rating={review.rating} starDimension="15px" starRatedColor="#f5d24b" starSpacing="2px" className='review-user-date'/>
                     <span className='review-user-date'>{new Date(review.review_date).toDateString()}</span>
                   </div>
+                  <div className="review-user-tag-container">
+                    {review.conditions.map((tag, idx) => {
+                      return <span key={'tag'+`${idx}`} className='review-user-tag'>{splitCap(tag)}</span>
+                    })}
+                  </div>
                 </div>
                 <div className="review-comment-container">
                   <div className="review-comment">{review.comment}</div>
                 </div>
+                {checkUser(currentUser, review)}
               </div>
             })}
           </div>

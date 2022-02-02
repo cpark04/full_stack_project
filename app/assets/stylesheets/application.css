@@ -674,14 +674,7 @@ footer {
   border-radius: 8px;
 }
 
-.slick-next {
-  /* right: 40px !important; */
-}
 
-.slick-prev {
-  /* left: -1px !important;
-  z-index: 999999999; */
-}
 
 .slick-next:before, .slick-prev:before {
   font-size: 37px !important;
@@ -764,4 +757,15 @@ footer {
 
 .trail-card-rating-container .top-num-reviews {
   color: #767676;
+}
+
+.trail-card-home {
+  display: block;
+  height: 236px;
+  width: 94%;
+  border-radius: 8px;
+  background-color: #fff;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
 }

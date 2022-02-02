@@ -5,14 +5,19 @@
     "@babel/core": "^7.16.10",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
+    "@date-io/date-fns": "^2.13.1",
+    "@date-io/dayjs": "^2.13.1",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@mui/icons-material": "^5.3.1",
+    "@mui/lab": "^5.0.0-alpha.67",
     "@mui/material": "^5.3.1",
     "babel-loader": "^8.2.3",
     "bootstrap": "^5.1.3",
     "dotenv": "^14.3.0",
     "react": "^17.0.2",
+    "react-calendar": "^3.6.0",
+    "react-date-picker": "^8.3.6",
     "react-dom": "^17.0.2",
     "react-modal": "^3.14.4",
     "react-ratings-declarative": "^3.4.1",
@@ -55,5 +60,8 @@
   "bugs": {
     "url": "https://github.com/cpark04/some_trails/issues"
   },
-  "homepage": "https://github.com/cpark04/some_trails#readme"
+  "homepage": "https://github.com/cpark04/some_trails#readme",
+  "devDependencies": {
+    "css-loader": "^6.5.1"
+  }
 }

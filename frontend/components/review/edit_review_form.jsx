@@ -4,7 +4,7 @@ import { withRouter } from "react-router-dom";
 
 
 
-class CreateReviewForm extends React.Component {
+class EditReviewForm extends React.Component {
 
   constructor(props) {
     super(props);
@@ -69,7 +69,7 @@ class CreateReviewForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault()
     console.log("handle submit", this.state)
-    this.props.createReview(this.state)
+    this.props.updateReview(this.state)
     this.props.history.go(0)
   }
 
@@ -194,5 +194,5 @@ class CreateReviewForm extends React.Component {
   }
 }
 
-export default withRouter(CreateReviewForm)
+export default withRouter(EditReviewForm)
 
