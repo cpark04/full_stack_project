@@ -151,7 +151,7 @@ class Trail extends React.Component {
 
           <MenuBar trail={trail}/>
           {this.state.forecastArray ? <WeatherBar forecastArr={this.state.forecastArray} /> : null }
-          <ReviewBar trail={trail} currentUser={this.props.currentUser}/>
+          <ReviewBar trail={trail} currentUser={this.props.currentUser} deleteReview={this.props.deleteReview}/>
 
 
         </div>

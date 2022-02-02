@@ -7,6 +7,7 @@ import StarRatings from 'react-star-ratings';
 import CreateReviewModal from '../modal/create_review_modal';
 import { splitCap } from '../../util/util';
 import EditReviewModal from './../modal/edit_review_modal'
+import { useHistory } from "react-router";
 
 
 function TabPanel(props) {
@@ -37,23 +38,34 @@ function a11yProps(index) {
   };
 }
 
-function checkUser(currentUser, review, trail) {
-  if (currentUser === review.user_id) {
-    return <div className='edit-delete-container'>
-      <button className='review-delete-button'>Delete</button>
-      <EditReviewModal trail={trail} review={review} />
-      {/* <a href="" className='review-edit-button'>Edit</a> */}
-    </div>
-  }
-}
+// function handleDelete(review, e, deleteReview) {
+//   e.preventDefault();
+//   deleteReview(review);
+// }
 
-export default function ReviewBar({trail, currentUser}) {
+// function checkUser(currentUser, review, trail) {
+//   if (currentUser === review.user_id) {
+//     return <div className='edit-delete-container'>
+//       <button className='review-delete-button' onClick={(e) => handleDelete(review, e)}>Delete</button>
+//       <EditReviewModal trail={trail} review={review} />
+//     </div>
+//   }
+// }
+
+export default function ReviewBar({trail, currentUser, deleteReview}) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+  
+  const history = useHistory();
 
+  const handleDelete = (e, review) => {
+    e.preventDefault();
+    deleteReview(review);
+    history.go(0);
+  }
 
   return (
     <Box sx={{ width: '100%' }}>
@@ -85,7 +97,11 @@ export default function ReviewBar({trail, currentUser}) {
                 <div className="review-comment-container">
                   <div className="review-comment">{review.comment}</div>
                 </div>
-                {checkUser(currentUser, review, trail)}
+                {/* {checkUser(currentUser, review, trail)} */}
+                {(currentUser === review.user_id) ? <div className='edit-delete-container'>
+                  <button className='review-delete-button' onClick={(e) => handleDelete(e, review.id)}>Delete</button>
+                  <EditReviewModal trail={trail} review={review} />
+                </div> : '' }
               </div>
             })}
           </div>
