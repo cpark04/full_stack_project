@@ -32,10 +32,12 @@ class PhotoForm extends React.Component {
 
   render() {
     console.log(this.state.photoFile)
-    return <form className='review-create-container' onSubmit={this.handleSubmit}>
-      <input type="file" onChange={this.handleFile}/>
-      <input type="submit" value="Upload Photo" />
-    </form>
+    return <div className='review-create-container'>
+      <form onSubmit={this.handleSubmit}>
+        <input type="file" onChange={this.handleFile} />
+        <input type="submit" value="Upload Photo" className="review-create-button"/>
+      </form>
+    </div>
   }
 }
 

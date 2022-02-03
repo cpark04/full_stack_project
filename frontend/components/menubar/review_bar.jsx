@@ -9,7 +9,7 @@ import { splitCap } from '../../util/util';
 import EditReviewModal from './../modal/edit_review_modal'
 import { useHistory } from "react-router";
 import PhotoForm from '../photo/photo_form';
-
+import { ImageViewer } from 'react-image-viewer-dv'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -78,6 +78,10 @@ export default function ReviewBar({trail, currentUser, deleteReview, photos}) {
     return photoArr
   }
 
+  const photoModalOpen = () => {
+    
+  }
+
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -119,15 +123,15 @@ export default function ReviewBar({trail, currentUser, deleteReview, photos}) {
 
         </div>
       </TabPanel>
-      <TabPanel value={value} index={1}>
-         <div>
-           <PhotoForm trail={trail} currentUser={currentUser}/>
-         </div>
-          <div className="trail-photo-index">
+      <TabPanel value={value} index={1} className='photo-tab-container'>
+        <div className='photo-container'>
+          <PhotoForm trail={trail} currentUser={currentUser} className='photo-upload-container'/>
+          <div className='photo-index'>
             {photoFind(photos, trail).map((photo, idx) => {
-              return <img key={'photo'+`${idx}`} src={photo.trailPhoto} alt="" />
+              return <ImageViewer ><img key={'photo'+`${idx}`} src={photo.trailPhoto} alt="" className='trail-photo-item'/></ImageViewer>
             })}
           </div>
+        </div>
 
 
       </TabPanel>

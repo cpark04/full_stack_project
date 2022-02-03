@@ -1,3 +1,41 @@
 // Place all the styles related to the api::photos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.photo-tab-container {
+  min-height: 900px;
+  padding: 0 0 10px;
+  margin: 0 24px;
+}
+
+.photo-upload-container {
+  margin: 24px 0;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.photo-index-container {
+  justify-content: flex-start;
+  margin-bottom: 24px;
+  align-content: stretch;
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+
+}
+
+.trail-photo-item {
+  border-radius: 5px;
+  height: 148px;
+  margin-bottom: 16px;
+  margin-right: 16px;
+  object-fit: cover;
+  vertical-align: initial;
+}
+
+.photo-index {
+  display:flex
+}
