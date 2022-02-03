@@ -36,19 +36,19 @@ class TrailSearchBar extends React.Component {
 
     const {parks, trails} = this.props
 
-    return <div className="search-container">
-      <div className='search-form'>
+    return <div className="search-container-trail">
+      <div className='search-form-trail'>
         <input 
           type="text" 
           className="search-bar" 
           placeholder="Search by park or trail name"
           onChange={this.handleParams}
         />
-        <button className='search-button'>
+        <button className='search-button-trail'>
           <img src="https://cdn-assets.alltrails.com/assets/packs/73160f92adaa640e4b1e.svg" alt="icon"></img>
         </button>
       </div>
-      <div className='search-dropdown hide' id='search-dropdown'>
+      <div className='search-dropdown-trail hide' id='search-dropdown'>
         {parks.map((park, idx) => {
           if (park.park_name.toLowerCase().startsWith(this.state.params.toLowerCase())) {
             return <div key={'park'+`${idx}`} className="park-search-container">
