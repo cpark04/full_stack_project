@@ -22,7 +22,7 @@ class SearchBar extends React.Component {
   }
 
   toggleHidden(e) {
-    e.stopPropagation()
+    // e.stopPropagation()
     
     this.setState({hidden: (this.state.hidden === true ? false : true)})
   }
@@ -43,8 +43,9 @@ class SearchBar extends React.Component {
           className="search-bar" 
           placeholder="Search by park or trail name"
           onChange={this.handleParams}
-          onFocus={this.toggleHidden}
-          onBlur={this.toggleHidden}
+          onInput={this.toggleHidden}
+          // onBlur={this.toggleHidden}
+          // onHover={this.toggleHidden}
         />
         <button className='search-button'>
           <img src="https://cdn-assets.alltrails.com/assets/packs/73160f92adaa640e4b1e.svg" alt="icon"></img>
