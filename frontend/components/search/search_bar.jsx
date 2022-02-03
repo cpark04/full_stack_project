@@ -16,10 +16,14 @@ class SearchBar extends React.Component {
   }
 
   handleParams(e) {
+    // e.stopPropagation()
+
     this.setState({params: e.target.value})
   }
 
   toggleHidden(e) {
+    e.stopPropagation()
+    
     this.setState({hidden: (this.state.hidden === true ? false : true)})
   }
 
