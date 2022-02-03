@@ -35,7 +35,6 @@ class PhotoForm extends React.Component {
   // }
 
   render() {
-    console.log(this.state.photoFile)
     return <div className='review-create-container'>
       <form onSubmit={this.handleSubmit}>
         {/* <button id="file-label" className="review-create-button" onClick={this.handleFileClick}> */}

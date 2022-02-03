@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 
-class SearchBar extends React.Component {
+class TrailSearchBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -37,7 +37,6 @@ class SearchBar extends React.Component {
     const {parks, trails} = this.props
 
     return <div className="search-container">
-      <p>Find your next Trail</p>
       <div className='search-form'>
         <input 
           type="text" 
@@ -89,4 +88,4 @@ class SearchBar extends React.Component {
   }
 }
 
-export default withRouter(SearchBar)
+export default withRouter(TrailSearchBar)
