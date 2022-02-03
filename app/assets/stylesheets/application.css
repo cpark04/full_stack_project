@@ -262,6 +262,7 @@ body {
 .search-container {
   display: flex;
   flex-direction: column;
+  width: 545px;
   align-items: center;
   font-size: 60px;
   font-weight: 550;
@@ -288,7 +289,11 @@ body {
 }
 
 .search-form {
-  display: flex;
+  position: absolute;
+  top: 348px;
+  z-index: 4;
+  width: 545px;
+
 }
 
 .search-button {
@@ -478,27 +483,7 @@ footer {
   color: #414141;
 }
 
-.park-search-button {
-  width: 40px;
-  background-image: url('https://cdn-assets.alltrails.com/assets/packs/617af213308a3e90697f.svg') !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  cursor: pointer;
-  -webkit-appearance: button;
-  font-size: inherit;
-  line-height: inherit;
-  min-height: 100%;
-  display: inline-block;
-  color: #fff;
-  font-weight: 700;
-  padding: 0 12px;
-  background: #428a13;
-  border: 1px solid #428a13;
-  border-top-left-radius: 0;
-  border-top-right-radius: inherit;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: inherit;
-}
+
 
 .breadcrumb-link {
   text-decoration: none;
