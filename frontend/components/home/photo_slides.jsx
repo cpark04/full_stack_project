@@ -21,8 +21,9 @@ class PhotoSlides extends React.Component {
   }
 
   render() {
+    const {parks, trails} = this.props
     return <div className='slide-component'>
-      <SearchBar />
+      <SearchBar parks={parks} trails={trails}/>
     </div>
   }
 }
