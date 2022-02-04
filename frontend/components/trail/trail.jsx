@@ -6,6 +6,7 @@ import WeatherBar from "../menubar/weather_bar";
 import { fetchWeather } from "../../util/weather_api_util";
 import ReviewBar from "../menubar/review_bar";
 import StarRatings from "react-star-ratings";
+import TrailSearchBar from "../search/trail_search_bar";
 
 class Trail extends React.Component {
 
@@ -62,18 +63,14 @@ class Trail extends React.Component {
     if (!this.props.trail) return null;
     if (!this.props.trails) return null;
     if (!this.props.photos) return null;
-    const {trail, trails} = this.props;
+    const {trail, trails, parks} = this.props;
     (this.props.trails)
 
     return <div className="trail-bg-color">
     <div className="trail-container">
       <div className="trail-search-component">
         <Breadcrumb item={trail} />
-        <form className='park-search-form'>
-          <input type="text" className="park-search-bar" placeholder="Enter park or trail name"/>
-          <button className='park-search-button'>
-          </button>
-        </form>
+        <TrailSearchBar parks={parks} trails={trails} />
       </div>
 
       <div className="trail-photo-info-container">
@@ -114,14 +111,14 @@ class Trail extends React.Component {
                 <span className="trail-button-photo-text">Print/PDF</span>
               </a>
             </li>
-            <li className="trail-button-share trail-photo-li">
+            {/* <li className="trail-button-share trail-photo-li">
               <a href="" className="trail-button-photo-a">
                 <div className="trail-button-icon-container">
                   <div className="trail-button-share-icon"></div>
                 </div>
                 <span className="trail-button-photo-text">Share</span>
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

@@ -128,7 +128,7 @@ export default function ReviewBar({trail, currentUser, deleteReview, photos}) {
           <PhotoForm trail={trail} currentUser={currentUser} className='photo-upload-container'/>
           <div className='photo-index'>
             {photoFind(photos, trail).map((photo, idx) => {
-              return <ImageViewer ><img key={'photo'+`${idx}`} src={photo.trailPhoto} alt="" className='trail-photo-item'/></ImageViewer>
+              return <ImageViewer key={'photo'+`${idx}`} ><img src={photo.trailPhoto} alt="" className='trail-photo-item'/></ImageViewer>
             })}
           </div>
         </div>

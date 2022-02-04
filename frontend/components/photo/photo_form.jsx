@@ -30,11 +30,16 @@ class PhotoForm extends React.Component {
     }).then(() => this.props.history.go(0))
   }
 
+  // handleFileClick(e){
+  //   document.getElementById('hide-file').click()
+  // }
+
   render() {
-    console.log(this.state.photoFile)
     return <div className='review-create-container'>
       <form onSubmit={this.handleSubmit}>
-        <input type="file" onChange={this.handleFile} />
+        {/* <button id="file-label" className="review-create-button" onClick={this.handleFileClick}> */}
+        <input type="file" onChange={this.handleFile} id="hide-file"/>
+        {/* </button> */}
         <input type="submit" value="Upload Photo" className="review-create-button"/>
       </form>
     </div>

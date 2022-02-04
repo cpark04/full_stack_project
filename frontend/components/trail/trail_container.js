@@ -3,6 +3,7 @@ import Trail from "./trail";
 import { fetchTrail, fetchTrails } from "../../actions/trail_actions";
 import { deleteReview } from "../../actions/review_actions";
 import { fetchPhotos } from "../../actions/photo_actions";
+import { fetchParks } from "../../actions/park_actions"
 
 
 const mSTP = (state, ownProps) => {
@@ -10,8 +11,8 @@ const mSTP = (state, ownProps) => {
     trail: state.entities.trails[ownProps.match.params.trailId],
     trails: Object.values(state.entities.trails),
     currentUser: state.session.id,
-    // reviews: state.entities.trails[ownProps.match.params.trailId].reviews
-    photos: Object.values(state.entities.photos)
+    photos: Object.values(state.entities.photos),
+    parks: Object.values(state.entities.parks)
   }
 }
 
@@ -20,7 +21,8 @@ const mDTP = (dispatch) => {
     fetchTrail: (trailId) => dispatch(fetchTrail(trailId)),
     fetchTrails: () => dispatch(fetchTrails()),
     deleteReview: (reviewId) => dispatch(deleteReview(reviewId)),
-    fetchPhotos: () => dispatch(fetchPhotos())
+    fetchPhotos: () => dispatch(fetchPhotos()),
+    fetchParks: () => dispatch(fetchParks())
   }
 }
 

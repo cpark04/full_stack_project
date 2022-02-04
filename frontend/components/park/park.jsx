@@ -1,8 +1,8 @@
 import React from "react";
 import Breadcrumb from "./breadcrumb";
 import Slider from "react-slick"
-import ShareModal from "../modal/create_review_modal";
-import { useState } from "react";
+import TrailSearchBar from "./../search/trail_search_bar"
+import StarRatings from "react-star-ratings";
 
 
 class Park extends React.Component {
@@ -54,6 +54,8 @@ class Park extends React.Component {
   
 
   componentDidMount(){
+    this.props.fetchParks();
+    this.props.fetchTrails();
     this.props.fetchPark(this.props.match.params.parkId);
   }
 
@@ -105,19 +107,15 @@ class Park extends React.Component {
   }
 
   render() {
-    if (!this.props.park || !this.props.park.trails) return null;
-    const {park} = this.props;
+    if (!this.props.park || !this.props.parks || !this.props.trails) return null;
+    const {park, parks, trails} = this.props;
 
 
     return <div className="park-container">
       <div className="park-search-component">
         <Breadcrumb item={park} />
 
-        <form className='park-search-form'>
-          <input type="text" className="park-search-bar" placeholder="Enter park or trail name"/>
-          <button className='park-search-button'>
-          </button>
-        </form>
+        <TrailSearchBar parks={parks} trails={trails} />        
 
       </div>
 
@@ -128,16 +126,6 @@ class Park extends React.Component {
       <div className="park-module">
         <div className="park-title-info">
           <p className="park-title">Best Trails in {park.park_name}</p>
-          <div className="park-review">
-            <div className="park-stars">
-              <span className="fa fa-star checked star"></span>
-              <span className="fa fa-star checked star"></span>
-              <span className="fa fa-star checked star"></span>
-              <span className="fa fa-star checked star"></span>
-              <span className="fa fa-star star"></span>
-            </div>
-            <div className='park-review-text'>1032 Reviews</div>
-          </div>
         </div>
 
         <div className="park-summary">
@@ -162,10 +150,10 @@ class Park extends React.Component {
               <span>Print map</span>
             </a>
 
-            <a className="park-dir">
+            {/* <a className="park-dir">
               <div className="share-button"></div>
               <span>Share</span>
-            </a>
+            </a> */}
           </div>
         </div>
 
@@ -213,13 +201,8 @@ class Park extends React.Component {
                       <div className="park-trail-info-park">{trail.park_name}</div>
                       <div className="trail-card-rating-container">
                         {this.difficultyColorRender(trail.difficulty)}
-                        <span className="trail-stars">
-                          <span className="fa fa-star checked star"></span>
-                          <span className="fa fa-star checked star"></span>
-                          <span className="fa fa-star checked star"></span>
-                          <span className="fa fa-star checked star"></span>
-                          <span className="fa fa-star star"></span>
-                        </span>
+                        <StarRatings rating={trail.avg_rating} starDimension="15px" starRatedColor="#f5d24b" starSpacing="2px" className='review-user-date'/>
+                        <span className="top-num-reviews">({trail.num_reviews})</span>  
                       </div>
                       <div className="trail-card-time-container">
                         <span>Length: {trail.length}</span>

@@ -34,8 +34,14 @@
   margin-right: 16px;
   object-fit: cover;
   vertical-align: initial;
+  
 }
 
 .photo-index {
-  display:flex
+  display:flex;
+  flex-wrap: wrap;
 }
+
+// #hide-file {
+//   display: none;
+// }

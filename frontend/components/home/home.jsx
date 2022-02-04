@@ -79,7 +79,7 @@ class Home extends React.Component {
     return <div className="home-page">
       
       <div className='bg-slides'>
-        <PhotoSlides />
+        <PhotoSlides parks={parks} trails={trails}/>
       </div>
 
 
