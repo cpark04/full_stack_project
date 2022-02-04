@@ -254,3 +254,110 @@ review27 = Review.create!(user_id: jerry.id, trail_id: mirror.id, rating: 2, com
 
 # PHOTO STARTS HERE -----------
 
+photo1 = Photo.create!(trail_id: vernal.id, user_id: chris.id)
+photo2 = Photo.create!(trail_id: vernal.id, user_id: chris.id)
+photo3 = Photo.create!(trail_id: vernal.id, user_id: chris.id)
+photo4 = Photo.create!(trail_id: vernal.id, user_id: chris.id)
+photo5 = Photo.create!(trail_id: vernal.id, user_id: chris.id)
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/vernal/vernal-1.jpeg')
+photo1.photo.attach(io: file, filename: 'vernal-1.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/vernal/vernal-2.jpeg')
+photo2.photo.attach(io: file, filename: 'vernal-2.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/vernal/vernal-3.jpeg')
+photo3.photo.attach(io: file, filename: 'vernal-3.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/vernal/vernal-4.jpeg')
+photo4.photo.attach(io: file, filename: 'vernal-4.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/vernal/vernal-5.jpeg')
+photo5.photo.attach(io: file, filename: 'vernal-5.jpeg')
+
+photo6 = Photo.create!(trail_id: halfDome.id, user_id: chris.id)
+photo7 = Photo.create!(trail_id: halfDome.id, user_id: chris.id)
+photo8 = Photo.create!(trail_id: halfDome.id, user_id: chris.id)
+photo9 = Photo.create!(trail_id: halfDome.id, user_id: chris.id)
+photo10 = Photo.create!(trail_id: halfDome.id, user_id: chris.id)
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/half-dome/half-dome1.jpeg')
+photo6.photo.attach(io: file, filename: 'half-dome1.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/half-dome/half-dome2.jpeg')
+photo7.photo.attach(io: file, filename: 'half-dome2.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/half-dome/half-dome3.jpeg')
+photo8.photo.attach(io: file, filename: 'half-dome3.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/half-dome/half-dome4.jpeg')
+photo9.photo.attach(io: file, filename: 'half-dome4.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/half-dome/half-dome5.jpeg')
+photo10.photo.attach(io: file, filename: 'half-dome5.jpeg')
+
+photo11 = Photo.create!(trail_id: glacier.id, user_id: chris.id)
+photo12 = Photo.create!(trail_id: glacier.id, user_id: chris.id)
+photo13 = Photo.create!(trail_id: glacier.id, user_id: chris.id)
+photo14 = Photo.create!(trail_id: glacier.id, user_id: chris.id)
+photo15 = Photo.create!(trail_id: glacier.id, user_id: chris.id)
+
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/glacier/glacier1.jpeg')
+photo11.photo.attach(io: file, filename: 'glacier1.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/glacier/glacier2.jpeg')
+photo12.photo.attach(io: file, filename: 'glacier2.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/glacier/glacier3.jpeg')
+photo13.photo.attach(io: file, filename: 'glacier3.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/glacier/glacier4.jpeg')
+photo14.photo.attach(io: file, filename: 'glacier4.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/glacier/glacier5.jpeg')
+photo15.photo.attach(io: file, filename: 'glacier5.jpeg')
+
+photo16 = Photo.create!(trail_id: sentinel.id, user_id: chris.id)
+photo17 = Photo.create!(trail_id: sentinel.id, user_id: chris.id)
+photo18 = Photo.create!(trail_id: sentinel.id, user_id: chris.id)
+photo19 = Photo.create!(trail_id: sentinel.id, user_id: chris.id)
+photo20 = Photo.create!(trail_id: sentinel.id, user_id: chris.id)
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/sentinel/sentinel1.jpeg')
+photo16.photo.attach(io: file, filename: 'sentinel1.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/sentinel/sentinel2.jpeg')
+photo17.photo.attach(io: file, filename: 'sentinel2.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/sentinel/sentinel3.jpeg')
+photo18.photo.attach(io: file, filename: 'sentinel3.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/sentinel/sentinel4.jpeg')
+photo19.photo.attach(io: file, filename: 'sentinel4.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/sentinel/sentinel5.jpeg')
+photo20.photo.attach(io: file, filename: 'sentinel5.jpeg')
+
+
+photo21 = Photo.create!(trail_id: mirror.id, user_id: chris.id)
+photo22 = Photo.create!(trail_id: mirror.id, user_id: chris.id)
+photo23 = Photo.create!(trail_id: mirror.id, user_id: chris.id)
+photo24 = Photo.create!(trail_id: mirror.id, user_id: chris.id)
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/mirror/mirror1.jpeg')
+photo21.photo.attach(io: file, filename: 'mirror1.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/mirror/mirror2.jpeg')
+photo22.photo.attach(io: file, filename: 'mirror2.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/mirror/mirror4.jpeg')
+photo23.photo.attach(io: file, filename: 'mirror4.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/mirror/mirror5.jpeg')
+photo24.photo.attach(io: file, filename: 'mirror5.jpeg')
+
+
+
+# file = open('')
+# photo1.photo.attach(io: file, filename: '')
