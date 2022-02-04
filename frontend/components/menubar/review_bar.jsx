@@ -124,7 +124,7 @@ export default function ReviewBar({trail, currentUser, deleteReview, photos}) {
         </div>
       </TabPanel>
       <TabPanel value={value} index={1} className='photo-tab-container'>
-        <div className='photo-container'>
+        <div className='photo-container' >
           <PhotoForm trail={trail} currentUser={currentUser} className='photo-upload-container'/>
           <div className='photo-index'>
             {photoFind(photos, trail).map((photo, idx) => {

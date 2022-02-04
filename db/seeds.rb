@@ -68,35 +68,6 @@ Foodservice facilities in the park are wheelchair accessible except for partial-
 file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/parks/yosemitemap.png')
 yosemite.small_map.attach(io: file, filename: 'yosemitemap.png')
 
-sequoia = Park.create!(park_name: "Sequoia National Park", description: "The beautiful Sequoia National Park features the tallest peak in the continental United States and the largest trees on the planet. Covering an impressive 404,063 acres, there is so much to explore including the Giant Forest. There you will find the world's largest tree, General Sherman, and many of the world's other largest trees. There are numerous caves, Mount Whitney, and the granite dome Moro Rock. 
-
-The park is open 24 hours a day, all year round. There will be closures, however, depending on weather conditions. 
-
-Fees:
-Vehicle Pass - $35.00
-This pass is valid for 1-7 days and includes everyone traveling in a single vehicle for Sequoia & Kings Canyon National Parks and Hume Lake District of Sequoia National Forest/Giant Sequoia National Monument. You can purchase this pass in advance at www.yourpassnow.com.
-
-Individual Entry Pass - $20.00
-This entry fee is for a single person traveling on foot or by bicycle. It is valid for 1-7 days in Sequoia & Kings Canyon National Parks and Hume Lake District of Sequoia National Forest/Giant Sequoia National Monument.
-
-Non-Commercial Group - $15.00
-Groups traveling in a bus or vehicle with a capacity of 16 persons or more are charged per person. People 15 years old or younger, drivers hired for transportation only, or anyone with a pass that may be used for park entry is exempt from paying the entrance fee.
-
-Motorcycle Pass - $30.00
-This pass is valid for 1-7 days and includes everyone traveling on a motorcycle, scooter, or similar motorized vehicle for Sequoia & Kings Canyon National Parks and Hume Lake District of Sequoia National Forest/Giant Sequoia National Monument. You can purchase this pass in advance at www.yourpassnow.com.
-
-Accessibility: The Interagency Access Pass for free or discounted admission for US Citizens or permanent residents with permanent disabilities is accepted here. They are available at park entrance stations or online. The Visitor Centers are wheelchair/mobility equipment/stroller accessible and have accessible bathrooms. Manual loaner wheelchairs are available for free on a first-come-first-served at Giant Forest Museum, Lodgepole Visitor Center, and Kings Canyon Visitor Center. They may be used throughout the park but must be returned where they were borrowed from by closing on the same day. 
-
-Temporary accessible-parking placards are available at the visitor center for visitors who do not have a state-issued parking permit. No documentation is required. Check out the NPS Sequoia & Kings Canyon phone app for alternative text for images. Free shuttle buses in the Giant Forest and Lodgepole areas operate during the Summer and on holidays and they are wheelchair accessible. 
-
-There are wheelchair accessible picnic spots in the Foothills Area. There are wheelchair accessible campsites at the Cedar Grove, Grant Grove, and Mineral King Areas. Service animals must be on-leash throughout the park. Additional accessible trails and facilities information can be found here: https://www.nps.gov/seki/planyourvisit/accessibility.htm", latitude: 36.50014370311408, longitude: -118.5610676317433, country: "United States of America", state: "California", directions: "placeholder", intro: "Want to find the best trails in Sequoia National Park for an adventurous hike or a family trip? AllTrails has 110 great hiking trails, biking trails, running trails and more. Enjoy hand-curated trail maps, along with reviews and photos from nature lovers like you.
-
-Ready for your next hike or bike ride? Explore one of 27 easy hiking trails in Sequoia National Park that are great for the whole family. Looking for a more strenuous hike? We've got you covered, with trails ranging from 72 to 19,032 feet in elevation gain. Whatever you have planned for the day, you can find the perfect trail for your next trip to Sequoia National Park.", acre: "404,063 acres", contact: "559-565-3341", social_url: [["Facebook","https://www.facebook.com/SequoiaKingsNPS/"], ["Website", "http://www.nps.gov/seki/"]])
-
-file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/parks/sequoiapark.png')
-sequoia.small_map.attach(io: file, filename: 'sequoiapark.png')
-
-
 
 # TRAIL DATA
 
@@ -183,25 +154,8 @@ glacier.small_map.attach(io: file, filename: 'glacierpoint-map.png')
 file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails/glacierpoint/glacierpoint-header.jpeg')
 glacier.head_photo.attach(io: file, filename: 'glacierpoint-header.jpeg')
 
-moroRock = Trail.create!(park_id: sequoia.id, latitude: 36.54699, longitude: -118.76568, description: "The Moro Rock Trail starts from the Moro Rock parking area, and traverses a narrow, steep ¼-mile staircase to the summit. Quickly you’ll see the Great Western Divide's peaks, the San Joaquin Valley, and wilderness to the east. The chain railings along the trail make it relatively safe, but watch out for small children. People with a fear of heights might not enjoy the steep drop-offs on either side of the trail.
 
-During summer, free shuttles run to this trailhead. On weekends, the road closes to private vehicles. In winter, ski trails lead to the Moro Rock parking area, but the trail is closed due to hazardous conditions.
 
-To reach the top of this granite dome, take the stairway that climbs up 300 feet (.09 km) to the 6,275 ft (2,050 km) summit. This parking area is two miles (3.2 km) from the Generals Highway. In summer, free park shuttles at the Giant Forest Museum will drop you off at this parking area.
-
- At the top is a spectacular 360° view from the Great Western Divide to the east around to the western half of Sequoia National Park. Consider summiting Moro Rock at dawn or before dusk. It offers a huge expanse of night sky, a rare view in forested parts of the parks. One of the best places in the parks to see sunset and moonrise. 
-
-Moro Rock is one of several granite domes in these parks. These domes formed millions of years ago when magma beneath the surface cooled into granite. Since erosion removed the layers of softer rock that were above them, they have been rebounding and lifting a tiny bit each year.
-
-Take your time - unless you are used to this elevation this walk can be challenging. Don't climb the stairs if any ice or snow is present. Moro Rock is also prone to lightning strikes. If there is any evidence of an approaching storm, get off the rock quickly but safely.", length: "0.5 mi", elevation_gain: "177 ft", route_type: "Out & back", country: "United States of America", state: "California", trail_name: "Moro Rock Trail", intro: "Moro Rock Trail is a 0.5 mile heavily trafficked out and back trail located near Sequoia National Park, California that offers the chance to see wildlife and is rated as moderate. The trail is primarily used for hiking and is best used from May until October.", park_name: "Sequoia National Park", contact: "There are full facilities at the Giant Forest Museum (opens in May), there is parking near Moro Rock in the summer. There are also trash cans, historical exhibits at the trailhead (with audio tours), and benches for resting.", getting_there: "Sequoia and Kings Canyon National Parks
-47050 Generals Highway
-Three Rivers, CA 93271-9700
-559-565-3341  For 24-hour recorded information.
-Speak with park staff on weekdays only 8:15 a.m.-4:15 p.m.", tags: ['Wheelchair friendly', 'Hiking', 'Forest',  'Kid friendly', 'Wildflowers',  'Rocky', 'Fee', 'No dogs'], difficulty: "moderate")
-file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails/moro-rock/moro-rock-map.png')
-moroRock.small_map.attach(io: file, filename: 'moro-rock-map.png')
-file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails/moro-rock/moro-rock-header.jpeg')
-moroRock.head_photo.attach(io: file, filename: 'moro-rock-header.jpeg')
 
 sentinel = Trail.create!(park_id: yosemite.id, latitude: 37.71243, longitude: -119.58632, description: "Sentinel Dome starts from Glacier Point Road and scales one of Yosemite's high domes and offers a fully breathtaking 360-degree view.
 

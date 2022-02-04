@@ -293,12 +293,13 @@ body {
   top: 348px;
   z-index: 4;
   width: 545px;
+  display: flex;
 
 }
 
 .search-button {
   margin-left: -46px;
-  margin-top: 43px;
+  margin-top: 39px;
   height: 34px;
   border-radius: 50%;
   border: none;

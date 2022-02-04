@@ -15,6 +15,7 @@ class Trail extends React.Component {
     this.state = {
       forecastArray: '',
     }
+    this.photoRedirect = this.photoRedirect.bind(this)
   }
 
   componentDidMount() {
@@ -27,6 +28,14 @@ class Trail extends React.Component {
   printPage(e) {
     e.preventDefault();
     window.print()
+  }
+
+  photoRedirect(e) {
+    e.preventDefault();
+    // let trailList = document.getElementById('trail-right-list')
+    let photoButton = document.querySelectorAll('div button')[11]
+    photoButton.scrollIntoView({block: "center"})
+    photoButton.click();
   }
 
   tagsRender(){
@@ -88,7 +97,7 @@ class Trail extends React.Component {
         <div className="trail-photo-buttons">
           <ul className="trail-button-photo-uo">
             <li className="trail-button-photo trail-photo-li">
-              <a href="" className="trail-button-photo-a">
+              <a href="" className="trail-button-photo-a" id="photo-tab" onClick={this.photoRedirect}>
                 <div className="trail-button-icon-container">
                   <div className="trail-button-photo-icon"></div>
                 </div>
@@ -163,7 +172,7 @@ class Trail extends React.Component {
             <div className="trail-right-index-container">
               <div className="trail-right-index-title">Nearby Trails</div>
               <div className="trail-right-index">
-                <ul className="trail-right-list">
+                <ul className="trail-right-list" id="trail-right-list">
                   {trails.map((trail, idx) => {
                     return(
                       <li key={'trail'+`${idx}`} className="trail-card-container">
