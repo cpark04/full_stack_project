@@ -247,7 +247,7 @@ review24 = Review.create!(user_id: chris.id, trail_id: sentinel.id, rating: 4, c
 review25 = Review.create!(user_id: amanda.id, trail_id: sentinel.id, rating: 5, comment: "Great easy hike with amazing views! A little hazy due to wildfire smoke but you can still see quite a bit. It was pretty windy when we went; had to hold onto our hats. There were a few horse flies at the top but we didn’t get bit.", review_date: "2021-06-12", conditions: ['snow','washed-out'])
 
 review26 = Review.create!(user_id: amanda.id, trail_id: mirror.id, rating: 4, comment: "Some great views, although not sure if it's worth the entire loop. Easy hike/stroll. We parked at the vernal falls lot because the lot for this is closed, adding about 1 mile total. Started without microspikes. Although you can definitely do it without spikes (carefully), you lose so much time being careful. Once we put them on we cruised through the whole loop in no time. Mirror lake is not very impressive in my opinion. View of valley walls are pretty cool though", review_date: "2022-01-11", conditions: ['icy', 'muddy'])
-review27 = Review.create!(user_id: jerry.id, trail_id: mirror.id, rating: 2, comment: "like the majority of trails in yosemite NP this one is paved and crowded. plus it's mostly flat and the "lake" really just feels like a bulge in the river", review_date: "2021-05-21", conditions: ['rocky', 'snow'])
+review27 = Review.create!(user_id: jerry.id, trail_id: mirror.id, rating: 2, comment: "like the majority of trails in yosemite NP this one is paved and crowded. plus it's mostly flat and the 'lake' really just feels like a bulge in the river", review_date: "2021-05-21", conditions: ['rocky', 'snow'])
 
 
 
