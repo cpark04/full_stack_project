@@ -8,6 +8,7 @@ User.destroy_all
 Park.destroy_all
 Trail.destroy_all
 Review.destroy_all
+Photo.destroy_all
 
 # USER DATA
 demo = User.create!(fname: 'demo', lname: 'demo', email: 'demo@gmail.com', password: '12341234')
@@ -250,4 +251,6 @@ review27 = Review.create!(user_id: jerry.id, trail_id: mirror.id, rating: 2, com
 
 
 
+
+# PHOTO STARTS HERE -----------
 
