@@ -742,6 +742,11 @@ footer {
   width: 50%;
 }
 
+.trail-card-rating-container {
+  display: flex;
+  padding-top: 5px;
+}
+
 .trail-card-rating-container .top-num-reviews {
   color: #767676;
 }
