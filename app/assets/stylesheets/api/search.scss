@@ -60,7 +60,7 @@
 }
 
 .search-dropdown {
-  width: 545px;
+  width: 559px;
   max-height: 257px;
   position: absolute;
   background-color: #ffffff;
@@ -69,8 +69,9 @@
   z-index: 1;
   box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.3);
   overflow-y: auto;
-  margin-top: 121px;
+  margin-top: 135px;
   padding-top: 38px;
+  margin-left: 14px
 }
 
 .search-container-trail {
@@ -92,12 +93,12 @@
   display: flex;
   position: absolute;
   z-index: 4;
-  top: 59px;
+  top: 43px;
   width: 430px;
 }
 
 .search-dropdown-trail {
-  width: 430px;
+  width: 439px;
   max-height: 257px;
   position: absolute;
   background-color: #ffffff;
@@ -106,9 +107,9 @@
   z-index: 1;
   box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.30);
   overflow-y: auto;
-  margin-top: 19px;
+  margin-top: 22px;
   padding-top: 16px;
-  // margin-right: 20px;
+  margin-left: 8px
 }
 
 .search-form-trail input {

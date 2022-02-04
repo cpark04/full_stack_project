@@ -36,11 +36,11 @@ class PhotoForm extends React.Component {
 
   render() {
     return <div className='review-create-container'>
-      <form onSubmit={this.handleSubmit}>
-        {/* <button id="file-label" className="review-create-button" onClick={this.handleFileClick}> */}
-        <input type="file" onChange={this.handleFile} id="hide-file"/>
-        {/* </button> */}
-        <input type="submit" value="Upload Photo" className="review-create-button"/>
+      <form onSubmit={this.handleSubmit} className='upload-form'>
+        <label className="upload-button"> Upload File
+          <input type="file" onChange={this.handleFile} id="hide-file"/>
+        </label>
+        <input type="submit" value="Submit Photo" className="review-create-button"/>
       </form>
     </div>
   }
