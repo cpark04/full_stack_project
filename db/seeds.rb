@@ -8,6 +8,7 @@ User.destroy_all
 Park.destroy_all
 Trail.destroy_all
 Review.destroy_all
+Photo.destroy_all
 
 # USER DATA
 demo = User.create!(fname: 'demo', lname: 'demo', email: 'demo@gmail.com', password: '12341234')
@@ -17,24 +18,24 @@ brian = User.create!(fname: 'Brian', lname: 'Ko', email: 'brian@gmail.com', pass
 jerry = User.create!(fname: 'Jerry', lname: 'Phan', email: 'jerry@gmail.com', password: '12341234')
 amanda = User.create!(fname: 'Amanda', lname: 'Chen', email: 'amanda@gmail.com', password: '12341234')
 laney = User.create!(fname: 'Laney', lname: 'Luong', email: 'laney@gmail.com', password: '12341234')
+
 file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/profile-pic/person_placeholder.png')
 demo.pfp.attach(io: file, filename: 'person_placeholder.png')
-file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/profile-pic/person_placeholder.png')
 
-chris.pfp.attach(io: file, filename: 'person_placeholder.png')
-file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/profile-pic/person_placeholder.png')
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/profile-pic/chris.png')
+chris.pfp.attach(io: file, filename: 'chris.png')
 
-brian.pfp.attach(io: file, filename: 'person_placeholder.png')
-file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/profile-pic/person_placeholder.png')
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/profile-pic/brian.png')
+brian.pfp.attach(io: file, filename: 'brian.png')
 
-jerry.pfp.attach(io: file, filename: 'person_placeholder.png')
-file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/profile-pic/person_placeholder.png')
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/profile-pic/jerry.jpg')
+jerry.pfp.attach(io: file, filename: 'jerry.jpg')
 
-amanda.pfp.attach(io: file, filename: 'person_placeholder.png')
-file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/profile-pic/person_placeholder.png')
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/profile-pic/amanda.jpg')
+amanda.pfp.attach(io: file, filename: 'amanda.jpg')
 
-laney.pfp.attach(io: file, filename: 'person_placeholder.png')
-file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/profile-pic/person_placeholder.png')
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/profile-pic/laney.JPG')
+laney.pfp.attach(io: file, filename: 'laney.JPG')
 
 
 
@@ -88,6 +89,7 @@ vernal.small_map.attach(io: file, filename: 'VernalAndNevadaFalls.png')
 file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails/vernal-header-photo.jpeg')
 vernal.head_photo.attach(io: file, filename: 'vernal-header-photo.jpeg')
 
+
 halfDome = Trail.create!(park_id: yosemite.id, latitude: 37.73268, longitude: -119.55794, description: "Half Dome is a serious endurance hike taking you 4800 feet above the Yosemite Valley to spectacular views of Vernal and Nevada Falls, Liberty Cap, the Yosemite Valley, and the High Sierra. This is one of Yosemite National Park’s most iconic hikes. You must obtain a permit to hike to the summit of Half Dome. 
 
 Preparation and safety are key to having a fantastic experience. This is a hike that requires users to be in good shape. Most people take 10 to 12 hours to hike to Half Dome and back, depending on the way chosen to come down. Plan to leave around sunrise (or earlier) and then have a non-negotiable turn-around time. The trail is fairly well marked but make sure to watch for all trail signs as it can be easy to miss them.
@@ -140,6 +142,8 @@ halfDome.small_map.attach(io: file, filename: 'half-dome-map.png')
 file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails/half-dome/half-dome-header.jpeg')
 halfDome.head_photo.attach(io: file, filename: 'half-dome-header.jpeg')
 
+
+
 glacier = Trail.create!(park_id: yosemite.id, latitude: 37.72759, longitude: -119.57437, description: "Glacier Point is a popular stop for many new visitors to Yosemite National Park on their way down to Yosemite Valley.  Although it's not much of a hike, the view at the end of the paved walkway will leave you breathless.  You will see (left to right) both Upper and Lower Yosemite Falls, Yosemite Valley below, Clouds Rest, Half Dome standing proud, and even Vernal and Nevada Falls.  The expansive views of Yosemite Valley will fill you with wonder.
 
 There are no shuttle services available between Yosemite Valley and Glacier Point. There is a limited bus to Glacier Point for a tour which is available in summer- reservations are required for these bus tours.
@@ -176,6 +180,8 @@ sentinel.small_map.attach(io: file, filename: 'sentinel-map.png')
 file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails/sentinel/sentinel-header.jpeg')
 sentinel.head_photo.attach(io: file, filename: 'sentinel-header.jpeg')
 
+
+
 mirror = Trail.create!(park_id: yosemite.id, latitude: 37.73949, longitude: -119.55979, description: "The Mirror Lake via Valley Loop Trail is an easy loop in Yosemite National Park, with the pathway around Mirror Lake being a must-see for its beautiful reflections of Half Dome and its abundance of wildflowers during the early summer months. Mirror Lake is a seasonal calm lake located on Tenaya Creek and situated in Tenaya Canyon directly between North Dome and Half Dome. It is the last remnant of a large glacial lake that once filled the entire Yosemite Valley.
 
 This is a well-marked trail and significantly less crowded than other trails in the park, since it is further away from Yosemite lodging. The trailhead is at the far east end of Yosemite Valley and many visitors take the free shuttle bus or hike east from Curry Village or the Ahwahnee Hotel where there is a parking area and drinking water is available. The shuttle stops directly at the trailhead. There's a one mile paved trail walkway and bike path along Tenaya Creek to the north side of the lake and an unpaved trail along the south side.
@@ -211,34 +217,147 @@ review2 = Review.create!(user_id: brian.id, trail_id: vernal.id, rating: 5, comm
 review3 = Review.create!(user_id: amanda.id, trail_id: vernal.id, rating: 5, comment: "Incredible hike with amazing views of both falls and the surrounding valley. It was definitely icy once you get past the bridge so bring micro spikes! I saw people without spikes slipping and it’s a bit steep near the top so you don’t want to be without stability there… also parts of the trail were closed so you can’t do the full loop as indicated on all trails but still a great hike! ", review_date: "2021-10-08", conditions: ['icy', 'muddy'])
 review4 = Review.create!(user_id: jerry.id, trail_id: vernal.id, rating: 4, comment: "Awesome in the snow! Bring trekking poles to make it easier on yourself .", review_date: "2021-06-18", conditions: ['icy', 'muddy'])
 
-review5 = Review.create!(user_id: laney.id, trail_id: halfDome.id, rating: 5, comment: "Great trail", review_date: "2022-01-11", conditions: ['icy', 'muddy'])
-review6 = Review.create!(user_id: chris.id, trail_id: halfDome.id, rating: 4, comment: "Great trail", review_date: "2022-01-11", conditions: ['icy', 'muddy'])
-review7 = Review.create!(user_id: brian.id, trail_id: halfDome.id, rating: 4, comment: "Great trail", review_date: "2022-01-11", conditions: ['icy', 'muddy'])
-review8 = Review.create!(user_id: jerry.id, trail_id: halfDome.id, rating: 3, comment: "Great trail", review_date: "2022-01-11", conditions: ['icy', 'muddy'])
-review9 = Review.create!(user_id: amanda.id, trail_id: halfDome.id, rating: 5, comment: "Great trail", review_date: "2022-01-11", conditions: ['icy', 'muddy'])
-review10 = Review.create!(user_id: chris.id, trail_id: halfDome.id, rating: 5, comment: "Great trail", review_date: "2022-01-11", conditions: ['icy', 'muddy'])
-review11 = Review.create!(user_id: laney.id, trail_id: halfDome.id, rating: 4, comment: "Great trail", review_date: "2022-01-11", conditions: ['icy', 'muddy'])
-review12 = Review.create!(user_id: brian.id, trail_id: halfDome.id, rating: 5, comment: "Great trail", review_date: "2022-01-11", conditions: ['icy', 'muddy'])
+review5 = Review.create!(user_id: laney.id, trail_id: halfDome.id, rating: 5, comment: "Me and my buddy went on 22nd january. Started 5 AM in the morning took winter route. Joh Muir trail was closed. fell some many times on the trail because of ice on the trail because I didn't bring any hiking poles or spikes. I usually do a lot of research and prepare for difficult hikes but this time didnt do any kind of research or prep. 
 
-review13 = Review.create!(user_id: brian.id, trail_id: glacier.id, rating: 5, comment: "Great trail", review_date: "2022-01-11", conditions: ['icy', 'muddy'])
-review14 = Review.create!(user_id: amanda.id, trail_id: glacier.id, rating: 3, comment: "Great trail", review_date: "2022-01-11", conditions: ['icy', 'muddy'])
-review15 = Review.create!(user_id: jerry.id, trail_id: glacier.id, rating: 3, comment: "Great trail", review_date: "2022-01-11", conditions: ['icy', 'muddy'])
+Wasn't expecting this much snow and ice. so the first half is solid ice and then second half majority of trail its deep snow. makes it lot harder to walk. fell few times because the snow was lot deeper. had to pay attention to every step we took , just to make sure we werent stepping on deep snow. 
 
-review16 = Review.create!(user_id: chris.id, trail_id: moroRock.id, rating: 1, comment: "Great trail", review_date: "2022-01-11", conditions: ['icy', 'muddy'])
-review17 = Review.create!(user_id: brian.id, trail_id: moroRock.id, rating: 2, comment: "Great trail", review_date: "2022-01-11", conditions: ['icy', 'muddy'])
-review18 = Review.create!(user_id: jerry.id, trail_id: moroRock.id, rating: 1, comment: "Great trail", review_date: "2022-01-11", conditions: ['icy', 'muddy'])
-review19 = Review.create!(user_id: laney.id, trail_id: moroRock.id, rating: 2, comment: "Great trail", review_date: "2022-01-11", conditions: ['icy', 'muddy'])
+Got to the base of subdome at 12:30pm. we didnt have spike or poles so just barely made to half of the subdome. 22md january the wind was strong it turned the snow into solid ice. 
+I remember slipping and almost falling when trying to get to one of trees on subdome. 
 
-review20 = Review.create!(user_id: amanda.id, trail_id: sentinel.id, rating: 1, comment: "Great trail", review_date: "2022-01-11", conditions: ['icy', 'muddy'])
-review21 = Review.create!(user_id: jerry.id, trail_id: sentinel.id, rating: 1, comment: "Great trail", review_date: "2022-01-11", conditions: ['icy', 'muddy'])
-review22 = Review.create!(user_id: brian.id, trail_id: sentinel.id, rating: 1, comment: "Great trail", review_date: "2022-01-11", conditions: ['icy', 'muddy'])
-review23 = Review.create!(user_id: laney.id, trail_id: sentinel.id, rating: 1, comment: "Great trail", review_date: "2022-01-11", conditions: ['icy', 'muddy'])
-review24 = Review.create!(user_id: chris.id, trail_id: sentinel.id, rating: 1, comment: "Great trail", review_date: "2022-01-11", conditions: ['icy', 'muddy'])
-review25 = Review.create!(user_id: amanda.id, trail_id: sentinel.id, rating: 1, comment: "Great trail", review_date: "2022-01-11", conditions: ['icy', 'muddy'])
+so we decided it wasn't worth risking our life. If we had a rope or crampons we would have given it a try for sure but since we didnt have anything we accepted the fate. it was heart breaking but hey we still alive to climb another day. 
 
-review26 = Review.create!(user_id: amanda.id, trail_id: mirror.id, rating: 5, comment: "Great trail", review_date: "2022-01-11", conditions: ['icy', 'muddy'])
-review27 = Review.create!(user_id: jerry.id, trail_id: mirror.id, rating: 5, comment: "Great trail", review_date: "2022-01-11", conditions: ['icy', 'muddy'])
+came down around 6 30pm. we didnt anyone in the morning on the trail except while coming back close to the water fall we say few people but they were just there to see water fall. ", review_date: "2022-01-24", conditions: ['icy', 'muddy'])
+review6 = Review.create!(user_id: chris.id, trail_id: halfDome.id, rating: 4, comment: "Amazing trail!! First time climbing the half dome and was insane with the cables down, I need to come back in summer ", review_date: "2021-12-08", conditions: ['flooded','no-shade', 'rocky'])
+review7 = Review.create!(user_id: brian.id, trail_id: halfDome.id, rating: 4, comment: "Started off tired from doing the Mist Trail to Vernal And Nevada Falls from the day before. This time went up John Muir trail straight through to Nevada Falls. Then headed to Half Dome. First half was walking through the woods with steady incline, which was more tiring than it should have been. Towards the last third was a steep rock scramble to subdome…normally these are my favorite type of hikes but by this point I was quite spent, but I still had enough last bit of strength to last me. But it was a struggle…I took break every 1-20 rock steps. Finally got to subdome where I passed out on the rock. Looking up at actual half dome was insane…we were previously debating whether to do  the cables or not but once we saw it, nope never mind, we don’t even have equipment. Descending would be another struggle, had to make sure I recovered enough. The hike back felt endless rock stepping. Overall was super tiring but kinda fun…would probably never do again but glad I did the Yosemite thing.", review_date: "2021-11-27", conditions: ['scramble', 'rocky'])
+review8 = Review.create!(user_id: jerry.id, trail_id: halfDome.id, rating: 3, comment: "I intended on going to yosemite valley, but I met some other solo hikers and they were headed for Half Dome. I had some energy still so I tagged along. I only made it to Subdome, but it was worth it. beautiful views! but very hard! ", review_date: "2021-11-10", conditions: [])
+review9 = Review.create!(user_id: amanda.id, trail_id: halfDome.id, rating: 5, comment: "Amazing experience, cables down made for a voyage. Water water water! Don’t underestimate the elevation gain, definitely a leg burner.", review_date: "2021-10-23", conditions: ['bugs', 'snow', 'washed out'])
+review10 = Review.create!(user_id: chris.id, trail_id: halfDome.id, rating: 5, comment: "Exceptional hike, heavily trafficked but heavily signed. BRING GLOVES FOR CABLES AND ENOUGH WATER!!", review_date: "2021-09-24", conditions: ['fee','off-trail'])
+review11 = Review.create!(user_id: laney.id, trail_id: halfDome.id, rating: 4, comment: "One of the most toughest, yet rewarding hikes I’ve ever done. Decent incline at the beginning and solid hike after, but after a couple miles you’ll reach half dome. Cables down means no crowds but of course a bit of a tougher climb. Harness, carabiner, gloves and a Prusik knott was what I used to climb. Definitely doable, be mindful that the cables are heavy and it is a bit technical, but if you do your research you should be just fine.", review_date: "2021-08-23", conditions: ['icy', 'muddy'])
+review12 = Review.create!(user_id: brian.id, trail_id: halfDome.id, rating: 5, comment: "So good at the end,, just wish it’s easier well as I did it in late Nov. the sky getting dark around 5 pm,, there’s no much time left to enjoy the top. But I made it and the cable down experience to me is unforgettable:) Will do it again. Also we met some people in the trail, very fun and experiential.", review_date: "2021-05-12", conditions: ['muddy'])
+
+review13 = Review.create!(user_id: brian.id, trail_id: glacier.id, rating: 5, comment: "Very short easy paved trail with gorgeous views of Yosemite Valley and Half Dome. While a bit of a drive from the Valley, well worth it for the view.", review_date: "2022-01-11", conditions: ['icy', 'muddy'])
+review14 = Review.create!(user_id: amanda.id, trail_id: glacier.id, rating: 4, comment: "THis is one of the easiest hikes I think you can do up here on the south edge of Yosemite valley.  The hike is really so you can make best use of the all the views you'll get of the much of the park.", review_date: "2022-01-02", conditions: ['flooded', 'snow', 'over-grown'])
+review15 = Review.create!(user_id: jerry.id, trail_id: glacier.id, rating: 3, comment: "This was phenomenal. Just take glacier road all the way to then end for probably the Easiest walk you’ll ever have with no effort to get some of the best views you’ll ever see. Do this hike for sure if the glacier road is open. Handicap accessible. Bathrooms. But it is a long drive from anywhere in the valley 35-50 minutes.", review_date: "2021-10-23", conditions: ['muddy'])
+
+review20 = Review.create!(user_id: amanda.id, trail_id: sentinel.id, rating: 5, comment: "Definitely not easy as stated. It’s pretty uphill, so I would say it’s moderate. Plan to go at sunset, the 360 degree views are just impeccable. So far my favorite hike in Yosemite. ", review_date: "2022-01-02", conditions: ['icy', 'muddy'])
+review21 = Review.create!(user_id: jerry.id, trail_id: sentinel.id, rating: 4, comment: "So, while this is listed as easy, it's actually more Moderate as a whole.  The reason why is because of the altitude and that you're nearly the highest point of the park.  What climbing you need to do on this hike will zep your lungs the entire time.  So while it isn't easy, it is always one of favorites since you're at height, you'll have the very best views entire park from the Dome too.  ", review_date: "2021-12-01", conditions: ['scramble','fee', 'bridge-out'])
+review22 = Review.create!(user_id: brian.id, trail_id: sentinel.id, rating: 4, comment: "Like hiking on the moon in parts to get there. Uphill mostly and some mild scaling near the end to get to the top of the dome. Amazing 360 degree views. Sunset here is a mist. Nicer than Taft Point.", review_date: "2021-11-12", conditions: ['no-shade', 'rocky', 'bugs'])
+review23 = Review.create!(user_id: laney.id, trail_id: sentinel.id, rating: 3, comment: "So it’s a fantastic hike IF Glacier Point Rd. is open, which it wasn’t due to frosty conditions from the night before. So ask the park rangers at the entrance to Yosemite if it’s open before setting your heart on it… Otherwise one of best views in Yosemite!", review_date: "2021-09-21", conditions: ['icy', 'muddy'])
+review24 = Review.create!(user_id: chris.id, trail_id: sentinel.id, rating: 4, comment: "This was a gorgeous hike. I was alone pretty much the entire time until I got to the lake. It was pretty easy; the last mile was mostly uphill but doable. Highly recommend!", review_date: "2021-09-01", conditions: ['snow','rocky','blowdown'])
+review25 = Review.create!(user_id: amanda.id, trail_id: sentinel.id, rating: 5, comment: "Great easy hike with amazing views! A little hazy due to wildfire smoke but you can still see quite a bit. It was pretty windy when we went; had to hold onto our hats. There were a few horse flies at the top but we didn’t get bit.", review_date: "2021-06-12", conditions: ['snow','washed-out'])
+
+review26 = Review.create!(user_id: amanda.id, trail_id: mirror.id, rating: 4, comment: "Some great views, although not sure if it's worth the entire loop. Easy hike/stroll. We parked at the vernal falls lot because the lot for this is closed, adding about 1 mile total. Started without microspikes. Although you can definitely do it without spikes (carefully), you lose so much time being careful. Once we put them on we cruised through the whole loop in no time. Mirror lake is not very impressive in my opinion. View of valley walls are pretty cool though", review_date: "2022-01-11", conditions: ['icy', 'muddy'])
+review27 = Review.create!(user_id: jerry.id, trail_id: mirror.id, rating: 2, comment: "like the majority of trails in yosemite NP this one is paved and crowded. plus it's mostly flat and the 'lake' really just feels like a bulge in the river", review_date: "2021-05-21", conditions: ['rocky', 'snow'])
 
 
 
 
+# PHOTO STARTS HERE -----------
+
+photo1 = Photo.create!(trail_id: vernal.id, user_id: chris.id)
+photo2 = Photo.create!(trail_id: vernal.id, user_id: chris.id)
+photo3 = Photo.create!(trail_id: vernal.id, user_id: chris.id)
+photo4 = Photo.create!(trail_id: vernal.id, user_id: chris.id)
+photo5 = Photo.create!(trail_id: vernal.id, user_id: chris.id)
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/vernal/vernal-1.jpeg')
+photo1.photo.attach(io: file, filename: 'vernal-1.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/vernal/vernal-2.jpeg')
+photo2.photo.attach(io: file, filename: 'vernal-2.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/vernal/vernal-3.jpeg')
+photo3.photo.attach(io: file, filename: 'vernal-3.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/vernal/vernal-4.jpeg')
+photo4.photo.attach(io: file, filename: 'vernal-4.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/vernal/vernal-5.jpeg')
+photo5.photo.attach(io: file, filename: 'vernal-5.jpeg')
+
+photo6 = Photo.create!(trail_id: halfDome.id, user_id: chris.id)
+photo7 = Photo.create!(trail_id: halfDome.id, user_id: chris.id)
+photo8 = Photo.create!(trail_id: halfDome.id, user_id: chris.id)
+photo9 = Photo.create!(trail_id: halfDome.id, user_id: chris.id)
+photo10 = Photo.create!(trail_id: halfDome.id, user_id: chris.id)
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/half-dome/half-dome1.jpeg')
+photo6.photo.attach(io: file, filename: 'half-dome1.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/half-dome/half-dome2.jpeg')
+photo7.photo.attach(io: file, filename: 'half-dome2.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/half-dome/half-dome3.jpeg')
+photo8.photo.attach(io: file, filename: 'half-dome3.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/half-dome/half-dome4.jpeg')
+photo9.photo.attach(io: file, filename: 'half-dome4.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/half-dome/half-dome5.jpeg')
+photo10.photo.attach(io: file, filename: 'half-dome5.jpeg')
+
+photo11 = Photo.create!(trail_id: glacier.id, user_id: chris.id)
+photo12 = Photo.create!(trail_id: glacier.id, user_id: chris.id)
+photo13 = Photo.create!(trail_id: glacier.id, user_id: chris.id)
+photo14 = Photo.create!(trail_id: glacier.id, user_id: chris.id)
+photo15 = Photo.create!(trail_id: glacier.id, user_id: chris.id)
+
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/glacier/glacier1.jpeg')
+photo11.photo.attach(io: file, filename: 'glacier1.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/glacier/glacier2.jpeg')
+photo12.photo.attach(io: file, filename: 'glacier2.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/glacier/glacier3.jpeg')
+photo13.photo.attach(io: file, filename: 'glacier3.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/glacier/glacier4.jpeg')
+photo14.photo.attach(io: file, filename: 'glacier4.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/glacier/glacier5.jpeg')
+photo15.photo.attach(io: file, filename: 'glacier5.jpeg')
+
+photo16 = Photo.create!(trail_id: sentinel.id, user_id: chris.id)
+photo17 = Photo.create!(trail_id: sentinel.id, user_id: chris.id)
+photo18 = Photo.create!(trail_id: sentinel.id, user_id: chris.id)
+photo19 = Photo.create!(trail_id: sentinel.id, user_id: chris.id)
+photo20 = Photo.create!(trail_id: sentinel.id, user_id: chris.id)
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/sentinel/sentinel1.jpeg')
+photo16.photo.attach(io: file, filename: 'sentinel1.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/sentinel/sentinel2.jpeg')
+photo17.photo.attach(io: file, filename: 'sentinel2.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/sentinel/sentinel3.jpeg')
+photo18.photo.attach(io: file, filename: 'sentinel3.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/sentinel/sentinel4.jpeg')
+photo19.photo.attach(io: file, filename: 'sentinel4.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/sentinel/sentinel5.jpeg')
+photo20.photo.attach(io: file, filename: 'sentinel5.jpeg')
+
+
+photo21 = Photo.create!(trail_id: mirror.id, user_id: chris.id)
+photo22 = Photo.create!(trail_id: mirror.id, user_id: chris.id)
+photo23 = Photo.create!(trail_id: mirror.id, user_id: chris.id)
+photo24 = Photo.create!(trail_id: mirror.id, user_id: chris.id)
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/mirror/mirror1.jpeg')
+photo21.photo.attach(io: file, filename: 'mirror1.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/mirror/mirror2.jpeg')
+photo22.photo.attach(io: file, filename: 'mirror2.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/mirror/mirror4.jpeg')
+photo23.photo.attach(io: file, filename: 'mirror4.jpeg')
+
+file = open('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/trails_pictures/mirror/mirror5.jpeg')
+photo24.photo.attach(io: file, filename: 'mirror5.jpeg')
+
+
+
+# file = open('')
+# photo1.photo.attach(io: file, filename: '')

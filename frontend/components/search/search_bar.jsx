@@ -19,7 +19,6 @@ class SearchBar extends React.Component {
   }
 
   hide(e) {
-    console.log(e)
     const dropdown = document.getElementById('search-dropdown')
     if (e.target.className === 'search-bar') {
       dropdown.classList.remove('hide')
