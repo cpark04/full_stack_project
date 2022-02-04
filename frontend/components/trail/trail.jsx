@@ -111,14 +111,14 @@ class Trail extends React.Component {
                 <span className="trail-button-photo-text">Print/PDF</span>
               </a>
             </li>
-            <li className="trail-button-share trail-photo-li">
+            {/* <li className="trail-button-share trail-photo-li">
               <a href="" className="trail-button-photo-a">
                 <div className="trail-button-icon-container">
                   <div className="trail-button-share-icon"></div>
                 </div>
                 <span className="trail-button-photo-text">Share</span>
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
