@@ -20,6 +20,14 @@
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
     />
+    <meta property="og:title" content="SomeTrails" />
+     <meta property='og:image' content="<%= image_url('https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/profile-pic/SomeTrails_screenshot.png') %>"/>
+     <meta property="og:description"
+       content="Single page clone of AllTrails where users can look up their favorite trails for different cities, areas and parks."
+     />
+     <meta property="og:url"
+       content="https://some-trails.herokuapp.com/"
+     />
 
     <script type="text/javascript">
         window.weatherAPI= "<%= Rails.application.credentials.weather[:api_key] %>"
