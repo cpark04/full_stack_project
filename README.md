@@ -20,4 +20,4 @@ SomeTrails backend is built using the Ruby on Rails framework, PostgreSQL, AWS S
 
 Users will be able to create/read/update/destroy reviews for trails. To create a review, a user simply has to click on the "Write Review" button and a 2-part modal form will popup. One the first page, user will select a rating and write their review. Once done, they can click the next button and select the date, trail condition tags and select the Post button to create the review.
 
- ![UpdateDestroyReview](app/assets/images//update_destroy_review.gif)
+ ![UpdateDestroyReview](app/assets/images//update_destroy_review1.gif)
