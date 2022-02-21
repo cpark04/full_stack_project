@@ -4,6 +4,8 @@
 
 [SomeTrails](https://some-trails.herokuapp.com/#/ "SomeTrails Home Page")
 
+![CompleteHomepage](https://i.imgur.com/2SmAxI2.png)
+
 
 ## About
 
@@ -13,3 +15,4 @@ SomeTrails backend is built using the Ruby on Rails framework, PostgreSQL, AWS S
 
 ## Features
 
+ 
