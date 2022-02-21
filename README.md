@@ -14,5 +14,10 @@ SomeTrails is a clone of AllTrails where users can browse through parks and the 
 SomeTrails backend is built using the Ruby on Rails framework, PostgreSQL, AWS S3 storage for photos used in the frontend. The frontend is built using React, Redux, and SCSS. jQuery is used to send all AJAX calls from the frontend to the backend..
 
 ## Features
+### CRUD For Reviews
+
+![CreateReview](https://im5.ezgif.com/tmp/ezgif-5-a2d101381d.gif)
+
+Users will be able to create/read/update/destroy reviews for trails. To create a review, a user simply has to click on the "Write Review" button and a 2-part modal form will popup. One the first page, user will select a rating and write their review. Once done, they can click the next button and select the date, trail condition tags and select the Post button to create the review.
 
  
