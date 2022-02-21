@@ -80,3 +80,9 @@ Users can find a park or trail using the search bar in the middle of the home pa
   })}
 </div>
 ```
+
+### WeatherAPI
+
+![WeatherAPI](app/assets/images/weather_api.gif)
+
+SomeTrails uses the WeatherAPI to dynamically fetch data to get 3-day forecast of the temperature, weather conditions, UV index, sunrise and sunset times.
