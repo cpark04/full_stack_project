@@ -8,15 +8,15 @@ const Footer = () => {
     </div>
     <div className="footer-social">
       <div className="social-button">
-        <a href="https://www.github.com/cpark04">
+        <a href="https://www.github.com/cpark04" target="_blank">
           <img src="https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/buttons/github.png" alt="" className="github-button"/>
         </a>
 
-        <a href="https://www.linkedin.com/in/chris-p-7b087b46/">
+        <a href="https://www.linkedin.com/in/chris-p-7b087b46/" target="_blank">
           <img src="https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/buttons/linkedin.png" alt="" className="linkedin-button"/>
         </a>
 
-        <a href="https://angel.co/u/chris-park-23">
+        <a href="https://angel.co/u/chris-park-23" target="_blank">
           <img src="https://some-trails-aa-dev.s3.us-west-1.amazonaws.com/buttons/angellist.png" alt="" className="angel-button"/>
         </a>
 
