@@ -7,7 +7,6 @@ import Slider from "react-slick";
 import StarRatings from "react-star-ratings";
 
 class Home extends React.Component {
-
   componentDidMount() {
     this.props.fetchParks();
     this.props.fetchTrails();
@@ -15,11 +14,32 @@ class Home extends React.Component {
 
   difficultyColorRender(diff) {
     if (diff === "hard") {
-      return <span className="trail-difficulty" style={{backgroundColor:"#676767"}}>{diff}</span>
+      return (
+        <span
+          className='trail-difficulty'
+          style={{ backgroundColor: "#676767" }}
+        >
+          {diff}
+        </span>
+      );
     } else if (diff === "moderate") {
-      return <span className="trail-difficulty" style={{backgroundColor:"#4bafe1"}}>{diff}</span>
+      return (
+        <span
+          className='trail-difficulty'
+          style={{ backgroundColor: "#4bafe1" }}
+        >
+          {diff}
+        </span>
+      );
     } else {
-      return <span className="trail-difficulty" style={{backgroundColor:"#69a041"}}>{diff}</span>
+      return (
+        <span
+          className='trail-difficulty'
+          style={{ backgroundColor: "#69a041" }}
+        >
+          {diff}
+        </span>
+      );
     }
   }
 
@@ -33,75 +53,88 @@ class Home extends React.Component {
       arrows: true,
     };
 
-    const {trails} = this.props
+    const { trails } = this.props;
     if (trails) {
-      return(
+      return (
         <Slider {...settings}>
-          
           {trails.map((trail, idx) => {
             return (
-              <a href={`#/trail/${trail.id}`} key={'trail'+`${idx}`} className="trail-card-container">
-                <div className="trail-card-home">
+              <a
+                href={`#/trail/${trail.id}`}
+                key={"trail" + `${idx}`}
+                className='trail-card-container'
+              >
+                <div className='trail-card-home'>
                   <div>
-                    <div className="trail-card-photo-container">
-                      <img src={trail.headPhoto} alt="" className="trail-card-photo" />
+                    <div className='trail-card-photo-container'>
+                      <img
+                        src={trail.headPhoto}
+                        alt=''
+                        className='trail-card-photo'
+                      />
                     </div>
                   </div>
-                  <div className="trail-card-info-container">
-                    <div className="trail-card-name">{trail.trail_name}</div>
-                    <div className="trail-card-park">{trail.park_name}</div>
-                    <div className="trail-card-rating-container">
+                  <div className='trail-card-info-container'>
+                    <div className='trail-card-name'>{trail.trail_name}</div>
+                    <div className='trail-card-park'>{trail.park_name}</div>
+                    <div className='trail-card-rating-container'>
                       {this.difficultyColorRender(trail.difficulty)}
-                      <StarRatings rating={trail.avg_rating} starDimension="15px" starRatedColor="#f5d24b" starSpacing="2px" className='review-user-date'/>
-                      <span className="top-num-reviews">({trail.num_reviews})</span>
+                      <StarRatings
+                        rating={trail.avg_rating}
+                        starDimension='15px'
+                        starRatedColor='#f5d24b'
+                        starSpacing='2px'
+                        className='review-user-date'
+                      />
+                      <span className='top-num-reviews'>
+                        ({trail.num_reviews})
+                      </span>
                     </div>
-                    <div className="trail-card-time-container">
-                      <span className="trail-card-length">Length: {trail.length}</span>
+                    <div className='trail-card-time-container'>
+                      <span className='trail-card-length'>
+                        Length: {trail.length}
+                      </span>
                       <span>&nbsp;•&nbsp;</span>
-                      <span className="trail-card-time">Est. 3h 53m</span>
+                      <span className='trail-card-time'>Est. 3h 53m</span>
                     </div>
                   </div>
                 </div>
               </a>
-            )
+            );
           })}
         </Slider>
-      )
+      );
     }
   }
 
-  render(){
+  render() {
     if (!this.props.parks) return null;
     if (!this.props.trails) return null;
 
-    const {parks, trails} = this.props
+    const { parks, trails } = this.props;
 
-    return <div className="home-page">
-      
-      <div className='bg-slides'>
-        <PhotoSlides parks={parks} trails={trails}/>
-      </div>
-
-
-      <div className='home-trail-card-container'>
-          {this.simpleSlider()}       
-      </div>
-      
-
-      <div className="module-picture">
-        <div className="module-text">
-          <h1 className="module-title">Explore with</h1>
-          <h1 className="module-title2">confidence</h1>
-          <div className="module-description">Inspiration and guidance for wherever your trail may lead.</div>
-          <div className="app-rating"></div>
+    return (
+      <div className='home-page'>
+        <div className='bg-slides'>
+          <PhotoSlides parks={parks} trails={trails} />
         </div>
-      </div>
-      
-      <div className="phone-module">
-        
-      </div>
 
-    </div>
+        <div className='home-trail-card-container'>{this.simpleSlider()}</div>
+
+        <div className='module-picture'>
+          <div className='module-text'>
+            <h1 className='module-title'>Explore with</h1>
+            <h1 className='module-title2'>confidence</h1>
+            <div className='module-description'>
+              Inspiration and guidance for wherever your trail may lead.
+            </div>
+            <div className='app-rating'></div>
+          </div>
+        </div>
+
+        <div className='phone-module'></div>
+      </div>
+    );
   }
 }
 
