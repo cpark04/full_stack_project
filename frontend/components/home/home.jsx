@@ -1,8 +1,5 @@
 import React from "react";
 import PhotoSlides from "./photo_slides";
-import SearchBar from "../search/search_bar";
-import TrailCards from "../trail_cards/trail_cards";
-import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import StarRatings from "react-star-ratings";
 
