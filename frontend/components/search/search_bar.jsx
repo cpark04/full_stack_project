@@ -3,13 +3,9 @@ import { withRouter } from "react-router-dom";
 
 const SearchBar = (props) => {
   const [params, setParams] = useState("");
-  const [parks, setParks] = useState(props.parks);
-  const [trails, setTrails] = useState(props.trails);
 
   useEffect(() => {
     document.addEventListener("click", (e) => hide(e));
-    setParks(props.parks);
-    setTrails(props.trails);
   }, []);
 
   const hide = (e) => {
@@ -51,8 +47,7 @@ const SearchBar = (props) => {
       </div>
 
       <div className='search-dropdown hide' id='search-dropdown'>
-        {console.log(parks)}
-        {parks.map((park, idx) => {
+        {props.parks.map((park, idx) => {
           if (park.park_name.toLowerCase().startsWith(params.toLowerCase())) {
             return (
               <div key={"park" + `${idx}`} className='park-search-container'>
@@ -75,7 +70,7 @@ const SearchBar = (props) => {
           }
         })}
 
-        {trails.map((trail, idx) => {
+        {props.trails.map((trail, idx) => {
           if (trail.trail_name.toLowerCase().startsWith(params.toLowerCase())) {
             return (
               <div key={"trail" + `${idx}`} className='park-search-container'>
